@@ -77,7 +77,20 @@ def logo(img, x, y, scale=1.0):
     dx = d.textlength("DHD", font=f1)
     d.text((x+s+22*scale+dx+2, y+int(4*scale)), "news", font=f1, fill=PINK)
     bb = d.textbbox((x+s+22*scale, y+int(4*scale)), "DHD", font=f1)
-    d.text((x+s+24*scale, bb[3]+int(10*scale)), "NEWSFLYS · AL VUELO", font=font("bold", int(18*scale)), fill=(170, 170, 190))
+    d.text((x+s+24*scale, bb[3]+int(10*scale)), "NEWSFLYS", font=font("black", int(24*scale)), fill=(225, 225, 235))
+
+def logo_c(img, y, scale=1.0):
+    layer = Image.new("RGBA", (W*2, int(300*scale)), (0, 0, 0, 0))
+    logo(layer, 0, 0, scale)
+    bb = layer.getbbox()
+    layer = layer.crop(bb)
+    x = (W - layer.width)//2
+    # halo detrás del logo para que destaque
+    halo = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(halo).rounded_rectangle((x-40, y-30, x+layer.width+40, y+layer.height+30), radius=60, fill=(11, 11, 16, 150))
+    img.paste(Image.alpha_composite(img.convert("RGBA"), halo).convert("RGB"))
+    img.paste(layer, (x, y), layer)
+    return y + layer.height
 
 def chip(d, x, y, label, color, size=30):
     f = font("black", size)
@@ -93,10 +106,12 @@ def fecha_txt(fecha):
 def story_lista(news, fecha, desde, titulo, cta):
     img = background(PINK if desde == 0 else VIOLET)
     d = ImageDraw.Draw(img, "RGBA")
-    logo(img, 80, 230)
-    d.text((80, 400), titulo, font=font("anton", 150), fill="white")
-    d.text((84, 575), fecha_txt(fecha).upper(), font=font("bold", 34), fill=CYAN)
-    y = 680
+    logo_c(img, 210, 1.55); d = ImageDraw.Draw(img, "RGBA")
+    ft = font("anton", 120)
+    d.text(((W-d.textlength(titulo, font=ft))/2, 430), titulo, font=ft, fill="white")
+    fd = font("black", 32); ftxt = fecha_txt(fecha).upper()
+    d.text(((W-d.textlength(ftxt, font=fd))/2, 585), ftxt, font=fd, fill=CYAN)
+    y = 670
     for i, n in enumerate(news[desde:desde+5], start=desde+1):
         lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
         d.rounded_rectangle((70, y, W-70, y+190), radius=34, fill=(20, 20, 28, 225), outline=(255, 255, 255, 30), width=2)
@@ -118,19 +133,19 @@ def story_lista(news, fecha, desde, titulo, cta):
 # ---------- REEL ----------
 def slide_intro(fecha):
     img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
-    logo(img, 80, 300)
+    logo_c(img, 280, 1.7); d = ImageDraw.Draw(img, "RGBA")
     d.text((80, 620), "LAS 5", font=font("anton", 230), fill="white")
     d.text((80, 860), "NOTICIAS", font=font("anton", 230), fill=PINK)
     d.text((80, 1100), "DE HOY", font=font("anton", 230), fill="white")
-    d.text((86, 1370), fecha_txt(fecha).upper(), font=font("black", 44), fill=CYAN)
-    d.text((86, 1440), "Música · Gaming · Streamers · Deportes · Tele", font=font("semi", 32), fill=(200, 200, 215))
+    d.text((86, 1400), fecha_txt(fecha).upper(), font=font("black", 44), fill=CYAN)
+    d.text((86, 1470), "Música · Gaming · Streamers · Deportes · Tele", font=font("semi", 32), fill=(200, 200, 215))
     return img
 
 def slide_news(n, rank):
     lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
     img = background(col); d = ImageDraw.Draw(img, "RGBA")
-    logo(img, 80, 230, .8)
-    d.text((W-80-d.textlength(str(rank), font=font("anton", 300)), 180), str(rank), font=font("anton", 300), fill=(255, 255, 255, 40))
+    d.text((W-80-d.textlength(str(rank), font=font("anton", 300)), 330), str(rank), font=font("anton", 300), fill=(255, 255, 255, 40))
+    logo_c(img, 200, 1.3); d = ImageDraw.Draw(img, "RGBA")
     chip(d, 80, 560, lab, col, 34)
     kw = (n.get("kw") or n["title"].split(":")[0]).upper()
     fk = fit(d, kw, "anton", W-160, 210, 90)
@@ -151,7 +166,7 @@ def slide_news(n, rank):
 
 def slide_outro():
     img = background(VIOLET); d = ImageDraw.Draw(img, "RGBA")
-    logo(img, 80, 520, 1.4)
+    logo_c(img, 480, 2.0); d = ImageDraw.Draw(img, "RGBA")
     d.text((80, 820), "TODAS LAS", font=font("anton", 150), fill="white")
     d.text((80, 980), "NOTICIAS EN", font=font("anton", 150), fill="white")
     d.text((80, 1140), "LA WEB", font=font("anton", 150), fill=PINK)
