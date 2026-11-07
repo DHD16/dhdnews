@@ -1,0 +1,27 @@
+name: Descargar fotos libres (Unsplash)
+on:
+  push:
+    paths: ["fotos/lista.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar
+        run: |
+          while read cat i id; do
+            [ -z "$cat" ] && continue
+            mkdir -p "fotos/$cat"
+            curl -sfL "https://images.unsplash.com/photo-${id}?auto=format&fm=jpg&fit=crop&w=1200&h=900&q=78" -o "fotos/$cat/$i.jpg" || echo "fallo $cat $i"
+          done < fotos/lista.txt
+          ls -R fotos | head -50
+      - name: Guardar en el repo
+        run: |
+          git config user.name "DHD16"
+          git config user.email "hidalgodaher@gmail.com"
+          git add fotos
+          git commit -m "Fotos libres (Unsplash) descargadas" || echo "sin cambios"
+          git push
