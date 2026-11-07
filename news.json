@@ -26,19 +26,19 @@
  },
  {
   "cat": "deportes",
-  "title": "Hoy: Valencia–Real Madrid en Mestalla (21:00, DAZN)",
-  "text": "El Madrid tiene que seguir el ritmo de arriba y el Valencia busca salir del descenso. Es la jornada 12, la última antes del parón de selecciones.",
-  "source": "ElDesmarque / La Grada",
-  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html",
-  "kw": "Mestalla"
+  "kw": "LaLiga J12",
+  "title": "LaLiga: Valencia–Real Madrid hoy y Atleti–Barça mañana",
+  "text": "Sábado a las 21:00 en Mestalla y domingo a las 21:00 en el Metropolitano (los dos en DAZN). Es la última jornada antes del parón de selecciones.",
+  "source": "ElDesmarque",
+  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html"
  },
  {
-  "cat": "deportes",
-  "title": "Domingo: Atlético–Barça en el Metropolitano (21:00, DAZN)",
-  "text": "El líder visita al Atleti para cerrar la jornada 12 de LaLiga.",
-  "source": "ElDesmarque",
-  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html",
-  "kw": "Atleti–Barça"
+  "cat": "tele",
+  "kw": "La Séptima",
+  "title": "La Séptima arranca fuerte: 2,8% de cuota en su estreno",
+  "text": "El nuevo canal de la TDT empezó a emitir el 5 de noviembre y casi 5 millones de personas lo vieron en algún momento del día, muy por encima del 1,5% que se había marcado como objetivo.",
+  "source": "FormulaTV / Noticias de Navarra",
+  "url": "https://www.formulatv.com/noticias/septima-da-sorpresa-estrena-gran-28-primer-dia-138699/"
  },
  {
   "cat": "deportes",
