@@ -157,6 +157,45 @@ def bug(img, cx, y, scale=1.0, center=True):
     img.paste(layer, (x, y), layer)
     return y + Hl
 
+
+def link_icon(size, color):
+    L = Image.new("RGBA", (size*2, size*2), (0, 0, 0, 0)); d = ImageDraw.Draw(L)
+    w = max(4, size//7); r = size//2
+    d.rounded_rectangle((size*0.25, size*0.75, size*1.15, size*1.25), radius=r//2, outline=color, width=w)
+    d.rounded_rectangle((size*0.85, size*0.75, size*1.75, size*1.25), radius=r//2, outline=color, width=w)
+    return L.rotate(-45, resample=Image.BICUBIC).resize((size, size), Image.LANCZOS)
+
+def cta_sticker(img, cy, title="LINK EN BIO", sub="dhd16.github.io/dhdnews", angle=-3):
+    ft, fs = font("anton", 64), font("black", 26)
+    d0 = ImageDraw.Draw(Image.new("RGB", (5, 5)))
+    tw = max(d0.textlength(title, font=ft), d0.textlength(sub, font=fs))
+    ic = 96; pad = 30
+    w, h = int(ic + tw + pad*3 + 70), 160
+    lay = Image.new("RGBA", (w+80, h+80), (0, 0, 0, 0))
+    sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).rounded_rectangle((40, 52, 40+w, 52+h), radius=h//2, fill=(0, 0, 0, 150))
+    lay = Image.alpha_composite(lay, sh.filter(ImageFilter.GaussianBlur(16)))
+    d = ImageDraw.Draw(lay)
+    # cuerpo blanco con borde degradado
+    grad = Image.new("RGBA", (w+12, h+12)); gd = ImageDraw.Draw(grad)
+    for x in range(w+12):
+        t = x/(w+12); gd.line([(x, 0), (x, h+12)], fill=tuple(int(PINK[k]*(1-t)+CYAN[k]*t) for k in range(3))+(255,))
+    m = Image.new("L", grad.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w+11, h+11), radius=(h+12)//2, fill=255)
+    lay.paste(grad, (34, 34), m)
+    d.rounded_rectangle((40, 40, 40+w, 40+h), radius=h//2, fill="white")
+    # icono en círculo rosa
+    cx0 = 40+pad-6; d.ellipse((cx0, 40+(h-ic)//2, cx0+ic, 40+(h+ic)//2), fill=PINK)
+    li = link_icon(60, "white"); lay.paste(li, (cx0+18, 40+(h-60)//2), li)
+    tx = cx0+ic+pad
+    d.text((tx, 40+10), title, font=ft, fill=BG)
+    d.text((tx+2, 40+104), sub, font=fs, fill=(120, 120, 140))
+    # flecha
+    ax = 40+w-pad-34; ay = 40+h//2
+    d.line([(ax-20, ay+20), (ax+14, ay-14)], fill=PINK, width=9)
+    d.line([(ax-6, ay-16), (ax+16, ay-16)], fill=PINK, width=9); d.line([(ax+16, ay-16), (ax+16, ay+6)], fill=PINK, width=9)
+    lay = lay.rotate(angle, resample=Image.BICUBIC, expand=True)
+    img.paste(lay, (int(W/2 - lay.width/2), int(cy - lay.height/2)), lay)
+
 def story_top5(news, fecha):
     img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
     bug(img, W/2, 200, 1.0)
@@ -164,23 +203,20 @@ def story_top5(news, fecha):
     d.text(((W-d.textlength(t, font=ft))/2, 420), t, font=ft, fill="white")
     fd = font("black", 32); ftxt = fecha_txt(fecha).upper()
     d.text(((W-d.textlength(ftxt, font=fd))/2, 585), ftxt, font=fd, fill=CYAN)
-    y = 670
+    y = 650
     for i, n in enumerate(news[:5], start=1):
         lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
-        d.rounded_rectangle((70, y, W-70, y+190), radius=34, fill=(20, 20, 28, 225), outline=(255, 255, 255, 30), width=2)
-        d.rounded_rectangle((70, y, 82, y+190), radius=6, fill=col)
-        d.text((108, y+28), str(i), font=font("anton", 110), fill=col)
+        d.rounded_rectangle((70, y, W-70, y+180), radius=34, fill=(20, 20, 28, 225), outline=(255, 255, 255, 30), width=2)
+        d.rounded_rectangle((70, y, 82, y+180), radius=6, fill=col)
+        d.text((108, y+24), str(i), font=font("anton", 106), fill=col)
         tx = 108 + 120
-        d.text((tx, y+30), lab, font=font("black", 24), fill=col)
+        d.text((tx, y+24), lab, font=font("black", 24), fill=col)
         kw = (n.get("kw") or n["title"].split(":")[0]).upper()
-        d.text((tx, y+60), kw, font=fit(d, kw, "anton", W-70-tx-30, 64, 40), fill="white")
+        d.text((tx, y+52), kw, font=fit(d, kw, "anton", W-70-tx-30, 64, 40), fill="white")
         sub = wrap(d, n["title"], font("semi", 27), W-70-tx-30)
-        if sub: d.text((tx, y+138), sub[0] + ("…" if len(sub) > 1 else ""), font=font("semi", 27), fill=(200, 200, 215))
-        y += 212
-    f = font("black", 34); cta = "TODO EL TOP 10 · LINK EN BIO"
-    w = d.textlength(cta, font=f)
-    d.rounded_rectangle(((W-w)/2-40, 1750, (W+w)/2+40, 1822), radius=999, fill="white")
-    d.text(((W-w)/2, 1764), cta, font=f, fill=BG)
+        if sub: d.text((tx, y+128), sub[0] + ("…" if len(sub) > 1 else ""), font=font("semi", 27), fill=(200, 200, 215))
+        y += 194
+    cta_sticker(img, 1735, "TOP 10 COMPLETO", "link en bio · dhd16.github.io/dhdnews")
     return img
 
 def story_ultima(n, fecha):
@@ -245,11 +281,11 @@ def story_card(news, idx, fecha):
     glow = Image.new("RGB", (W, H), BG); ImageDraw.Draw(glow).ellipse((W*0.3, -H*0.2, W*1.5, H*0.35), fill=col)
     img = Image.blend(img, glow.filter(ImageFilter.GaussianBlur(240)), 0.55)
     d = ImageDraw.Draw(img, "RGBA")
-    bug(img, W/2, 120, 0.85)
+    bug(img, W/2, 110, 0.8)
     fh = font("anton", 78); t = "ÚLTIMAS NOTICIAS"
-    d.text((60, 345), t, font=fh, fill="white")
-    tw = d.textlength(t, font=fh); d.rectangle((60+tw+24, 392, W-60, 396), fill=(255, 255, 255, 70))
-    X0, X1, Y0, PH, Y1 = 50, W-50, 470, 640, 1800
+    d.text((60, 325), t, font=fh, fill="white")
+    tw = d.textlength(t, font=fh); d.rectangle((60+tw+24, 372, W-60, 376), fill=(255, 255, 255, 70))
+    X0, X1, Y0, PH, Y1 = 50, W-50, 450, 540, 1590
     CW = X1-X0
     d.rounded_rectangle((X0, Y0, X1, Y1), radius=44, fill=(22, 22, 31), outline=(255, 255, 255, 28), width=2)
     # foto
@@ -288,14 +324,17 @@ def story_card(news, idx, fecha):
         d.text((X0+40, y), l, font=ft, fill="white"); y += 74
     y += 18
     fx = font("semi", 38); tl = wrap(d, n.get("text", ""), fx, CW-80)
-    maxl = max(2, min(6, (Y1-150-y)//54))
-    if len(tl) > maxl: tl = tl[:maxl]; tl[-1] = tl[-1].rstrip(",.;") + "…"
+    maxl = max(0, min(6, (Y1-130-y)//54))
+    if len(tl) > maxl:
+        tl = tl[:maxl]
+        if tl: tl[-1] = tl[-1].rstrip(",.;") + "…"
     for l in tl:
         d.text((X0+40, y), l, font=fx, fill=(170, 170, 190)); y += 54
     d.line([(X0+40, Y1-110), (X1-40, Y1-110)], fill=(255, 255, 255, 40), width=2)
     d.text((X0+40, Y1-80), n.get("source", ""), font=font("semi", 32), fill=(160, 160, 180))
-    go = "Leer noticia · link en bio →"; fg = font("black", 32)
+    go = "Leer noticia →"; fg = font("black", 32)
     d.text((X1-40-d.textlength(go, font=fg), Y1-80), go, font=fg, fill=CYAN)
+    cta_sticker(img, 1700, "LEE LA NOTICIA", "link en bio · dhd16.github.io/dhdnews")
     return img
 
 # ---------- REEL ----------
