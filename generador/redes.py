@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DHDnews · Generador de contenido para redes.
+"""DHDNEWS · Dailynews · Generador de contenido para redes.
 Lee news.json y crea en contenido/AAAA-MM-DD/:
   story-1.png, story-2.png  (1080x1920, Instagram/TikTok stories)
   reel.mp4                  (1080x1920, ~25 s, sin música: se añade el audio en la app)
@@ -77,7 +77,7 @@ def logo(img, x, y, scale=1.0):
     dx = d.textlength("DHD", font=f1)
     d.text((x+s+22*scale+dx+2, y+int(4*scale)), "news", font=f1, fill=PINK)
     bb = d.textbbox((x+s+22*scale, y+int(4*scale)), "DHD", font=f1)
-    d.text((x+s+24*scale, bb[3]+int(10*scale)), "NEWSFLYS", font=font("black", int(24*scale)), fill=(225, 225, 235))
+    d.text((x+s+24*scale, bb[3]+int(10*scale)), "DAILYNEWS", font=font("black", int(24*scale)), fill=(225, 225, 235))
 
 def logo_c(img, y, scale=1.0):
     layer = Image.new("RGBA", (W*2, int(300*scale)), (0, 0, 0, 0))

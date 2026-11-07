@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DHDnews · Newsflys</title>
-<meta name="description" content="DHDnews · Newsflys — noticias diarias de música, gaming, streamers, youtubers, deportes y gossip en 60 segundos.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2213%22 fill=%22%23ff2e63%22/%3E%3Cpath d=%22M13 12h10.5C31.5 12 37 17 37 24s-5.5 12-13.5 12H13z%22 fill=%22white%22/%3E%3C/svg%3E">
+<title>DHDNEWS · Dailynews</title>
+<meta name="description" content="DHDNEWS · Dailynews — noticias diarias de música, gaming, streamers, youtubers, deportes y gossip en 60 segundos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2210%22 fill=%22%23ff2e63%22/%3E%3Crect y=%2230%22 width=%2248%22 height=%2218%22 fill=%22%2308d9d6%22/%3E%3Ctext x=%2224%22 y=%2226%22 text-anchor=%22middle%22 font-family=%22Arial Black,Impact%22 font-size=%2219%22 fill=%22white%22%3EDHD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -27,14 +27,17 @@ a{color:inherit;text-decoration:none}
 /* Header */
 header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,11,16,.92);backdrop-filter:blur(8px);z-index:10}
 .head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.logo{display:flex;align-items:center;gap:12px}
-.mark{width:46px;height:46px;flex:none;filter:drop-shadow(0 6px 18px rgba(255,46,99,.35))}
-.word{display:flex;flex-direction:column;line-height:1}
-.w1{font-family:Anton,sans-serif;font-size:34px;letter-spacing:.01em}
-.w1 em{font-style:normal;background:linear-gradient(90deg,#ff2e63,#ff7a59);-webkit-background-clip:text;background-clip:text;color:transparent;margin-left:1px}
-.w2{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:.28em;color:var(--muted);margin-top:5px}
-.live{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 0 rgba(8,217,214,.6);animation:pulse 1.8s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(8,217,214,0)}100%{box-shadow:0 0 0 0 rgba(8,217,214,0)}}
+.logo{display:inline-flex;flex-direction:column;transform:skewX(-8deg);margin-left:6px}
+.bug{display:flex}
+.b1,.b2{font-family:Anton,sans-serif;font-size:32px;line-height:1;padding:7px 13px 3px;letter-spacing:.01em}
+.b1{background:var(--accent);color:#fff}
+.b2{background:#fff;color:#0b0b10}
+.tbar{display:flex;align-items:center;gap:9px;background:var(--accent2);color:#0b0b10;font:900 10px Inter,sans-serif;letter-spacing:.34em;padding:4px 13px}
+.livet{display:flex;align-items:center;gap:5px;background:#0b0b10;color:#fff;padding:2px 6px;letter-spacing:.1em}
+.livet .live{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 6px rgba(255,46,99,0)}0%{box-shadow:0 0 0 0 rgba(255,46,99,.6)}100%{box-shadow:0 0 0 0 rgba(255,46,99,0)}}
+.stamp2{position:absolute;right:12px;bottom:12px;z-index:2;display:flex;transform:skewX(-8deg);font-family:Anton,sans-serif;font-size:13px;line-height:1}
+.stamp2 span{padding:3px 5px 1px}
 .social{display:flex;gap:10px}
 .social a{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;transition:.2s}
 .social a:hover{border-color:var(--accent);color:var(--accent)}
@@ -112,10 +115,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <header>
   <div class="wrap">
     <div class="head">
-      <a class="logo" href="#" aria-label="DHDnews · Newsflys">
-        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e63"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#lg)"/><path d="M13 12h10.5C31.5 12 37 17 37 24s-5.5 12-13.5 12H13z" fill="#fff"/><path d="M19 18v12h4.2c4.3 0 7.3-2.5 7.3-6s-3-6-7.3-6z" fill="url(#lg)"/><circle cx="39" cy="10" r="4.5" fill="#08d9d6" stroke="#0b0b10" stroke-width="2.5"/></svg>
-        <span class="word"><span class="w1">DHD<em>news</em></span><span class="w2"><i class="live"></i>NEWSFLYS</span></span>
-      </a>
+      <a class="logo" href="#" aria-label="DHDNEWS · Dailynews"><span class="bug"><span class="b1">DHD</span><span class="b2">NEWS</span></span><span class="tbar"><span class="livet"><i class="live"></i>LIVE</span>DAILYNEWS</span></a>
       <div class="social">
         <a href="https://www.instagram.com/dhdrecords" target="_blank" rel="noopener">📸 <span class="lbl">Instagram</span></a>
         <a href="https://www.tiktok.com/@dhdrecords" target="_blank" rel="noopener">🎵 <span class="lbl">TikTok</span></a>
@@ -151,9 +151,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="y"></span> DHDnews · Newsflys — DHD Records</span>
+    <span>© <span id="y"></span> DHDNEWS · Dailynews — DHD Records</span>
     <span>Fotos de ambiente: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:var(--accent2)">Unsplash</a> (licencia libre)</span>
-    <span>Fuentes enlazadas en cada noticia · Contacto: hola@newsflys (pendiente)</span>
+    <span>Fuentes enlazadas en cada noticia · Instagram y TikTok: @dhdrecords</span>
   </div>
 </footer>
 
@@ -289,7 +289,7 @@ const $ = s => document.querySelector(s);
 function kwOf(n){ return n.kw || n.title.split(/[:«(]/)[0].split(" ").slice(0,3).join(" "); }
 function card(n){
   const c = CATS[n.cat], rank = NEWS.indexOf(n)+1;
-  const mark = `<svg class="stamp" viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#ff2e63"/><path d="M13 12h10.5C31.5 12 37 17 37 24s-5.5 12-13.5 12H13z" fill="#fff"/><path d="M19 18v12h4.2c4.3 0 7.3-2.5 7.3-6s-3-6-7.3-6z" fill="#ff2e63"/></svg>`;
+  const mark = `<span class="stamp2"><span style="background:var(--accent);color:#fff">DHD</span><span style="background:#fff;color:#0b0b10">NEWS</span></span>`;
   const cover = `<div class="thumb has-img"><img src="${photoFor(n)}" alt="" loading="lazy" onerror="this.remove()"><span class="tint"></span>
       <span class="chip">${ICONS[n.cat]}${c.label.split(" ·")[0]}</span><span class="rank">${rank}</span><span class="kw">${kwOf(n)}</span>${mark}<span class="bar"></span></div>`;
   return `<a class="card" href="${n.url||"#"}" target="_blank" rel="noopener" style="--c:${c.color}">
