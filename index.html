@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHDnews · Newsflys</title>
+<meta name="description" content="DHDnews · Newsflys — noticias diarias de música, gaming, streamers, youtubers, deportes y gossip en 60 segundos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b10; --panel:#14141c; --line:#262633; --text:#f3f3f7; --muted:#9a9aae;
+  --accent:#ff2e63; --accent2:#08d9d6; --yellow:#ffd23f;
+  --musica:#ff2e63; --gaming:#8b5cf6; --youtube:#ff4d4d; --deportes:#22c55e; --gossip:#f59e0b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* Ticker */
+.ticker{background:var(--accent);color:#fff;font-weight:800;font-size:13px;letter-spacing:.04em;overflow:hidden;white-space:nowrap}
+.ticker span{display:inline-block;padding:8px 0;animation:scroll 40s linear infinite}
+@keyframes scroll{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+
+/* Header */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,11,16,.92);backdrop-filter:blur(8px);z-index:10}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.logo{font-family:Anton,sans-serif;font-size:34px;letter-spacing:.02em;line-height:1}
+.logo b{color:var(--accent)}
+.logo small{display:block;font-family:Inter;font-size:10px;font-weight:700;letter-spacing:.3em;color:var(--muted);margin-top:4px}
+.social{display:flex;gap:10px}
+.social a{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;transition:.2s}
+.social a:hover{border-color:var(--accent);color:var(--accent)}
+nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}
+nav button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 16px;font:700 13px Inter;cursor:pointer;white-space:nowrap;transition:.2s}
+nav button.on,nav button:hover{color:#fff;border-color:var(--c,var(--accent));background:color-mix(in srgb,var(--c,var(--accent)) 18%,transparent)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;padding:28px 0}
+.lead{border-radius:18px;padding:32px;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 80% 10%,rgba(255,46,99,.55),transparent 55%),radial-gradient(circle at 10% 90%,rgba(8,217,214,.35),transparent 50%),#1a1020}
+.lead .tag{margin-bottom:12px}
+.lead h1{font-family:Anton,sans-serif;font-size:clamp(30px,4.4vw,52px);line-height:1.05;font-weight:400}
+.lead p{color:#d6d6e0;margin-top:12px;max-width:560px}
+.daily{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.daily h2{font-family:Anton;font-weight:400;font-size:24px;letter-spacing:.02em;display:flex;justify-content:space-between;align-items:baseline}
+.daily h2 span{font-family:Inter;font-size:12px;color:var(--muted);font-weight:500}
+.daily ol{list-style:none;counter-reset:n;margin-top:14px}
+.daily li{counter-increment:n;display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:14px;font-weight:500}
+.daily li::before{content:counter(n);font-family:Anton;font-size:22px;color:var(--accent);line-height:1;min-width:18px}
+
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px;background:var(--c);color:#0b0b10;width:max-content}
+
+/* Grid */
+.sec-title{font-family:Anton;font-weight:400;font-size:28px;margin:12px 0 16px;display:flex;align-items:center;gap:12px}
+.sec-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;padding-bottom:40px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:var(--c)}
+.thumb{height:130px;background:linear-gradient(135deg,var(--c),#0b0b10);display:flex;align-items:center;justify-content:center;font-size:44px}
+.card .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:16px;line-height:1.3;font-weight:800}
+.card p{font-size:13.5px;color:var(--muted);flex:1}
+.meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+.meta a{color:var(--accent2);font-weight:700}
+
+/* Follow band */
+.follow{background:linear-gradient(90deg,var(--accent),#7c3aed);border-radius:18px;padding:28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.follow h2{font-family:Anton;font-weight:400;font-size:30px;line-height:1.1}
+.follow p{opacity:.9;font-size:14px}
+.follow .social a{background:#0b0b10;border-color:#0b0b10;color:#fff}
+
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.empty{color:var(--muted);padding:30px 0}
+
+@media(max-width:820px){.hero{grid-template-columns:1fr}.lead{min-height:280px;padding:24px}.social a .lbl{display:none}}
+</style>
+</head>
+<body>
+
+<div class="ticker"><span id="ticker">⚡ DHDnews · Noticias de música, gaming, youtubers, deportes y gossip — cada día en 60 segundos ⚡</span></div>
+
+<header>
+  <div class="wrap">
+    <div class="head">
+      <a class="logo" href="#">DHD<b>news</b><small>NEWSFLYS</small></a>
+      <div class="social">
+        <a href="https://www.instagram.com/newsflys" target="_blank" rel="noopener">📸 <span class="lbl">Instagram</span></a>
+        <a href="https://www.tiktok.com/@newsflys" target="_blank" rel="noopener">🎵 <span class="lbl">TikTok</span></a>
+      </div>
+    </div>
+    <nav id="nav"></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <a class="lead" id="lead"></a>
+    <aside class="daily">
+      <h2>TOP 10 DE HOY <span id="fecha"></span></h2>
+      <ol id="top5"></ol>
+    </aside>
+  </section>
+
+  <h2 class="sec-title" id="secTitle">ÚLTIMAS NOTICIAS</h2>
+  <section class="grid" id="grid"></section>
+
+  <section class="follow">
+    <div>
+      <h2>EL RESUMEN DIARIO,<br>EN TU FEED</h2>
+      <p>Post, stories y vídeo resumen cada día en Instagram y TikTok.</p>
+    </div>
+    <div class="social">
+      <a href="https://www.instagram.com/newsflys" target="_blank" rel="noopener">📸 @newsflys</a>
+      <a href="https://www.tiktok.com/@newsflys" target="_blank" rel="noopener">🎵 @newsflys</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> DHDnews · Newsflys — DHD Records</span>
+    <span>Fuentes enlazadas en cada noticia · Contacto: hola@newsflys (pendiente)</span>
+  </div>
+</footer>
+
+<script>
+/* ====== CATEGORÍAS ====== */
+const CATS = {
+  todas:    {label:"Todas",            icon:"⚡", color:"#ff2e63"},
+  musica:   {label:"Música",           icon:"🎤", color:"#ff2e63"},
+  gaming:   {label:"Gaming · Streamers",icon:"🎮", color:"#8b5cf6"},
+  youtube:  {label:"Streamers · YouTubers",icon:"▶️", color:"#ff4d4d"},
+  deportes: {label:"Deportes",         icon:"⚽", color:"#22c55e"},
+  gossip:   {label:"Gossip",           icon:"💬", color:"#f59e0b"}
+};
+
+/* ====== NOTICIAS ======
+   Contenido de EJEMPLO para maquetar. En producción, la automatización
+   genera un archivo news.json con este mismo formato y la web lo carga sola. */
+let NEWS = [
+ {
+  "cat": "musica",
+  "destacada": true,
+  "title": "C. Tangana vuelve al rap con «Milko Freestyle»",
+  "text": "Primer single en solitario en unos tres años: un tributo a Milkman en el que habla de paternidad y deja caer que prepara disco nuevo. Del 15 al 18 de noviembre, cuatro noches con Agorazein en el Movistar Arena de Madrid.",
+  "source": "LOS40 / Sopitas",
+  "url": "https://los40.com.mx/2026/11/04/c-tangana-sorprende-con-milko-freestyle-su-nuevo-lanzamiento-despues-de-tres-anos/"
+ },
+ {
+  "cat": "gaming",
+  "title": "GTA 6 sale el 19 de noviembre y la precarga empieza el día 10",
+  "text": "Llega a PS5 y Xbox Series X|S. Para la precarga digital necesitas hasta 212 GB libres.",
+  "source": "ElOtroLado / Instant Gaming",
+  "url": "https://elotrolado.net/noticias/juegos/semana-44-2026"
+ },
+ {
+  "cat": "gaming",
+  "title": "Zelda: Ocarina of Time Remake ya está a la venta en Switch 2",
+  "text": "Salió el 5 de noviembre con gráficos y banda sonora renovados. Forma parte del 40 aniversario de la saga.",
+  "source": "CNN Chile / KCH",
+  "url": "https://www.cnnchile.com/bits/videojuegos-lanzamientos-noviembre-2026-gta-6-zelda-football-manager/"
+ },
+ {
+  "cat": "deportes",
+  "title": "Hoy: Valencia–Real Madrid en Mestalla (21:00, DAZN)",
+  "text": "El Madrid tiene que seguir el ritmo de arriba y el Valencia busca salir del descenso. Es la jornada 12, la última antes del parón de selecciones.",
+  "source": "ElDesmarque / La Grada",
+  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html"
+ },
+ {
+  "cat": "deportes",
+  "title": "Domingo: Atlético–Barça en el Metropolitano (21:00, DAZN)",
+  "text": "El líder visita al Atleti para cerrar la jornada 12 de LaLiga.",
+  "source": "ElDesmarque",
+  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html"
+ },
+ {
+  "cat": "deportes",
+  "title": "Champions: Valverde rescata al Madrid en el 92' (2-3 al AEK)",
+  "text": "Jornada 4: el Barça le hizo un 3-0 al Aston Villa, el PSG un 0-6 al Villarreal y el Atlético cayó 0-2 ante el Bayern.",
+  "source": "UEFA / 365Scores",
+  "url": "https://es.uefa.com/uefachampionsleague/"
+ },
+ {
+  "cat": "deportes",
+  "title": "Premier: el Arsenal puede abrir hueco este fin de semana",
+  "text": "El líder (8 victorias en 9 partidos) recibe al Hull. Si el City pierde en Forest, se queda a 6 puntos antes del parón.",
+  "source": "IOL / Africa Soccer",
+  "url": "https://iol.co.za/sport/soccer/premier-league/2026-11-07-epl-weekend-preview-arsenal-hoping-to-stretch-lead-with-man-city-facing-tricky-trees/"
+ },
+ {
+  "cat": "musica",
+  "title": "Latin Grammy el jueves 12 en Las Vegas",
+  "text": "Edgar Barrera lidera con 10 nominaciones. Entre los primeros confirmados para actuar están Rosalía, Daddy Yankee, Juanes y Anitta.",
+  "source": "CNN en Español / Vanguardia",
+  "url": "https://www.vanguardia.com/entretenimiento/tendencias/2026/10/20/rosalia-daddy-yankee-y-juanes-encabezan-los-artistas-confirmados-para-el-latin-grammy-2026/"
+ },
+ {
+  "cat": "musica",
+  "title": "Viernes de estrenos: Alcalá Norte, Kiko Veneno, Zahara…",
+  "text": "Ha salido el disco «Dejémoslo como estaba» de Alcalá Norte, «Precisamente» de Kiko Veneno, «Spencer» de Zahara y novedades de Vetusta Morla y Leiva.",
+  "source": "Efe Eme / Música Nueva",
+  "url": "https://www.efeeme.com/lanzamientos-discograficos-6-de-noviembre-2/"
+ },
+ {
+  "cat": "youtube",
+  "title": "La Velada del Año se va a Netflix (2027-2029)",
+  "text": "Ibai cerró un acuerdo para emitir en exclusiva las tres próximas ediciones. La audiencia media ha pasado de cerca de 1 millón en 2021 a más de 6 millones en 2026.",
+  "source": "elDiario.es / Bloomberg Línea",
+  "url": "https://www.eldiario.es/vertele/1_cf7d22"
+ }
+];
+
+/* ====== RENDER ====== */
+let current = "todas";
+const $ = s => document.querySelector(s);
+
+function card(n){
+  const c = CATS[n.cat];
+  return `<article class="card" style="--c:${c.color}">
+    <div class="thumb">${n.img ? `<img src="${n.img}" alt="" style="width:100%;height:100%;object-fit:cover">` : c.icon}</div>
+    <div class="body">
+      <span class="tag">${c.label}</span>
+      <h3>${n.title}</h3>
+      <p>${n.text}</p>
+      <div class="meta"><span>${n.source||""}</span><a href="${n.url||"#"}" target="_blank" rel="noopener">Fuente →</a></div>
+    </div></article>`;
+}
+
+function render(){
+  const list = current==="todas" ? NEWS : NEWS.filter(n=>n.cat===current);
+  $("#grid").innerHTML = list.length ? list.map(card).join("") : `<p class="empty">Aún no hay noticias en esta sección hoy.</p>`;
+  $("#secTitle").textContent = current==="todas" ? "ÚLTIMAS NOTICIAS" : CATS[current].label.toUpperCase();
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on", b.dataset.cat===current));
+}
+
+function init(){
+  $("#nav").innerHTML = Object.entries(CATS).map(([k,c]) =>
+    `<button data-cat="${k}" style="--c:${c.color}">${c.icon} ${c.label}</button>`).join("");
+  $("#nav").onclick = e => { const b=e.target.closest("button"); if(b){current=b.dataset.cat; render();} };
+
+  const lead = NEWS.find(n=>n.destacada) || NEWS[0];
+  const lc = CATS[lead.cat];
+  $("#lead").href = lead.url||"#";
+  $("#lead").innerHTML = `<span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
+
+  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li>${CATS[n.cat].icon} ${n.title}</li>`).join("");
+  $("#ticker").textContent = "⚡ " + NEWS.map(n=>n.title).join("   ·   ") + " ⚡";
+  $("#fecha").textContent = new Date().toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"});
+  $("#y").textContent = new Date().getFullYear();
+  render();
+}
+
+/* Si existe news.json junto a la web (generado por la automatización), lo usa */
+fetch("news.json").then(r=>r.ok?r.json():null).then(d=>{ if(Array.isArray(d)&&d.length) NEWS=d; }).catch(()=>{}).finally(init);
+</script>
+</body>
+</html>
