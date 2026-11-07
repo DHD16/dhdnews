@@ -84,7 +84,13 @@ nav button.on,nav button:hover{color:#fff;border-color:var(--c,var(--accent));ba
 .card h3{font-size:16px;line-height:1.3;font-weight:800}
 .card p{font-size:13.5px;color:var(--muted);flex:1}
 .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
-.meta a{color:var(--accent2);font-weight:700}
+.meta .go{color:var(--accent2);font-weight:700}
+.card{cursor:pointer;color:inherit}
+.card:hover .go{text-decoration:underline}
+.daily li a{flex:1;transition:color .15s}
+.daily li a:hover{color:var(--accent)}
+.daily li:hover::before{transform:scale(1.15)}
+.daily li::before{transition:transform .15s}
 
 /* Follow band */
 .follow{background:linear-gradient(90deg,var(--accent),#7c3aed);border-radius:18px;padding:28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:40px}
@@ -286,14 +292,14 @@ function card(n){
   const mark = `<svg class="stamp" viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#ff2e63"/><path d="M13 12h10.5C31.5 12 37 17 37 24s-5.5 12-13.5 12H13z" fill="#fff"/><path d="M19 18v12h4.2c4.3 0 7.3-2.5 7.3-6s-3-6-7.3-6z" fill="#ff2e63"/></svg>`;
   const cover = `<div class="thumb has-img"><img src="${photoFor(n)}" alt="" loading="lazy" onerror="this.remove()"><span class="tint"></span>
       <span class="chip">${ICONS[n.cat]}${c.label.split(" ·")[0]}</span><span class="rank">${rank}</span><span class="kw">${kwOf(n)}</span>${mark}<span class="bar"></span></div>`;
-  return `<article class="card" style="--c:${c.color}">
+  return `<a class="card" href="${n.url||"#"}" target="_blank" rel="noopener" style="--c:${c.color}">
     ${cover}
     <div class="body">
       <span class="tag">${c.label}</span>
       <h3>${n.title}</h3>
       <p>${n.text}</p>
-      <div class="meta"><span>${n.source||""}</span><a href="${n.url||"#"}" target="_blank" rel="noopener">Fuente →</a></div>
-    </div></article>`;
+      <div class="meta"><span>${n.source||""}</span><span class="go">Leer noticia →</span></div>
+    </div></a>`;
 }
 
 function heroBg(n){
@@ -318,7 +324,7 @@ function init(){
   $("#lead").href = lead.url||"#";
   $("#lead").innerHTML = `<span class="wm">${kwOf(lead)}</span><span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
 
-  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li>${CATS[n.cat].icon} ${n.title}</li>`).join("");
+  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li><a href="${n.url||"#"}" target="_blank" rel="noopener">${CATS[n.cat].icon} ${n.title}</a></li>`).join("");
   $("#ticker").textContent = "⚡ " + NEWS.map(n=>n.title).join("   ·   ") + " ⚡";
   $("#fecha").textContent = new Date().toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"});
   $("#y").textContent = new Date().getFullYear();
