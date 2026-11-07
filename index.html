@@ -156,7 +156,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 const CATS = {
   todas:    {label:"Todas",            icon:"⚡", color:"#ff2e63"},
   musica:   {label:"Música",           icon:"🎤", color:"#ff2e63"},
-  gaming:   {label:"Gaming · Streamers",icon:"🎮", color:"#8b5cf6"},
+  gaming:   {label:"Gaming",icon:"🎮", color:"#8b5cf6"},
   youtube:  {label:"Streamers · YouTubers",icon:"▶️", color:"#ff4d4d"},
   deportes: {label:"Deportes",         icon:"⚽", color:"#22c55e"},
   tele:     {label:"Televisión",       icon:"📺", color:"#3b82f6"},
@@ -326,7 +326,7 @@ function init(){
 }
 
 /* Si existe news.json junto a la web (generado por la automatización), lo usa */
-fetch("news.json").then(r=>r.ok?r.json():null).then(d=>{ if(Array.isArray(d)&&d.length) NEWS=d; }).catch(()=>{}).finally(init);
+fetch("news.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{ if(Array.isArray(d)&&d.length) NEWS=d; }).catch(()=>{}).finally(init);
 </script>
 </body>
 </html>
