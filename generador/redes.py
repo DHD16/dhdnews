@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """DHDNEWS · Dailynews · Generador de contenido para redes.
 Lee news.json y crea en contenido/AAAA-MM-DD/:
-  story-1.png, story-2.png  (1080x1920, Instagram/TikTok stories)
-  reel.mp4                  (1080x1920, ~25 s, sin música: se añade el audio en la app)
-Uso: python3 generador/redes.py [ruta_news.json] [fecha AAAA-MM-DD]
+  story-top5.png                     (story con el top 5)
+  story-ultima-1.png, story-ultima-2.png  (formato ÚLTIMAS NOTICIAS, noticias 1 y 2)
+  reel.mp4 (solo con --reel)
+Uso: python3 generador/redes.py [ruta_news.json] [fecha AAAA-MM-DD | -] [--reel]
 """
 import json, os, sys, math, subprocess, shutil, tempfile, datetime
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -130,6 +131,91 @@ def story_lista(news, fecha, desde, titulo, cta):
     d.text(((W-w)/2, 1760+4), cta, font=f, fill=BG)
     return img
 
+
+# ---------- LOGO RÓTULO DE TV ----------
+def bug(img, cx, y, scale=1.0, center=True):
+    """Dibuja el logo DHD|NEWS + barra LIVE DAILYNEWS, inclinado como un rótulo de TV."""
+    fa = font("anton", int(96*scale)); fb = font("black", int(26*scale)); fl = font("black", int(22*scale))
+    tmp = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    pad = int(30*scale)
+    w1 = tmp.textlength("DHD", font=fa) + 2*pad; w2 = tmp.textlength("NEWS", font=fa) + 2*pad
+    h1 = int(118*scale); h2 = int(48*scale)
+    Wl, Hl = int(w1+w2), h1+h2
+    layer = Image.new("RGBA", (Wl+int(60*scale), Hl), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rectangle((0, 0, w1, h1), fill=PINK); d.text((pad, int(8*scale)), "DHD", font=fa, fill="white")
+    d.rectangle((w1, 0, w1+w2, h1), fill="white"); d.text((w1+pad, int(8*scale)), "NEWS", font=fa, fill=BG)
+    d.rectangle((0, h1, Wl, Hl), fill=CYAN)
+    lw = tmp.textlength("LIVE", font=fl) + int(44*scale)
+    d.rectangle((pad*0.6, h1+int(8*scale), pad*0.6+lw, Hl-int(8*scale)), fill=BG)
+    d.ellipse((pad*0.6+int(10*scale), h1+int(19*scale), pad*0.6+int(22*scale), h1+int(31*scale)), fill=PINK)
+    d.text((pad*0.6+int(28*scale), h1+int(11*scale)), "LIVE", font=fl, fill="white")
+    d.text((pad*0.6+lw+int(16*scale), h1+int(9*scale)), "D A I L Y N E W S", font=fb, fill=BG)
+    k = 0.14  # inclinación
+    layer = layer.transform(layer.size, Image.AFFINE, (1, k, -k*Hl, 0, 1, 0), resample=Image.BICUBIC)
+    x = int(cx - layer.width/2) if center else int(cx)
+    img.paste(layer, (x, y), layer)
+    return y + Hl
+
+def story_top5(news, fecha):
+    img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
+    bug(img, W/2, 200, 1.0)
+    ft = font("anton", 130); t = "TOP 5 DE HOY"
+    d.text(((W-d.textlength(t, font=ft))/2, 420), t, font=ft, fill="white")
+    fd = font("black", 32); ftxt = fecha_txt(fecha).upper()
+    d.text(((W-d.textlength(ftxt, font=fd))/2, 585), ftxt, font=fd, fill=CYAN)
+    y = 670
+    for i, n in enumerate(news[:5], start=1):
+        lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+        d.rounded_rectangle((70, y, W-70, y+190), radius=34, fill=(20, 20, 28, 225), outline=(255, 255, 255, 30), width=2)
+        d.rounded_rectangle((70, y, 82, y+190), radius=6, fill=col)
+        d.text((108, y+28), str(i), font=font("anton", 110), fill=col)
+        tx = 108 + 120
+        d.text((tx, y+30), lab, font=font("black", 24), fill=col)
+        kw = (n.get("kw") or n["title"].split(":")[0]).upper()
+        d.text((tx, y+60), kw, font=fit(d, kw, "anton", W-70-tx-30, 64, 40), fill="white")
+        sub = wrap(d, n["title"], font("semi", 27), W-70-tx-30)
+        if sub: d.text((tx, y+138), sub[0] + ("…" if len(sub) > 1 else ""), font=font("semi", 27), fill=(200, 200, 215))
+        y += 212
+    f = font("black", 34); cta = "TODO EL TOP 10 · LINK EN BIO"
+    w = d.textlength(cta, font=f)
+    d.rounded_rectangle(((W-w)/2-40, 1750, (W+w)/2+40, 1822), radius=999, fill="white")
+    d.text(((W-w)/2, 1764), cta, font=f, fill=BG)
+    return img
+
+def story_ultima(n, fecha):
+    lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = background(col); d = ImageDraw.Draw(img, "RGBA")
+    bug(img, W/2, 190, 0.9)
+    # rótulo ÚLTIMA HORA
+    y = 470
+    fu = font("anton", 80); tu = "ÚLTIMAS NOTICIAS"
+    wu = d.textlength(tu, font=fu)
+    d.rectangle((0, y, wu+160, y+128), fill=PINK)
+    d.text((80, y+8), tu, font=fu, fill="white")
+    d.rectangle((wu+160, y, W, y+128), fill=(255, 255, 255, 235))
+    fh = font("black", 34); hora = fecha_txt(fecha).upper()
+    d.text((wu+190, y+44), lab, font=fh, fill=col if col != (255, 255, 255) else BG)
+    y += 180
+    kw = (n.get("kw") or n["title"].split(":")[0]).upper()
+    fk = fit(d, kw, "anton", W-160, 200, 90)
+    for l in wrap(d, kw, fk, W-160)[:2]:
+        d.text((80, y), l, font=fk, fill="white"); y += int(fk.size*1.02)
+    y += 50
+    for l in wrap(d, n["title"], font("black", 54), W-160)[:3]:
+        d.text((80, y), l, font=font("black", 54), fill="white"); y += 68
+    y += 24
+    tl = wrap(d, n.get("text", ""), font("semi", 38), W-160)
+    if len(tl) > 5: tl = tl[:5]; tl[-1] = tl[-1].rstrip(",.;") + "…"
+    for l in tl:
+        d.text((80, y), l, font=font("semi", 38), fill=(215, 215, 228)); y += 52
+    d.text((80, 1660), "Fuente: " + n.get("source", "") + "  ·  " + hora.lower(), font=font("semi", 28), fill=(160, 160, 180))
+    f = font("black", 34); cta = "MÁS INFO · LINK EN BIO"
+    w = d.textlength(cta, font=f)
+    d.rounded_rectangle(((W-w)/2-40, 1750, (W+w)/2+40, 1822), radius=999, fill="white")
+    d.text(((W-w)/2, 1764), cta, font=f, fill=BG)
+    return img
+
 # ---------- REEL ----------
 def slide_intro(fecha):
     img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
@@ -195,13 +281,16 @@ def make_reel(slides_durs, out):
 
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "news.json")
-    fecha = datetime.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else datetime.date.today()
+    fecha = datetime.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2] != "-" else datetime.date.today()
+    reel = "--reel" in sys.argv
     news = json.load(open(src))
     out = os.path.join(ROOT, "contenido", fecha.isoformat()); os.makedirs(out, exist_ok=True)
-    story_lista(news, fecha, 0, "TOP 10 HOY", "DESLIZA PARA EL 6–10 →").save(os.path.join(out, "story-1.png"))
-    story_lista(news, fecha, 5, "DEL 6 AL 10", "LINK EN BIO · dhd16.github.io/dhdnews").save(os.path.join(out, "story-2.png"))
-    slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
-    make_reel(slides, os.path.join(out, "reel.mp4"))
+    story_top5(news, fecha).save(os.path.join(out, "story-top5.png"))
+    story_ultima(news[0], fecha).save(os.path.join(out, "story-ultima-1.png"))
+    story_ultima(news[1], fecha).save(os.path.join(out, "story-ultima-2.png"))
+    if reel:
+        slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
+        make_reel(slides, os.path.join(out, "reel.mp4"))
     print("OK", out)
 
 if __name__ == "__main__":
