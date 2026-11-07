@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DHDnews · Newsflys</title>
 <meta name="description" content="DHDnews · Newsflys — noticias diarias de música, gaming, streamers, youtubers, deportes y gossip en 60 segundos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2213%22 fill=%22%23ff2e63%22/%3E%3Cpath d=%22M13 12h10.5C31.5 12 37 17 37 24s-5.5 12-13.5 12H13z%22 fill=%22white%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -26,9 +27,14 @@ a{color:inherit;text-decoration:none}
 /* Header */
 header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,11,16,.92);backdrop-filter:blur(8px);z-index:10}
 .head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.logo{font-family:Anton,sans-serif;font-size:34px;letter-spacing:.02em;line-height:1}
-.logo b{color:var(--accent)}
-.logo small{display:block;font-family:Inter;font-size:10px;font-weight:700;letter-spacing:.3em;color:var(--muted);margin-top:4px}
+.logo{display:flex;align-items:center;gap:12px}
+.mark{width:46px;height:46px;flex:none;filter:drop-shadow(0 6px 18px rgba(255,46,99,.35))}
+.word{display:flex;flex-direction:column;line-height:1}
+.w1{font-family:Anton,sans-serif;font-size:34px;letter-spacing:.01em}
+.w1 em{font-style:normal;background:linear-gradient(90deg,#ff2e63,#ff7a59);-webkit-background-clip:text;background-clip:text;color:transparent;margin-left:1px}
+.w2{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:.28em;color:var(--muted);margin-top:5px}
+.live{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 0 rgba(8,217,214,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(8,217,214,0)}100%{box-shadow:0 0 0 0 rgba(8,217,214,0)}}
 .social{display:flex;gap:10px}
 .social a{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;transition:.2s}
 .social a:hover{border-color:var(--accent);color:var(--accent)}
@@ -41,6 +47,8 @@ nav button.on,nav button:hover{color:#fff;border-color:var(--c,var(--accent));ba
 .lead{border-radius:18px;padding:32px;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;
   background:radial-gradient(circle at 80% 10%,rgba(255,46,99,.55),transparent 55%),radial-gradient(circle at 10% 90%,rgba(8,217,214,.35),transparent 50%),#1a1020}
 .lead .tag{margin-bottom:12px}
+.lead .wm{position:absolute;right:-10px;top:-20px;font-family:Anton;font-size:clamp(90px,14vw,190px);line-height:.85;text-transform:uppercase;color:rgba(255,255,255,.07);text-align:right;pointer-events:none;max-width:95%}
+.lead > *{position:relative}
 .lead h1{font-family:Anton,sans-serif;font-size:clamp(30px,4.4vw,52px);line-height:1.05;font-weight:400}
 .lead p{color:#d6d6e0;margin-top:12px;max-width:560px}
 .daily{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
@@ -58,7 +66,14 @@ nav button.on,nav button:hover{color:#fff;border-color:var(--c,var(--accent));ba
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;padding-bottom:40px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
 .card:hover{transform:translateY(-3px);border-color:var(--c)}
-.thumb{height:130px;background:linear-gradient(135deg,var(--c),#0b0b10);display:flex;align-items:center;justify-content:center;font-size:44px}
+.thumb{position:relative;height:160px;overflow:hidden;
+  background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px),radial-gradient(circle at 85% 15%,color-mix(in srgb,var(--c) 90%,#fff 10%),transparent 60%),linear-gradient(160deg,color-mix(in srgb,var(--c) 75%,#000),#0b0b10 85%)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,16,.9),transparent 60%)}
+.thumb .ico{position:absolute;right:-14px;bottom:-18px;width:130px;height:130px;color:#fff;opacity:.16;transform:rotate(-12deg)}
+.thumb .rank{position:absolute;top:8px;right:14px;font-family:Anton;font-size:54px;line-height:1;color:rgba(255,255,255,.22);z-index:1}
+.thumb .kw{position:absolute;left:16px;right:70px;bottom:14px;font-family:Anton;font-size:38px;line-height:.95;text-transform:uppercase;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.45);z-index:1}
+.thumb .brand{position:absolute;top:12px;left:14px;font:800 10px Inter;letter-spacing:.2em;color:rgba(255,255,255,.75);z-index:1}
 .card .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .card h3{font-size:16px;line-height:1.3;font-weight:800}
 .card p{font-size:13.5px;color:var(--muted);flex:1}
@@ -85,7 +100,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <header>
   <div class="wrap">
     <div class="head">
-      <a class="logo" href="#">DHD<b>news</b><small>NEWSFLYS</small></a>
+      <a class="logo" href="#" aria-label="DHDnews · Newsflys">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e63"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#lg)"/><path d="M13 12h10.5C31.5 12 37 17 37 24s-5.5 12-13.5 12H13z" fill="#fff"/><path d="M19 18v12h4.2c4.3 0 7.3-2.5 7.3-6s-3-6-7.3-6z" fill="url(#lg)"/><circle cx="39" cy="10" r="4.5" fill="#08d9d6" stroke="#0b0b10" stroke-width="2.5"/></svg>
+        <span class="word"><span class="w1">DHD<em>news</em></span><span class="w2"><i class="live"></i>NEWSFLYS · AL VUELO</span></span>
+      </a>
       <div class="social">
         <a href="https://www.instagram.com/newsflys" target="_blank" rel="noopener">📸 <span class="lbl">Instagram</span></a>
         <a href="https://www.tiktok.com/@newsflys" target="_blank" rel="noopener">🎵 <span class="lbl">TikTok</span></a>
@@ -137,6 +155,14 @@ const CATS = {
   gossip:   {label:"Gossip",           icon:"💬", color:"#f59e0b"}
 };
 
+const ICONS = {
+  musica:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"/></svg>',
+  gaming:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 6h10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.3 2.1L14.5 15h-5l-1.2 1.6A3.5 3.5 0 0 1 2 14.5V11a5 5 0 0 1 5-5zm1 3H6.5v1.5H5V12h1.5v1.5H8V12h1.5v-1.5H8zm8.5 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>',
+  youtube:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 5 12 5 12 5s-6 0-7.7.3a2.7 2.7 0 0 0-1.9 1.9C2 8.9 2 12 2 12s0 3.1.4 4.8a2.7 2.7 0 0 0 1.9 1.9C6 19 12 19 12 19s6 0 7.7-.3a2.7 2.7 0 0 0 1.9-1.9c.4-1.7.4-4.8.4-4.8s0-3.1-.4-4.8zM10 15V9l5.2 3z"/></svg>',
+  deportes:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 3.3 2.7-1a8 8 0 0 1 3.6 2.8l-.7 2.8-2.6.9L13 8.6zm-4.7-1 2.7 1v3.3L8 10.8l-2.6-.9-.7-2.8a8 8 0 0 1 3.6-2.8zM5.6 17.2 4.2 15a8 8 0 0 1-.2-4l2.1-1.6 2.6.9.9 3.3-1.6 2.3zm8.9 2.6a8 8 0 0 1-5 0l-1-2.3 1.6-2.3h3.8l1.6 2.3zm3.9-2.6-2.5.3-1.6-2.3.9-3.3 2.6-.9L19.9 11a8 8 0 0 1-.2 4z"/></svg>',
+  gossip:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm3 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>'
+};
+
 /* ====== NOTICIAS ======
    Contenido de EJEMPLO para maquetar. En producción, la automatización
    genera un archivo news.json con este mismo formato y la web lo carga sola. */
@@ -147,70 +173,80 @@ let NEWS = [
   "title": "C. Tangana vuelve al rap con «Milko Freestyle»",
   "text": "Primer single en solitario en unos tres años: un tributo a Milkman en el que habla de paternidad y deja caer que prepara disco nuevo. Del 15 al 18 de noviembre, cuatro noches con Agorazein en el Movistar Arena de Madrid.",
   "source": "LOS40 / Sopitas",
-  "url": "https://los40.com.mx/2026/11/04/c-tangana-sorprende-con-milko-freestyle-su-nuevo-lanzamiento-despues-de-tres-anos/"
+  "url": "https://los40.com.mx/2026/11/04/c-tangana-sorprende-con-milko-freestyle-su-nuevo-lanzamiento-despues-de-tres-anos/",
+  "kw": "C. Tangana"
  },
  {
   "cat": "gaming",
   "title": "GTA 6 sale el 19 de noviembre y la precarga empieza el día 10",
   "text": "Llega a PS5 y Xbox Series X|S. Para la precarga digital necesitas hasta 212 GB libres.",
   "source": "ElOtroLado / Instant Gaming",
-  "url": "https://elotrolado.net/noticias/juegos/semana-44-2026"
+  "url": "https://elotrolado.net/noticias/juegos/semana-44-2026",
+  "kw": "GTA 6"
  },
  {
   "cat": "gaming",
   "title": "Zelda: Ocarina of Time Remake ya está a la venta en Switch 2",
   "text": "Salió el 5 de noviembre con gráficos y banda sonora renovados. Forma parte del 40 aniversario de la saga.",
   "source": "CNN Chile / KCH",
-  "url": "https://www.cnnchile.com/bits/videojuegos-lanzamientos-noviembre-2026-gta-6-zelda-football-manager/"
+  "url": "https://www.cnnchile.com/bits/videojuegos-lanzamientos-noviembre-2026-gta-6-zelda-football-manager/",
+  "kw": "Ocarina"
  },
  {
   "cat": "deportes",
   "title": "Hoy: Valencia–Real Madrid en Mestalla (21:00, DAZN)",
   "text": "El Madrid tiene que seguir el ritmo de arriba y el Valencia busca salir del descenso. Es la jornada 12, la última antes del parón de selecciones.",
   "source": "ElDesmarque / La Grada",
-  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html"
+  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html",
+  "kw": "Mestalla"
  },
  {
   "cat": "deportes",
   "title": "Domingo: Atlético–Barça en el Metropolitano (21:00, DAZN)",
   "text": "El líder visita al Atleti para cerrar la jornada 12 de LaLiga.",
   "source": "ElDesmarque",
-  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html"
+  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261012/horarios-fechas-tv-jornada-12-laliga-ea-sports_18_020410882.html",
+  "kw": "Atleti–Barça"
  },
  {
   "cat": "deportes",
   "title": "Champions: Valverde rescata al Madrid en el 92' (2-3 al AEK)",
   "text": "Jornada 4: el Barça le hizo un 3-0 al Aston Villa, el PSG un 0-6 al Villarreal y el Atlético cayó 0-2 ante el Bayern.",
   "source": "UEFA / 365Scores",
-  "url": "https://es.uefa.com/uefachampionsleague/"
+  "url": "https://es.uefa.com/uefachampionsleague/",
+  "kw": "Valverde 92'"
  },
  {
   "cat": "deportes",
   "title": "Premier: el Arsenal puede abrir hueco este fin de semana",
   "text": "El líder (8 victorias en 9 partidos) recibe al Hull. Si el City pierde en Forest, se queda a 6 puntos antes del parón.",
   "source": "IOL / Africa Soccer",
-  "url": "https://iol.co.za/sport/soccer/premier-league/2026-11-07-epl-weekend-preview-arsenal-hoping-to-stretch-lead-with-man-city-facing-tricky-trees/"
+  "url": "https://iol.co.za/sport/soccer/premier-league/2026-11-07-epl-weekend-preview-arsenal-hoping-to-stretch-lead-with-man-city-facing-tricky-trees/",
+  "kw": "Premier"
  },
  {
   "cat": "musica",
   "title": "Latin Grammy el jueves 12 en Las Vegas",
   "text": "Edgar Barrera lidera con 10 nominaciones. Entre los primeros confirmados para actuar están Rosalía, Daddy Yankee, Juanes y Anitta.",
   "source": "CNN en Español / Vanguardia",
-  "url": "https://www.vanguardia.com/entretenimiento/tendencias/2026/10/20/rosalia-daddy-yankee-y-juanes-encabezan-los-artistas-confirmados-para-el-latin-grammy-2026/"
+  "url": "https://www.vanguardia.com/entretenimiento/tendencias/2026/10/20/rosalia-daddy-yankee-y-juanes-encabezan-los-artistas-confirmados-para-el-latin-grammy-2026/",
+  "kw": "Latin Grammy"
  },
  {
   "cat": "musica",
   "title": "Viernes de estrenos: Alcalá Norte, Kiko Veneno, Zahara…",
   "text": "Ha salido el disco «Dejémoslo como estaba» de Alcalá Norte, «Precisamente» de Kiko Veneno, «Spencer» de Zahara y novedades de Vetusta Morla y Leiva.",
   "source": "Efe Eme / Música Nueva",
-  "url": "https://www.efeeme.com/lanzamientos-discograficos-6-de-noviembre-2/"
+  "url": "https://www.efeeme.com/lanzamientos-discograficos-6-de-noviembre-2/",
+  "kw": "Estrenos"
  },
  {
   "cat": "youtube",
   "title": "La Velada del Año se va a Netflix (2027-2029)",
   "text": "Ibai cerró un acuerdo para emitir en exclusiva las tres próximas ediciones. La audiencia media ha pasado de cerca de 1 millón en 2021 a más de 6 millones en 2026.",
   "source": "elDiario.es / Bloomberg Línea",
-  "url": "https://www.eldiario.es/vertele/1_cf7d22"
+  "url": "https://www.eldiario.es/vertele/1_cf7d22",
+  "kw": "La Velada"
  }
 ];
 
@@ -218,10 +254,14 @@ let NEWS = [
 let current = "todas";
 const $ = s => document.querySelector(s);
 
+function kwOf(n){ return n.kw || n.title.split(/[:«(]/)[0].split(" ").slice(0,3).join(" "); }
 function card(n){
-  const c = CATS[n.cat];
+  const c = CATS[n.cat], rank = NEWS.indexOf(n)+1;
+  const cover = n.img
+    ? `<div class="thumb has-img"><img src="${n.img}" alt="" loading="lazy"><span class="rank">${rank}</span><span class="kw">${kwOf(n)}</span></div>`
+    : `<div class="thumb"><span class="brand">DHDNEWS</span><span class="rank">${rank}</span>${ICONS[n.cat].replace('<svg','<svg class="ico"')}<span class="kw">${kwOf(n)}</span></div>`;
   return `<article class="card" style="--c:${c.color}">
-    <div class="thumb">${n.img ? `<img src="${n.img}" alt="" style="width:100%;height:100%;object-fit:cover">` : c.icon}</div>
+    ${cover}
     <div class="body">
       <span class="tag">${c.label}</span>
       <h3>${n.title}</h3>
@@ -245,7 +285,7 @@ function init(){
   const lead = NEWS.find(n=>n.destacada) || NEWS[0];
   const lc = CATS[lead.cat];
   $("#lead").href = lead.url||"#";
-  $("#lead").innerHTML = `<span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
+  $("#lead").innerHTML = `<span class="wm">${kwOf(lead)}</span><span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
 
   $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li>${CATS[n.cat].icon} ${n.title}</li>`).join("");
   $("#ticker").textContent = "⚡ " + NEWS.map(n=>n.title).join("   ·   ") + " ⚡";
