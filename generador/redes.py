@@ -216,6 +216,88 @@ def story_ultima(n, fecha):
     d.text(((W-w)/2, 1764), cta, font=f, fill=BG)
     return img
 
+
+def photo_for(news, idx):
+    n = news[idx]
+    k = sum(1 for m in news[:idx] if m["cat"] == n["cat"])
+    folder = os.path.join(ROOT, "fotos", n["cat"])
+    files = sorted(f for f in os.listdir(folder) if f.endswith(".jpg")) if os.path.isdir(folder) else []
+    return os.path.join(folder, files[k % len(files)]) if files else None
+
+def cover(im, w, h):
+    r = max(w/im.width, h/im.height)
+    im = im.resize((int(im.width*r)+1, int(im.height*r)+1), Image.LANCZOS)
+    l, t = (im.width-w)//2, (im.height-h)//2
+    return im.crop((l, t, l+w, t+h))
+
+def mini_bug(img, x, y, size=34):
+    f = font("anton", size); d0 = ImageDraw.Draw(Image.new("RGB", (5, 5)))
+    p = int(size*0.32); w1 = d0.textlength("DHD", font=f)+2*p; w2 = d0.textlength("NEWS", font=f)+2*p; h = int(size*1.25)
+    lay = Image.new("RGBA", (int(w1+w2)+20, h), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    d.rectangle((0, 0, w1, h), fill=PINK); d.text((p, int(size*0.08)), "DHD", font=f, fill="white")
+    d.rectangle((w1, 0, w1+w2, h), fill="white"); d.text((w1+p, int(size*0.08)), "NEWS", font=f, fill=BG)
+    lay = lay.transform(lay.size, Image.AFFINE, (1, 0.14, -0.14*h, 0, 1, 0), resample=Image.BICUBIC)
+    img.paste(lay, (int(x - lay.width), y), lay)
+
+def story_card(news, idx, fecha):
+    n = news[idx]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = Image.new("RGB", (W, H), BG)
+    glow = Image.new("RGB", (W, H), BG); ImageDraw.Draw(glow).ellipse((W*0.3, -H*0.2, W*1.5, H*0.35), fill=col)
+    img = Image.blend(img, glow.filter(ImageFilter.GaussianBlur(240)), 0.55)
+    d = ImageDraw.Draw(img, "RGBA")
+    bug(img, W/2, 120, 0.85)
+    fh = font("anton", 78); t = "ÚLTIMAS NOTICIAS"
+    d.text((60, 345), t, font=fh, fill="white")
+    tw = d.textlength(t, font=fh); d.rectangle((60+tw+24, 392, W-60, 396), fill=(255, 255, 255, 70))
+    X0, X1, Y0, PH, Y1 = 50, W-50, 470, 640, 1800
+    CW = X1-X0
+    d.rounded_rectangle((X0, Y0, X1, Y1), radius=44, fill=(22, 22, 31), outline=(255, 255, 255, 28), width=2)
+    # foto
+    ph = photo_for(news, idx)
+    pic = cover(Image.open(ph).convert("RGB"), CW, PH) if ph else Image.new("RGB", (CW, PH), col)
+    tint = Image.new("RGBA", (CW, PH), (0, 0, 0, 0)); td = ImageDraw.Draw(tint)
+    for yy in range(PH):
+        a = int(235 * max(0, (yy - PH*0.35) / (PH*0.65)) ** 1.3)
+        td.line([(0, yy), (CW, yy)], fill=(11, 11, 16, a))
+    diag = Image.new("RGBA", (CW, PH), col + (0,)); dd = ImageDraw.Draw(diag)
+    for xx in range(CW):
+        dd.line([(xx, 0), (xx, PH)], fill=col + (int(120*max(0, 1 - xx/(CW*0.6))),))
+    pic = Image.alpha_composite(Image.alpha_composite(pic.convert("RGBA"), diag), tint)
+    mask = Image.new("L", (CW, PH), 0); ImageDraw.Draw(mask).rounded_rectangle((0, 0, CW, PH+60), radius=44, fill=255)
+    img.paste(pic.convert("RGB"), (X0, Y0), mask)
+    d = ImageDraw.Draw(img, "RGBA")
+    # chip arriba
+    fc = font("black", 30); cw = d.textlength(lab, font=fc)
+    d.rounded_rectangle((X0+30, Y0+30, X0+30+cw+92, Y0+30+66), radius=999, fill=(11, 11, 16, 190), outline=(255, 255, 255, 50), width=2)
+    d.ellipse((X0+42, Y0+42, X0+84, Y0+84), fill=col)
+    d.text((X0+100, Y0+45), lab, font=fc, fill="white")
+    # palabra clave + sello + barra
+    kw = (n.get("kw") or n["title"].split(":")[0]).upper()
+    fk = fit(d, kw, "anton", CW-60-230, 170, 80)
+    d.text((X0+34, Y0+PH-30-fk.size*1.05), kw, font=fk, fill="white")
+    mini_bug(img, X1-28, Y0+PH-80, 40)
+    d.rectangle((X0, Y0+PH-10, X1, Y0+PH), fill=col)
+    # cuerpo
+    y = Y0+PH+40
+    fl = font("black", 30); lw = d.textlength(lab, font=fl)
+    d.rounded_rectangle((X0+40, y, X0+40+lw+48, y+60), radius=14, fill=col)
+    d.text((X0+64, y+12), lab, font=fl, fill=BG if n["cat"] in ("tele", "gossip", "deportes") else "white")
+    y += 96
+    ft = font("black", 60)
+    for l in wrap(d, n["title"], ft, CW-80)[:3]:
+        d.text((X0+40, y), l, font=ft, fill="white"); y += 74
+    y += 18
+    fx = font("semi", 38); tl = wrap(d, n.get("text", ""), fx, CW-80)
+    maxl = max(2, min(6, (Y1-150-y)//54))
+    if len(tl) > maxl: tl = tl[:maxl]; tl[-1] = tl[-1].rstrip(",.;") + "…"
+    for l in tl:
+        d.text((X0+40, y), l, font=fx, fill=(170, 170, 190)); y += 54
+    d.line([(X0+40, Y1-110), (X1-40, Y1-110)], fill=(255, 255, 255, 40), width=2)
+    d.text((X0+40, Y1-80), n.get("source", ""), font=font("semi", 32), fill=(160, 160, 180))
+    go = "Leer noticia · link en bio →"; fg = font("black", 32)
+    d.text((X1-40-d.textlength(go, font=fg), Y1-80), go, font=fg, fill=CYAN)
+    return img
+
 # ---------- REEL ----------
 def slide_intro(fecha):
     img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
@@ -286,8 +368,8 @@ def main():
     news = json.load(open(src))
     out = os.path.join(ROOT, "contenido", fecha.isoformat()); os.makedirs(out, exist_ok=True)
     story_top5(news, fecha).save(os.path.join(out, "story-top5.png"))
-    story_ultima(news[0], fecha).save(os.path.join(out, "story-ultima-1.png"))
-    story_ultima(news[1], fecha).save(os.path.join(out, "story-ultima-2.png"))
+    story_card(news, 0, fecha).save(os.path.join(out, "story-ultima-1.png"))
+    story_card(news, 1, fecha).save(os.path.join(out, "story-ultima-2.png"))
     if reel:
         slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
         make_reel(slides, os.path.join(out, "reel.mp4"))
