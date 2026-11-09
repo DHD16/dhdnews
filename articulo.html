@@ -46,6 +46,11 @@ h1{font-size:clamp(30px,4.6vw,46px);line-height:1.12;font-weight:900;letter-spac
 .body p{font-size:18.5px;line-height:1.75;color:#e4e4ec;margin-bottom:22px}
 .body p:first-child::first-letter{font-family:Anton,sans-serif;float:left;font-size:74px;line-height:.85;padding:6px 10px 0 0;color:var(--c,var(--accent))}
 .body strong{color:#fff}
+.credit{position:absolute;right:14px;top:14px;z-index:2;background:rgba(11,11,16,.6);backdrop-filter:blur(6px);border-radius:999px;padding:5px 11px;font-size:11.5px;font-weight:700;color:#e8e8f0}
+.credit a,figcaption a{color:var(--accent2)}
+figure{margin:6px 0 28px}
+figure img{width:100%;border-radius:16px;display:block}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .fuente{margin-top:6px;padding:14px 18px;border-left:4px solid var(--c,var(--accent));background:var(--panel);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--muted)}
 .fuente strong{color:var(--text)}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
@@ -99,7 +104,7 @@ if (!/^[a-z0-9-]+$/.test(id)) {
     document.querySelector('meta[name=description]').content = a.subtitle || a.title;
     document.getElementById("app").innerHTML = `
       <section class="hero" style="--c:${c.color}">
-        <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="" onerror="this.remove()">
+        <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="${esc(a.imgAlt||"")}" style="object-position:center 30%" onerror="this.remove()">${a.imgCredit ? `<span class="credit">Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}</span>` : ""}
         <div class="wrap">
           <div class="badges"><span class="chip cat">${c.label}</span></div>
           <div class="kw">${esc(a.kw || "")}</div>
@@ -109,7 +114,7 @@ if (!/^[a-z0-9-]+$/.test(id)) {
         <h1>${esc(a.title)}</h1>
         ${a.subtitle ? `<p class="sub">${esc(a.subtitle)}</p>` : ""}
         <div class="meta"><span class="av">DHD</span><span>Por <strong>${esc(a.author || "Diego D. Hidalgo")}</strong> · DHDNEWS<br>${fecha(a.date)}</span></div>
-        <div class="body">${(a.body||[]).map(p => `<p>${rich(p)}</p>`).join("")}</div>
+        <div class="body">${(a.body||[]).map((p,i) => `<p>${rich(p)}</p>` + (a.img && a.figureAfter === i ? `<figure><img src="${esc(a.img)}" alt="${esc(a.imgAlt||"")}" loading="lazy"><figcaption>${esc(a.kw||"")}${a.imgCredit ? ` · Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}` : ""}</figcaption></figure>` : "")).join("")}</div>
         <p class="fuente">Fuente: <strong>Artículo DHDNEWS</strong> · ${esc(a.author || "Diego D. Hidalgo")}</p>
         ${a.tags ? `<div class="tags">${a.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
         <div class="share">
