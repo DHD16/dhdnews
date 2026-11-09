@@ -275,7 +275,7 @@ def mini_bug(img, x, y, size=34):
     lay = lay.transform(lay.size, Image.AFFINE, (1, 0.14, -0.14*h, 0, 1, 0), resample=Image.BICUBIC)
     img.paste(lay, (int(x - lay.width), y), lay)
 
-def story_card(news, idx, fecha):
+def story_card(news, idx, fecha, mention=None, cta="LEE LA NOTICIA"):
     n = news[idx]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
     img = Image.new("RGB", (W, H), BG)
     glow = Image.new("RGB", (W, H), BG); ImageDraw.Draw(glow).ellipse((W*0.3, -H*0.2, W*1.5, H*0.35), fill=col)
@@ -312,6 +312,10 @@ def story_card(news, idx, fecha):
     fk = fit(d, kw, "anton", CW-60-230, 170, 80)
     d.text((X0+34, Y0+PH-30-fk.size*1.05), kw, font=fk, fill="white")
     mini_bug(img, X1-28, Y0+PH-80, 40)
+    if mention:
+        fm = font("black", 30); mw = d.textlength(mention, font=fm)
+        d.rounded_rectangle((X1-30-mw-40, Y0+30, X1-30, Y0+96), radius=999, fill=(255, 255, 255, 235))
+        d.text((X1-30-mw-20, Y0+45), mention, font=fm, fill=BG)
     d.rectangle((X0, Y0+PH-10, X1, Y0+PH), fill=col)
     # cuerpo
     y = Y0+PH+40
@@ -334,7 +338,7 @@ def story_card(news, idx, fecha):
     d.text((X0+40, Y1-80), n.get("source", ""), font=font("semi", 32), fill=(160, 160, 180))
     go = "Leer noticia →"; fg = font("black", 32)
     d.text((X1-40-d.textlength(go, font=fg), Y1-80), go, font=fg, fill=CYAN)
-    cta_sticker(img, 1700, "LEE LA NOTICIA", "link en bio · dhd16.github.io/dhdnews")
+    cta_sticker(img, 1700, cta, "link en bio · dhd16.github.io/dhdnews")
     return img
 
 # ---------- REEL ----------
