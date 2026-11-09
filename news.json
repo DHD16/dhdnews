@@ -21,8 +21,9 @@
   "kw": "Playacoco",
   "title": "Playacoco estrena «Migajero» el 27 de noviembre",
   "text": "El dúo canario vuelve con un single sobre esa persona que vive pendiente del móvil esperando un mensaje. Es el primer adelanto de su próximo álbum, que llegará en 2027.",
-  "source": "DHDNEWS · Dailynews",
-  "url": "https://dhd16.github.io/dhdnews/"
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=playacoco-migajero",
+  "own": true
  },
  {
   "cat": "gaming",

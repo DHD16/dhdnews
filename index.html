@@ -87,6 +87,11 @@ nav button.on,nav button:hover{color:#fff;border-color:var(--c,var(--accent));ba
 .card h3{font-size:16px;line-height:1.3;font-weight:800}
 .card p{font-size:13.5px;color:var(--muted);flex:1}
 .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+.tags-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.owntag{display:inline-flex;align-items:center;gap:5px;background:#fff;color:#0b0b10;font:900 10.5px Inter;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:6px}
+.owntag b{background:var(--accent);color:#fff;padding:1px 4px;border-radius:3px;transform:skewX(-8deg);display:inline-block}
+.owntag.sm{padding:2px 4px;margin-left:6px;vertical-align:middle}
+.card.own{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
 .meta .go{color:var(--accent2);font-weight:700}
 .card{cursor:pointer;color:inherit}
 .card:hover .go{text-decoration:underline}
@@ -287,18 +292,20 @@ let current = "todas";
 const $ = s => document.querySelector(s);
 
 function kwOf(n){ return n.kw || n.title.split(/[:«(]/)[0].split(" ").slice(0,3).join(" "); }
+function isOwn(n){ return !!n.own || (n.url||"").startsWith("articulo.html"); }
+function linkAttrs(n){ return isOwn(n) ? `href="${n.url}"` : `href="${n.url||"#"}" target="_blank" rel="noopener"`; }
 function card(n){
   const c = CATS[n.cat], rank = NEWS.indexOf(n)+1;
   const mark = `<span class="stamp2"><span style="background:var(--accent);color:#fff">DHD</span><span style="background:#fff;color:#0b0b10">NEWS</span></span>`;
   const cover = `<div class="thumb has-img"><img src="${photoFor(n)}" alt="" loading="lazy" onerror="this.remove()"><span class="tint"></span>
       <span class="chip">${ICONS[n.cat]}${c.label.split(" ·")[0]}</span><span class="rank">${rank}</span><span class="kw">${kwOf(n)}</span>${mark}<span class="bar"></span></div>`;
-  return `<a class="card" href="${n.url||"#"}" target="_blank" rel="noopener" style="--c:${c.color}">
+  return `<a class="card${isOwn(n)?" own":""}" ${linkAttrs(n)} style="--c:${c.color}">
     ${cover}
     <div class="body">
-      <span class="tag">${c.label}</span>
+      <span class="tags-row"><span class="tag">${c.label}</span>${isOwn(n)?`<span class="owntag"><b>DHD</b> Artículo propio</span>`:""}</span>
       <h3>${n.title}</h3>
       <p>${n.text}</p>
-      <div class="meta"><span>${n.source||""}</span><span class="go">Leer noticia →</span></div>
+      <div class="meta"><span>${n.source||""}</span><span class="go">${isOwn(n)?"Leer artículo →":"Leer noticia →"}</span></div>
     </div></a>`;
 }
 
@@ -324,7 +331,7 @@ function init(){
   $("#lead").href = lead.url||"#";
   $("#lead").innerHTML = `<span class="wm">${kwOf(lead)}</span><span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
 
-  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li><a href="${n.url||"#"}" target="_blank" rel="noopener">${CATS[n.cat].icon} ${n.title}</a></li>`).join("");
+  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li><a ${linkAttrs(n)}>${CATS[n.cat].icon} ${n.title}${isOwn(n)?' <span class="owntag sm"><b>DHD</b></span>':""}</a></li>`).join("");
   $("#ticker").textContent = "⚡ " + NEWS.map(n=>n.title).join("   ·   ") + " ⚡";
   $("#fecha").textContent = new Date().toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"});
   $("#y").textContent = new Date().getFullYear();

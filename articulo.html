@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHDNEWS · Dailynews</title>
+<meta name="description" content="Artículo de DHDNEWS · Dailynews">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2210%22 fill=%22%23ff2e63%22/%3E%3Crect y=%2230%22 width=%2248%22 height=%2218%22 fill=%22%2308d9d6%22/%3E%3Ctext x=%2224%22 y=%2226%22 text-anchor=%22middle%22 font-family=%22Arial Black,Impact%22 font-size=%2219%22 fill=%22white%22%3EDHD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b10;--panel:#14141c;--line:#262633;--text:#f3f3f7;--muted:#9a9aae;--accent:#ff2e63;--accent2:#08d9d6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,11,16,.92);backdrop-filter:blur(8px);z-index:10}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.logo{display:inline-flex;flex-direction:column;transform:skewX(-8deg);margin-left:6px}
+.bug{display:flex}
+.b1,.b2{font-family:Anton,sans-serif;font-size:30px;line-height:1;padding:7px 13px 3px}
+.b1{background:var(--accent);color:#fff}.b2{background:#fff;color:#0b0b10}
+.tbar{display:flex;align-items:center;gap:9px;background:var(--accent2);color:#0b0b10;font:900 10px Inter,sans-serif;letter-spacing:.34em;padding:4px 13px}
+.livet{display:flex;align-items:center;gap:5px;background:#0b0b10;color:#fff;padding:2px 6px;letter-spacing:.1em}
+.livet i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.back{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:800;transition:.2s}
+.back:hover{border-color:var(--accent);color:var(--accent)}
+
+.hero{position:relative;min-height:420px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:4px solid var(--c,var(--accent))}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,16,.96) 5%,rgba(11,11,16,.45) 55%,rgba(11,11,16,.15)),linear-gradient(110deg,color-mix(in srgb,var(--c,var(--accent)) 55%,transparent),transparent 55%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:36px;padding-top:120px;width:100%}
+.kw{font-family:Anton,sans-serif;font-size:clamp(64px,11vw,150px);line-height:.9;text-transform:uppercase;color:#fff;opacity:.95}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.chip.cat{background:var(--c,var(--accent));color:#0b0b10}
+.chip.own{background:#fff;color:#0b0b10}
+.chip.own b{background:var(--accent);color:#fff;padding:1px 5px;border-radius:4px;transform:skewX(-8deg)}
+
+article{max-width:760px;margin:0 auto;padding:40px 20px 30px}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.12;font-weight:900;letter-spacing:-.01em}
+.sub{font-size:20px;color:#c9c9d6;margin-top:16px;font-weight:500;line-height:1.5}
+.meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:26px 0 30px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.meta .av{width:38px;height:38px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:Anton;color:#fff;font-size:15px;transform:skewX(-8deg)}
+.meta strong{color:var(--text)}
+.body p{font-size:18.5px;line-height:1.75;color:#e4e4ec;margin-bottom:22px}
+.body p:first-child::first-letter{font-family:Anton,sans-serif;float:left;font-size:74px;line-height:.85;padding:6px 10px 0 0;color:var(--c,var(--accent))}
+.body strong{color:#fff}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tags span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;color:var(--muted);font-weight:700}
+.share{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.share button,.share a{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:10px 16px;font:800 13px Inter;cursor:pointer;transition:.2s}
+.share button:hover,.share a:hover{border-color:var(--accent);color:var(--accent)}
+.more{max-width:760px;margin:10px auto 50px;padding:0 20px}
+.more a{display:block;background:linear-gradient(90deg,var(--accent),#7c3aed);border-radius:18px;padding:24px;font-family:Anton;font-size:28px;line-height:1.1}
+.more a small{display:block;font:600 14px Inter;opacity:.9;margin-top:6px}
+.err{padding:80px 20px;text-align:center;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap head">
+    <a class="logo" href="./" aria-label="DHDNEWS · Dailynews, ir a la portada"><span class="bug"><span class="b1">DHD</span><span class="b2">NEWS</span></span><span class="tbar"><span class="livet"><i></i>LIVE</span>DAILYNEWS</span></a>
+    <a class="back" href="./">← Todas las noticias</a>
+  </div>
+</header>
+
+<main id="app"><p class="err">Cargando artículo…</p></main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> DHDNEWS · Dailynews — DHD Records</span>
+    <span>Instagram y TikTok: @dhdrecords · Fotos de ambiente: Unsplash (licencia libre)</span>
+  </div>
+</footer>
+
+<script>
+const CATS = {
+  musica:{label:"Música",color:"#ff2e63"}, gaming:{label:"Gaming",color:"#8b5cf6"},
+  youtube:{label:"Streamers · YouTubers",color:"#ff4d4d"}, deportes:{label:"Deportes",color:"#22c55e"},
+  tele:{label:"Televisión",color:"#3b82f6"}, gossip:{label:"Gossip",color:"#f59e0b"}
+};
+const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+const fecha = d => new Date(d+"T12:00:00").toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+document.getElementById("y").textContent = new Date().getFullYear();
+
+const id = new URLSearchParams(location.search).get("id") || "";
+if (!/^[a-z0-9-]+$/.test(id)) {
+  document.getElementById("app").innerHTML = '<p class="err">No hemos encontrado este artículo. <a href="./" style="color:var(--accent2)">Volver a la portada</a></p>';
+} else {
+  fetch(`articulos/${id}.json?t=${Date.now()}`, {cache:"no-store"}).then(r => { if(!r.ok) throw 0; return r.json(); }).then(a => {
+    const c = CATS[a.cat] || CATS.musica;
+    document.title = `${a.title} · DHDNEWS`;
+    document.querySelector('meta[name=description]').content = a.subtitle || a.title;
+    document.getElementById("app").innerHTML = `
+      <section class="hero" style="--c:${c.color}">
+        <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="" onerror="this.remove()">
+        <div class="wrap">
+          <div class="badges"><span class="chip cat">${c.label}</span><span class="chip own"><b>DHD</b> Artículo propio</span></div>
+          <div class="kw">${esc(a.kw || "")}</div>
+        </div>
+      </section>
+      <article style="--c:${c.color}">
+        <h1>${esc(a.title)}</h1>
+        ${a.subtitle ? `<p class="sub">${esc(a.subtitle)}</p>` : ""}
+        <div class="meta"><span class="av">DHD</span><span>Por <strong>${esc(a.author || "Redacción DHDNEWS")}</strong><br>${fecha(a.date)}</span></div>
+        <div class="body">${(a.body||[]).map(p => `<p>${rich(p)}</p>`).join("")}</div>
+        ${a.tags ? `<div class="tags">${a.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
+        <div class="share">
+          <button type="button" id="copy">🔗 Copiar enlace</button>
+          <a href="https://wa.me/?text=${encodeURIComponent(a.title + " " + location.href)}" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(a.title)}&url=${encodeURIComponent(location.href)}" target="_blank" rel="noopener">X</a>
+        </div>
+      </article>
+      <div class="more"><a href="./">TODO EL TOP 10 DE HOY →<small>Música, gaming, streamers, deportes, tele y gossip en DHDNEWS</small></a></div>`;
+    document.getElementById("copy").onclick = e => {
+      navigator.clipboard.writeText(location.href).then(() => e.target.textContent = "✓ Enlace copiado").catch(() => {});
+    };
+  }).catch(() => {
+    document.getElementById("app").innerHTML = '<p class="err">No hemos encontrado este artículo. <a href="./" style="color:var(--accent2)">Volver a la portada</a></p>';
+  });
+}
+</script>
+</body>
+</html>
