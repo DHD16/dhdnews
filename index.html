@@ -302,10 +302,10 @@ function card(n){
   return `<a class="card${isOwn(n)?" own":""}" ${linkAttrs(n)} style="--c:${c.color}">
     ${cover}
     <div class="body">
-      <span class="tags-row"><span class="tag">${c.label}</span>${isOwn(n)?`<span class="owntag"><b>DHD</b> Artículo propio</span>`:""}</span>
+      <span class="tags-row"><span class="tag">${c.label}</span></span>
       <h3>${n.title}</h3>
       <p>${n.text}</p>
-      <div class="meta"><span>${n.source||""}</span><span class="go">${isOwn(n)?"Leer artículo →":"Leer noticia →"}</span></div>
+      <div class="meta"><span>${isOwn(n)?"Fuente: Artículo DHDNEWS · Diego D. Hidalgo":(n.source||"")}</span><span class="go">${isOwn(n)?"Leer artículo →":"Leer noticia →"}</span></div>
     </div></a>`;
 }
 
@@ -331,7 +331,7 @@ function init(){
   $("#lead").href = lead.url||"#";
   $("#lead").innerHTML = `<span class="wm">${kwOf(lead)}</span><span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
 
-  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li><a ${linkAttrs(n)}>${CATS[n.cat].icon} ${n.title}${isOwn(n)?' <span class="owntag sm"><b>DHD</b></span>':""}</a></li>`).join("");
+  $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li><a ${linkAttrs(n)}>${CATS[n.cat].icon} ${n.title}</a></li>`).join("");
   $("#ticker").textContent = "⚡ " + NEWS.map(n=>n.title).join("   ·   ") + " ⚡";
   $("#fecha").textContent = new Date().toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"});
   $("#y").textContent = new Date().getFullYear();

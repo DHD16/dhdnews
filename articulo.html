@@ -46,6 +46,8 @@ h1{font-size:clamp(30px,4.6vw,46px);line-height:1.12;font-weight:900;letter-spac
 .body p{font-size:18.5px;line-height:1.75;color:#e4e4ec;margin-bottom:22px}
 .body p:first-child::first-letter{font-family:Anton,sans-serif;float:left;font-size:74px;line-height:.85;padding:6px 10px 0 0;color:var(--c,var(--accent))}
 .body strong{color:#fff}
+.fuente{margin-top:6px;padding:14px 18px;border-left:4px solid var(--c,var(--accent));background:var(--panel);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--muted)}
+.fuente strong{color:var(--text)}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
 .tags span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;color:var(--muted);font-weight:700}
 .share{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;align-items:center}
@@ -99,15 +101,16 @@ if (!/^[a-z0-9-]+$/.test(id)) {
       <section class="hero" style="--c:${c.color}">
         <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="" onerror="this.remove()">
         <div class="wrap">
-          <div class="badges"><span class="chip cat">${c.label}</span><span class="chip own"><b>DHD</b> Artículo propio</span></div>
+          <div class="badges"><span class="chip cat">${c.label}</span></div>
           <div class="kw">${esc(a.kw || "")}</div>
         </div>
       </section>
       <article style="--c:${c.color}">
         <h1>${esc(a.title)}</h1>
         ${a.subtitle ? `<p class="sub">${esc(a.subtitle)}</p>` : ""}
-        <div class="meta"><span class="av">DHD</span><span>Por <strong>${esc(a.author || "Redacción DHDNEWS")}</strong><br>${fecha(a.date)}</span></div>
+        <div class="meta"><span class="av">DHD</span><span>Por <strong>${esc(a.author || "Diego D. Hidalgo")}</strong> · DHDNEWS<br>${fecha(a.date)}</span></div>
         <div class="body">${(a.body||[]).map(p => `<p>${rich(p)}</p>`).join("")}</div>
+        <p class="fuente">Fuente: <strong>Artículo DHDNEWS</strong> · ${esc(a.author || "Diego D. Hidalgo")}</p>
         ${a.tags ? `<div class="tags">${a.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
         <div class="share">
           <button type="button" id="copy">🔗 Copiar enlace</button>
