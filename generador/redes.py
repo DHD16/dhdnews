@@ -255,6 +255,8 @@ def story_ultima(n, fecha):
 
 def photo_for(news, idx):
     n = news[idx]
+    if n.get("img") and os.path.exists(os.path.join(ROOT, n["img"])):
+        return os.path.join(ROOT, n["img"])
     k = sum(1 for m in news[:idx] if m["cat"] == n["cat"])
     folder = os.path.join(ROOT, "fotos", n["cat"])
     files = sorted(f for f in os.listdir(folder) if f.endswith(".jpg")) if os.path.isdir(folder) else []
@@ -275,7 +277,7 @@ def mini_bug(img, x, y, size=34):
     lay = lay.transform(lay.size, Image.AFFINE, (1, 0.14, -0.14*h, 0, 1, 0), resample=Image.BICUBIC)
     img.paste(lay, (int(x - lay.width), y), lay)
 
-def story_card(news, idx, fecha, mention=None, cta="LEE LA NOTICIA"):
+def story_card(news, idx, fecha, mention=None, cta="LEE LA NOTICIA", credit=None):
     n = news[idx]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
     img = Image.new("RGB", (W, H), BG)
     glow = Image.new("RGB", (W, H), BG); ImageDraw.Draw(glow).ellipse((W*0.3, -H*0.2, W*1.5, H*0.35), fill=col)
@@ -312,6 +314,10 @@ def story_card(news, idx, fecha, mention=None, cta="LEE LA NOTICIA"):
     fk = fit(d, kw, "anton", CW-60-230, 170, 80)
     d.text((X0+34, Y0+PH-30-fk.size*1.05), kw, font=fk, fill="white")
     mini_bug(img, X1-28, Y0+PH-80, 40)
+    if credit:
+        fc2 = font("semi", 22); cw2 = d.textlength(credit, font=fc2)
+        d.rounded_rectangle((X0+30, Y0+108, X0+30+cw2+28, Y0+146), radius=999, fill=(11, 11, 16, 170))
+        d.text((X0+44, Y0+114), credit, font=fc2, fill=(225, 225, 235))
     if mention:
         fm = font("black", 30); mw = d.textlength(mention, font=fm)
         d.rounded_rectangle((X1-30-mw-40, Y0+30, X1-30, Y0+96), radius=999, fill=(255, 255, 255, 235))
