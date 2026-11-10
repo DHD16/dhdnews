@@ -35,6 +35,16 @@
   "img": "articulos/img/playacoco-migajero.jpg"
  },
  {
+  "cat": "musica",
+  "kw": "Conchita",
+  "title": "Conchita estrena «El llavero» y anuncia gira",
+  "text": "Tercer capítulo de «La vida adulta», su octavo disco, que sale el 19 de febrero. La gira arranca el 20 de febrero en el Teatro Albéniz de Madrid.",
+  "source": "Agencia @clickbait_pr",
+  "url": "articulo.html?id=conchita-el-llavero",
+  "own": true,
+  "img": "articulos/img/conchita-el-llavero.jpg"
+ },
+ {
   "cat": "tele",
   "kw": "La Revuelta",
   "title": "Abascal da a «La Revuelta» su récord: 4,8 millones",
@@ -73,13 +83,5 @@
   "text": "Telecinco suma a Raquel Mosquera al casting de la nueva edición de GH VIP, que ya prepara tras Supervivientes All Stars.",
   "source": "Vertele (elDiario.es)",
   "url": "https://www.eldiario.es/vertele/noticias/raquel-mosquera-ficha-gh-vip-vuelve-universo-mediaset-pasar-veces-supervivientes_1_13646074.html"
- },
- {
-  "cat": "musica",
-  "kw": "U2",
-  "title": "U2 en España 2027: la venta general, este viernes 13",
-  "text": "Tras la preventa para fans, el viernes salen a la venta general las entradas para Barcelona (13 y 15 de mayo) y Sevilla (22 de mayo).",
-  "source": "Time Out",
-  "url": "https://www.timeout.es/barcelona/es/noticias/u2-anuncia-dos-grandes-conciertos-en-barcelona-en-2027-fechas-entradas-y-ubicacion-110526"
  }
 ]
