@@ -1,20 +1,28 @@
 [
  {
-  "cat": "musica",
+  "cat": "gaming",
   "destacada": true,
-  "kw": "U2",
-  "title": "U2 en España 2027: la preventa abre hoy a las 10:00",
-  "text": "La banda tocará el 13 y el 15 de mayo en el Estadi Olímpic de Barcelona y el 22 en La Cartuja de Sevilla. Hoy arranca la preventa para fans y la venta general llega el viernes 13.",
-  "source": "Time Out",
-  "url": "https://www.timeout.es/barcelona/es/noticias/u2-anuncia-dos-grandes-conciertos-en-barcelona-en-2027-fechas-entradas-y-ubicacion-110526"
+  "kw": "GTA 6",
+  "title": "GTA 6 ya se puede precargar en PS5 y Xbox",
+  "text": "Desde hoy, quien lo haya reservado puede descargar el juego antes del lanzamiento del 19 de noviembre. Ojo: hacen falta 212 GB libres.",
+  "source": "Infobae",
+  "url": "https://www.infobae.com/tecno/2026/11/09/cuanto-pesa-gta-6-tamano-de-descarga-oficial-y-fecha-de-precarga-en-ps5-y-xbox-series/"
+ },
+ {
+  "cat": "musica",
+  "kw": "Latin Grammy",
+  "title": "Cuenta atrás: Latin Grammy este jueves con Rosalía",
+  "text": "La gala se celebra el jueves 12 en el MGM Grand de Las Vegas. Rosalía, Karol G y Jorge Drexler, con «Taracá», son algunos de los nombres a seguir.",
+  "source": "Entretanto Magazine",
+  "url": "https://www.entretantomagazine.com/2026/11/09/latin-grammy-2026-las-vegas-nominados-rosalia-karol-g-drexler/"
  },
  {
   "cat": "deportes",
-  "kw": "Fermín",
-  "title": "Doblete de Fermín: Atleti 1-2 Barça",
-  "text": "El Atleti se adelantó pronto, pero Fermín López marcó al filo del descanso y en el 66'. El Barça sigue líder de LaLiga tras la jornada 12.",
-  "source": "VAVEL",
-  "url": "https://www.vavel.com/es/futbol/2026/11/08/fc-barcelona/1278652-fermin-silencia-el-metropolitano-con-un-doblete.html"
+  "kw": "La Roja",
+  "title": "La Roja ya se concentra: Chequia e Inglaterra",
+  "text": "La selección juega en Praga el jueves 12 y recibe a Inglaterra en el Metropolitano el domingo 15, ambos a las 20:45. Valles, Jacobo Ramón y Marc Roca debutan en la lista.",
+  "source": "FútbolFantasy",
+  "url": "https://www.futbolfantasy.com/laliga/noticias/154269-luis-de-la-fuente-anuncia-la-convocatoria-de-espana-para-el-paron-de-noviembre"
  },
  {
   "cat": "musica",
@@ -27,59 +35,51 @@
   "img": "articulos/img/playacoco-migajero.jpg"
  },
  {
-  "cat": "gaming",
-  "kw": "GTA 6",
-  "title": "GTA 6: la precarga empieza mañana y ocupa 212 GB",
-  "text": "Quien lo reservó en digital podrá descargarlo desde el 10 de noviembre en PS5 y Xbox. Las copias físicas traen código desde el día 12 y el juego sale el 19.",
-  "source": "Geeknetic",
-  "url": "https://www.geeknetic.es/Noticia/40714/La-precarga-del-GTA-6-comenzara-el-10-de-noviembre-y-puede-emplear-mas-de-200-GB.html"
+  "cat": "tele",
+  "kw": "La 1",
+  "title": "La 1 gana el lunes y MasterChef Celebrity firma un 14,3%",
+  "text": "La 1 lideró la jornada con un 16,8% de cuota media. En su prime time, MasterChef Celebrity Legends reunió a 698.000 espectadores.",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/noticias/audiencias-lunes-9-noviembre-la-septima-record-138725/"
  },
  {
   "cat": "musica",
-  "kw": "Latin Grammy",
-  "title": "Latin Grammy el jueves en Las Vegas, con Rosalía",
-  "text": "La 27ª edición se celebra el 12 de noviembre en el MGM Grand. Rosalía, Daddy Yankee, Juanes, Anitta y Jorge Drexler, entre los artistas confirmados.",
-  "source": "Teleamazonas",
-  "url": "https://www.teleamazonas.com/tendencias/entretenimiento/rosalia-daddy-yankee-juanes-cantaran-latin-grammy-2026-fecha-artistas-confirmados-131002/"
- },
- {
-  "cat": "tele",
-  "kw": "Audiencias",
-  "title": "El Atleti–Barça arrasa: 1,9 millones y un 15% de cuota",
-  "text": "Fue lo más visto del domingo, con pico de 2,1 millones. La semifinal de «Supervivientes All Stars» marcó un 12,3% y el cine de La 1 rondó el 10%.",
-  "source": "Vertele",
-  "url": "https://www.eldiario.es/vertele/audiencias-tv/domingo-8-noviembre-2026-semifinal-supervivientes-all-stars-cine-la-1-renido-duelo-lider-atleti-barca_1_13648659.html"
- },
- {
-  "cat": "tele",
-  "kw": "La Séptima",
-  "title": "La Séptima firma récord en su primer sábado y supera a La 2",
-  "text": "El nuevo canal de la TDT cerró el sábado con un 3% frente al 2,2% de La 2. Su programa estrella del día hizo un 6% por la mañana.",
-  "source": "FormulaTV",
-  "url": "https://www.formulatv.com/noticias/septima-vuelve-sorprender-marca-record-primer-138714/"
+  "kw": "Alcalá Norte",
+  "title": "Alcalá Norte vuelve con «Dejémoslo como estaba»",
+  "text": "El sexteto madrileño encabeza los lanzamientos de la semana con su segundo disco, producido junto a Pablo Fergus y cargado de post-punk.",
+  "source": "QConciertos",
+  "url": "https://qconciertos.es/alcala-norte-carino-y-royal-blood-encabezan-los-diez-lanzamientos-discograficos-clave-de-la-semana/"
  },
  {
   "cat": "deportes",
-  "kw": "Premier",
-  "title": "Locura en Old Trafford: Man United 4-4 Aston Villa",
-  "text": "Jornada loca en la Premier: el Forest tumbó 3-1 al City, el Liverpool ganó 1-3 en Selhurst Park y el Sunderland venció 1-0 al Chelsea.",
-  "source": "Sky Sports",
-  "url": "https://www.skysports.com/premier-league-scores-fixtures"
+  "kw": "Real Madrid",
+  "title": "Martes de Champions femenina y Copa del Rey",
+  "text": "El Real Madrid recibe hoy al Paris FC a las 18:45 en la Champions femenina. A las 21:00, el Valencia visita al Tavernes en la Copa del Rey.",
+  "source": "TUDN",
+  "url": "https://tudn.com/futbol/partidos-hoy-martes-10-noviembre-del-2026-copa-del-rey-y-champions-femenina"
  },
  {
   "cat": "musica",
-  "kw": "C. Tangana",
-  "title": "C. Tangana sorprende con «Milko Freestyle»",
-  "text": "El madrileño lanza por sorpresa un tema de rap con videoclip. Sale en una semana cargada de estrenos con Emilia, Nicky Jam y BOM.",
-  "source": "Publimetro",
-  "url": "https://www.publimetro.co/entretenimiento/2026/11/06/estos-son-los-lanzamientos-musicales-que-ponen-ritmo-a-la-primera-semana-de-noviembre/"
+  "kw": "Lali",
+  "title": "Lali y Miranda! se unen en BOM: «Bailar o Morir»",
+  "text": "Lali Espósito, Ale Sergi y Juliana Gattas estrenan proyecto conjunto de pop electrónico pensado para la pista de baile, con disco ya disponible.",
+  "source": "Minuto Uno",
+  "url": "https://www.minutouno.com/lali-esposito-y-miranda-presentaron-bom-lanzaron-bailar-o-morir-y-revelaron-la-fecha-su-album-n6338614"
  },
  {
   "cat": "gossip",
-  "kw": "Rocío Crusset",
-  "title": "Rocío Crusset anuncia que espera su primer hijo",
-  "text": "Lo contó en redes con un «bebé gringo en camino». Es su primer hijo con Charlie Schein, con quien se casó este verano en Nueva York.",
-  "source": "Telecinco",
-  "url": "https://www.telecinco.es/famosos/20261108/rocio-crusset-hija-carlos-herrera-marilo-montero-confiesa-embarazo_18_020654414.html"
+  "kw": "GH VIP 9",
+  "title": "Raquel Mosquera ficha por GH VIP 9",
+  "text": "Telecinco suma a Raquel Mosquera al casting de la nueva edición de GH VIP, que ya prepara tras Supervivientes All Stars.",
+  "source": "Vertele (elDiario.es)",
+  "url": "https://www.eldiario.es/vertele/noticias/raquel-mosquera-ficha-gh-vip-vuelve-universo-mediaset-pasar-veces-supervivientes_1_13646074.html"
+ },
+ {
+  "cat": "musica",
+  "kw": "U2",
+  "title": "U2 en España 2027: la venta general, este viernes 13",
+  "text": "Tras la preventa para fans, el viernes salen a la venta general las entradas para Barcelona (13 y 15 de mayo) y Sevilla (22 de mayo).",
+  "source": "Time Out",
+  "url": "https://www.timeout.es/barcelona/es/noticias/u2-anuncia-dos-grandes-conciertos-en-barcelona-en-2027-fechas-entradas-y-ubicacion-110526"
  }
 ]
