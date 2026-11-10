@@ -104,7 +104,7 @@ if (!/^[a-z0-9-]+$/.test(id)) {
     document.querySelector('meta[name=description]').content = a.subtitle || a.title;
     document.getElementById("app").innerHTML = `
       <section class="hero" style="--c:${c.color}">
-        <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="${esc(a.imgAlt||"")}" style="object-position:center 30%" onerror="this.remove()">${a.imgCredit ? `<span class="credit">Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}</span>` : ""}
+        <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="${esc(a.imgAlt||"")}" style="object-position:${esc(a.imgPos || "center 30%")}" onerror="this.remove()">${a.imgCredit ? `<span class="credit">Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}</span>` : ""}
         <div class="wrap">
           <div class="badges"><span class="chip cat">${c.label}</span></div>
           <div class="kw">${esc(a.kw || "")}</div>
@@ -114,8 +114,8 @@ if (!/^[a-z0-9-]+$/.test(id)) {
         <h1>${esc(a.title)}</h1>
         ${a.subtitle ? `<p class="sub">${esc(a.subtitle)}</p>` : ""}
         <div class="meta"><span class="av">DHD</span><span>Por <strong>${esc(a.author || "Diego D. Hidalgo")}</strong> · DHDNEWS<br>${fecha(a.date)}</span></div>
-        <div class="body">${(a.body||[]).map((p,i) => `<p>${rich(p)}</p>` + (a.img && a.figureAfter === i ? `<figure><img src="${esc(a.img)}" alt="${esc(a.imgAlt||"")}" loading="lazy"><figcaption>${esc(a.kw||"")}${a.imgCredit ? ` · Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}` : ""}</figcaption></figure>` : "")).join("")}</div>
-        <p class="fuente">Fuente: <strong>Artículo DHDNEWS</strong> · ${esc(a.author || "Diego D. Hidalgo")}</p>
+        <div class="body">${(a.body||[]).map((p,i) => `<p>${rich(p)}</p>` + ((a.img2 || a.img) && a.figureAfter === i ? `<figure${a.img2 ? ' style="max-width:440px;margin-left:auto;margin-right:auto"' : ""}><img src="${esc(a.img2 || a.img)}" alt="${esc(a.img2 ? (a.img2Alt||"") : (a.imgAlt||""))}" loading="lazy"><figcaption>${esc(a.img2 ? (a.img2Caption || a.kw || "") : (a.kw||""))}${a.imgCredit ? ` · Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}` : ""}</figcaption></figure>` : "")).join("")}</div>
+        <p class="fuente">${a.source ? `Fuente: <strong>${a.sourceUrl ? `<a href="${esc(a.sourceUrl)}" target="_blank" rel="noopener">${esc(a.source)}</a>` : esc(a.source)}</strong> · Por ${esc(a.author || "Diego D. Hidalgo")} · DHDNEWS` : `Fuente: <strong>Artículo DHDNEWS</strong> · ${esc(a.author || "Diego D. Hidalgo")}`}</p>
         ${a.tags ? `<div class="tags">${a.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
         <div class="share">
           <button type="button" id="copy">🔗 Copiar enlace</button>
