@@ -36,9 +36,17 @@
  },
  {
   "cat": "tele",
-  "kw": "La 1",
-  "title": "La 1 gana el lunes y MasterChef Celebrity firma un 14,3%",
-  "text": "La 1 lideró la jornada con un 16,8% de cuota media. En su prime time, MasterChef Celebrity Legends reunió a 698.000 espectadores.",
+  "kw": "La Revuelta",
+  "title": "Abascal da a «La Revuelta» su récord: 4,8 millones",
+  "text": "La entrevista de Broncano en La 1 reunió el lunes a 4.815.000 espectadores (33,6%), la emisión más vista del programa. La de Pedro Sánchez del 22 de octubre sigue por delante en cuota (33,9%).",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/noticias/abascal-arrasa-revuelta-supera-audiencia-sanchez-138726/"
+ },
+ {
+  "cat": "tele",
+  "kw": "La Séptima",
+  "title": "Sánchez con Javier Ruiz, récord de La Séptima",
+  "text": "La entrevista del lunes en «La última hora» sumó 2.160.000 espectadores (14,2%), lo más visto de la cadena en su primera semana. La Séptima cerró el día con un 5,8%, por delante de laSexta.",
   "source": "FormulaTV",
   "url": "https://www.formulatv.com/noticias/audiencias-lunes-9-noviembre-la-septima-record-138725/"
  },
@@ -49,14 +57,6 @@
   "text": "El sexteto madrileño encabeza los lanzamientos de la semana con su segundo disco, producido junto a Pablo Fergus y cargado de post-punk.",
   "source": "QConciertos",
   "url": "https://qconciertos.es/alcala-norte-carino-y-royal-blood-encabezan-los-diez-lanzamientos-discograficos-clave-de-la-semana/"
- },
- {
-  "cat": "deportes",
-  "kw": "Real Madrid",
-  "title": "Martes de Champions femenina y Copa del Rey",
-  "text": "El Real Madrid recibe hoy al Paris FC a las 18:45 en la Champions femenina. A las 21:00, el Valencia visita al Tavernes en la Copa del Rey.",
-  "source": "TUDN",
-  "url": "https://tudn.com/futbol/partidos-hoy-martes-10-noviembre-del-2026-copa-del-rey-y-champions-femenina"
  },
  {
   "cat": "musica",
