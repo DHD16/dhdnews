@@ -1,83 +1,12 @@
 [
- {
-  "cat": "gaming",
-  "destacada": true,
-  "kw": "GTA 6",
-  "title": "GTA 6 irá a 30 FPS en todas las consolas",
-  "text": "Rockstar confirma que no habrá modo rendimiento en PS5 ni en Xbox Series; la PS5 Pro tendrá mejoras extra. Sale el 19 de noviembre.",
-  "source": "Vandal",
-  "url": "https://vandal.elespanol.com/noticia/2026314026/gta-6-ira-a-30-fps-en-todas-las-consolas-y-rockstar-confirma-estas-mejoras-en-ps5-pro"
- },
- {
-  "cat": "musica",
-  "kw": "Latin Grammy",
-  "title": "Mañana, Latin Grammy con Rosalía en el escenario",
-  "text": "La gala de Las Vegas es este jueves 12. Rosalía, con siete nominaciones, actuará junto a Daddy Yankee, Juanes o Anitta.",
-  "source": "Extra",
-  "url": "https://www.extra.ec/noticia/farandula/latin-grammy-2026-quienes-actuaran-ver-ceremonia-ecuador-165416.html"
- },
- {
-  "cat": "deportes",
-  "kw": "Chequia–ESP",
-  "title": "La Roja juega mañana en Chequia (20:45, La 1)",
-  "text": "España, líder del grupo con pleno de victorias, visita a Chequia el jueves a las 20:45 en la Nations League. Se verá en La 1 y RTVE Play.",
-  "source": "Fútbol Total",
-  "url": "https://futboltotal.futbol/partido/partido-czech-republic-vs-spain-uefa-nations-league-2026-11-12"
- },
- {
-  "cat": "musica",
-  "kw": "Dani Martín",
-  "title": "Dani Martín suma 14 conciertos más en 2027",
-  "text": "Su gira «25 p*t*s años» se alarga con las «Últimas 14 noches», de abril a julio de 2027, con cierre doble en el Movistar Arena de Madrid.",
-  "source": "La Ganzúa",
-  "url": "https://www.laganzua.net/noticias/32888-dani-martin-suma-14-nuevos-conciertos-a-su-gira-25-p-t-s-anos-y-actuara-en-madrid-barcelona-valencia-donostia-o-malaga-en-2027"
- },
- {
-  "cat": "youtube",
-  "kw": "Ibai",
-  "title": "Ibai ficha a los «Reyes del Empeño»",
-  "text": "Los fundadores de Pawn Shop protagonizarán «La casa de empeños de Ibai», una nueva sección en su canal de YouTube para tasar objetos de lujo y coleccionismo.",
-  "source": "Madridiario",
-  "url": "https://www.madridiario.es/noticia/557005/notas-de-prensa/ibai-llanos-ficha-a-los-reyes-del-empeno-de-pawn-shop-para-la-seccion-la-casa-de-empenos-de-ibai.html"
- },
- {
-  "cat": "deportes",
-  "kw": "LaLiga",
-  "title": "El Barça llega líder al parón, con el Madrid a 3",
-  "text": "Tras ganar 2-1 al Atlético con doblete de Fermín, el Barça suma 33 puntos; el Real Madrid (30) goleó 3-0 al Valencia. La liga vuelve el 21 de noviembre.",
-  "source": "Unánimo Deportes",
-  "url": "https://unanimodeportes.com/deportes/futbol/laliga/asi-queda-real-madrid-barcelona-paron/"
- },
- {
-  "cat": "tele",
-  "kw": "La 1",
-  "title": "Estreno de «La cena de los idiotas»: 15,1% en La 1",
-  "text": "El nuevo programa de La 1 arrancó el martes con 1,2 millones de espectadores. La 1 fue la cadena líder del día con un 14,1% de cuota.",
-  "source": "Barlovento Comunicación",
-  "url": "https://barloventocomunicacion.es/audiencias-diarias/audiencias-10-de-noviembre-2026/"
- },
- {
-  "cat": "gaming",
-  "kw": "PS Plus",
-  "title": "PS Plus Extra trae Death Stranding 2 en noviembre",
-  "text": "Llegan 10 juegos a Extra y Premium, con Death Stranding 2 y Dragon Quest III HD-2D. Además, Sony cerrará la app de PS Plus para PC el 10 de diciembre.",
-  "source": "3DJuegos",
-  "url": "https://www.3djuegos.com/pc/noticias/playstation-da-nuevo-paso-para-abandonar-pc-10-juegos-noviembre-2026-para-ps-plus-extra-premium-estan-aqui-cambio-servicio"
- },
- {
-  "cat": "gossip",
-  "kw": "Llorente",
-  "title": "Marcos Llorente y Paddy Noarbe esperan su 2º hijo",
-  "text": "La pareja lo anunció en redes con una foto en el mar y un mensaje: «Nuestro amor vuelve a hacerse vida».",
-  "source": "Telecinco",
-  "url": "https://www.telecinco.es/famosos/20261110/marcos-llorente-paddy-noarbe-anuncian-esperan-segundo-hijo_18_020675680.html"
- },
- {
-  "cat": "musica",
-  "kw": "Lori Meyers",
-  "title": "Lori Meyers salen de gira con «Disonancia»",
-  "text": "La banda granadina presentará su nuevo disco en siete ciudades entre enero y febrero de 2027. Las entradas salen a la venta este jueves 12.",
-  "source": "La Ganzúa",
-  "url": "https://www.laganzua.net/noticias/32890-lori-meyers-anuncian-conciertos-en-granada-madrid-toledo-gijon-pamplona-valladolid-y-burgos-en-2027"
- }
+ {"cat":"musica","destacada":true,"kw":"Latin Grammy","title":"Esta noche, Latin Grammy: Rosalía va a por 7","text":"La gala de Las Vegas se celebra hoy jueves; en España se verá de madrugada en Movistar Plus+ (desde las 02:00). Rosalía, con siete nominaciones, actúa junto a Karol G, Bad Gyal, Bizarrap y Nathy Peluso.","source":"Qué!","url":"https://www.que.es/2026/11/11/latin-grammy-2026-las-vegas-rosalia/"},
+ {"cat":"gaming","kw":"GTA 6","title":"GTA 6 ya se puede precargar: sale el 19","text":"Rockstar ha abierto la precarga para quienes reservaron la versión digital; con la edición en caja se puede precargar al activar el código. Llega a PS5 y Xbox Series en una semana.","source":"Rockstar Games","url":"https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"},
+ {"cat":"deportes","kw":"Chequia–ESP","title":"Chequia–España, hoy a las 20:45 en La 1","text":"La Roja, líder con cuatro victorias, 12 puntos y 12 goles a favor, visita Praga en la Nations League. El partido se emite en La 1 y RTVE Play.","source":"Fútbol Total","url":"https://futboltotal.futbol/noticias/que-ver-paron-selecciones-noviembre-2026"},
+ {"cat":"musica","kw":"Coachella","title":"Bad Gyal y Las Petunias, al Coachella 2027","text":"El cartel del festival, con Dua Lipa, Madonna y Daddy Yankee, incluye a la catalana y al grupo madrileño. Será en abril de 2027 y las entradas salen este viernes 13.","source":"Infobae","url":"https://infobae.com/america/agencias/2026/11/11/bad-gyal-y-las-petunias-representacion-espanola-en-el-festival-coachella-2027"},
+ {"cat":"tele","kw":"La Séptima","title":"La Séptima cierra su 1ª semana con un 3,5%","text":"El nuevo canal de la TDT suma 5,2 millones de espectadores diarios en sus siete primeros días. Sus franjas más fuertes son la noche (4,3%) y la sobremesa (3,8%).","source":"Infobae","url":"https://www.infobae.com/espana/agencias/2026/11/12/la-septima-en-su-primera-semana-35-de-cuota-y-52-millones-de-espectadores-diarios/"},
+ {"cat":"musica","kw":"Stray Kids","title":"Stray Kids llenarán el Olímpic en 2027","text":"El grupo de K-pop actuará el 24 de julio de 2027 en el Estadi Olímpic de Barcelona con su gira «Run It». Entradas a la venta el 19 de noviembre a las 15:00.","source":"La Ganzúa","url":"https://www.laganzua.net/noticias/32884-stray-kids-anuncian-un-concierto-en-barcelona-en-2027-con-sus-hits-de-kpop"},
+ {"cat":"gaming","kw":"PS Plus","title":"Adiós a la app de PS Plus para PC","text":"Sony cerrará el 10 de diciembre la app que permitía jugar en streaming en PC con PS Plus Premium. El Remote Play con tu propia consola seguirá funcionando.","source":"Kotaku en Español","url":"https://es.kotaku.com/playstation-confirma-una-mala-noticia-para-los-jugadores-de-pc-eliminara-una-funcion-de-ps-plus-en-diciembre-2000056915"},
+ {"cat":"gossip","kw":"Lambda García","title":"Lambda García anuncia su compromiso","text":"El actor mexicano se casará con el productor teatral Daniel Delgado, que le pidió matrimonio con una canción en un mirador de Ensenada. Aún no hay fecha de boda.","source":"El Vigía","url":"https://elvigia.com.mx/2026/11/11/lambda-garcia-anuncia-su-compromiso-matrimonial/"},
+ {"cat":"musica","kw":"Los Enemigos","title":"Los Enemigos tocan hoy en Valencia","text":"La banda de Josele Santiago presenta «Canciones chulas», su primer disco en seis años, esta noche en la Sala Moon. La gira sigue en Santiago y llega a Madrid en enero.","source":"La Ganzúa","url":"https://www.laganzua.net/noticias/32894-los-enemigos-actuan-en-valencia-el-12-de-noviembre-y-luego-en-santiago-barcelona-y-mas-ciudades"},
+ {"cat":"deportes","kw":"Italia–Francia","title":"Italia–Francia, el otro duelazo de hoy","text":"A la misma hora que España, a las 20:45, italianos y franceses se miden en la Nations League en uno de los platos fuertes del parón de selecciones.","source":"Fútbol Total","url":"https://futboltotal.futbol/noticias/que-ver-paron-selecciones-noviembre-2026"}
 ]
