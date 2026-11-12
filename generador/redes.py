@@ -347,6 +347,126 @@ def story_card(news, idx, fecha, mention=None, cta="LEE LA NOTICIA", credit=None
     cta_sticker(img, 1700, cta, "link en bio · dhd16.github.io/dhdnews")
     return img
 
+
+# ---------- CARRUSEL TIKTOK ----------
+# Zona segura de TikTok: arriba ~170 px (pestañas), abajo ~430 px (texto y música),
+# derecha ~150 px (botones). Todo el texto importante va dentro de X 64..930, Y 170..1490.
+TK_L, TK_R, TK_T, TK_B = 64, 930, 170, 1490
+
+def tk_photo_bg(news, idx, col, darken=0.62):
+    ph = photo_for(news, idx)
+    img = cover(Image.open(ph).convert("RGB"), W, H) if ph else background(col)
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
+    for yy in range(H):
+        t = yy / H
+        a = int(255 * min(1, darken + 0.38 * max(0, (t - 0.25) / 0.75)))
+        od.line([(0, yy), (W, yy)], fill=BG + (a,))
+    tint = Image.new("RGBA", (W, H), col + (0,)); tdd = ImageDraw.Draw(tint)
+    for xx in range(W):
+        tdd.line([(xx, 0), (xx, H)], fill=col + (int(90 * max(0, 1 - xx / (W * 0.7))),))
+    return Image.alpha_composite(Image.alpha_composite(img.convert("RGBA"), ov), tint).convert("RGB")
+
+def tk_counter(d, i, total, col):
+    f = font("black", 30); t = f"{i}/{total}"
+    w = d.textlength(t, font=f)
+    d.rounded_rectangle((TK_L, TK_T, TK_L + w + 44, TK_T + 58), radius=999, fill=(11, 11, 16, 200), outline=col + (255,), width=3)
+    d.text((TK_L + 22, TK_T + 11), t, font=f, fill="white")
+
+def tk_swipe(d, y, label="DESLIZA"):
+    f = font("black", 34); t = label + "  →"
+    w = d.textlength(t, font=f)
+    d.rounded_rectangle((TK_L, y, TK_L + w + 60, y + 70), radius=999, fill="white")
+    d.text((TK_L + 30, y + 15), t, font=f, fill=BG)
+
+def tk_cover(news, fecha):
+    n = news[0]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = tk_photo_bg(news, 0, col, 0.55); d = ImageDraw.Draw(img, "RGBA")
+    bug(img, TK_L, TK_T + 10, 0.62, center=False)
+    y = 470
+    fd = font("black", 34); ftxt = "TOP 5 DE HOY · " + fecha_txt(fecha).upper()
+    d.rounded_rectangle((TK_L, y, TK_L + d.textlength(ftxt, font=fd) + 44, y + 64), radius=14, fill=PINK)
+    d.text((TK_L + 22, y + 12), ftxt, font=fd, fill="white")
+    y += 110
+    hook = (n.get("gancho") or n.get("kw") or n["title"]).upper()
+    maxw = TK_R - TK_L
+    size = 190
+    while size > 90:
+        fh = font("anton", size); lines = wrap(d, hook, fh, maxw)
+        if len(lines) <= 4 and all(d.textlength(l, font=fh) <= maxw for l in lines): break
+        size -= 8
+    for k, l in enumerate(lines):
+        d.text((TK_L, y), l, font=fh, fill=col if k == len(lines) - 1 and len(lines) > 1 else "white")
+        y += int(fh.size * 1.0)
+    y += 50
+    sub = "5 noticias que tienes que saber hoy" if n.get("gancho") else n["title"]
+    for l in wrap(d, sub, font("black", 46), maxw)[:2]:
+        d.text((TK_L, y), l, font=font("black", 46), fill=(235, 235, 245)); y += 60
+    tk_swipe(d, max(y + 40, 1300), "DESLIZA Y ENTÉRATE")
+    return img
+
+def tk_news(news, idx, total):
+    n = news[idx]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = tk_photo_bg(news, idx, col, 0.45); d = ImageDraw.Draw(img, "RGBA")
+    tk_counter(d, idx + 1, total, col)
+    mini_bug(img, TK_R, TK_T + 4, 36); d = ImageDraw.Draw(img, "RGBA")
+    # número gigante
+    fn = font("anton", 420); num = f"#{idx+1}"
+    d.text((TK_L - 10, 250), num, font=fn, fill=col + (255,))
+    y = 780
+    chip(d, TK_L, y, lab, col, 32); y += 100
+    kw = (n.get("kw") or n["title"].split(":")[0]).upper()
+    fk = fit(d, kw, "anton", TK_R - TK_L, 170, 80)
+    for l in wrap(d, kw, fk, TK_R - TK_L)[:2]:
+        d.text((TK_L, y), l, font=fk, fill="white"); y += int(fk.size * 1.0)
+    y += 60
+    for l in wrap(d, n["title"], font("black", 50), TK_R - TK_L)[:3]:
+        d.text((TK_L, y), l, font=font("black", 50), fill="white"); y += 64
+    y += 16
+    fx = font("semi", 36); tl = wrap(d, n.get("text", ""), fx, TK_R - TK_L)
+    maxl = max(0, (TK_B - 50 - y) // 48)
+    if len(tl) > maxl:
+        tl = tl[:maxl]
+        if tl: tl[-1] = tl[-1].rstrip(",.;") + "…"
+    for l in tl:
+        d.text((TK_L, y), l, font=fx, fill=(215, 215, 228)); y += 48
+    d.text((TK_L, TK_B - 30), "Fuente: " + n.get("source", ""), font=font("semi", 26), fill=(165, 165, 185))
+    return img
+
+def tk_outro(news, total):
+    img = background(VIOLET); d = ImageDraw.Draw(img, "RGBA")
+    mini_bug(img, TK_R, TK_T + 4, 36); d = ImageDraw.Draw(img, "RGBA")
+    y = 300
+    for t, c in (("¿CUÁL TE HA", "white"), ("SORPRENDIDO", "white"), ("MÁS?", PINK)):
+        d.text((TK_L, y), t, font=font("anton", 150), fill=c); y += 152
+    y += 40
+    f = font("black", 40); t = "COMENTA EL NÚMERO  ↓"
+    d.rounded_rectangle((TK_L, y + 20, TK_L + d.textlength(t, font=f) + 60, y + 100), radius=999, fill=CYAN)
+    d.text((TK_L + 30, y + 37), t, font=f, fill=BG)
+    y += 170
+    d.text((TK_L, y), "Y ADEMÁS EN EL TOP 10:", font=font("black", 36), fill=(200, 200, 215)); y += 64
+    for i, n in enumerate(news[5:10], start=6):
+        lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+        kw = (n.get("kw") or n["title"].split(":")[0]).upper()
+        d.text((TK_L, y), f"{i}", font=font("anton", 58), fill=col)
+        d.text((TK_L + 80, y), kw, font=fit(d, kw, "anton", TK_R - TK_L - 80, 58, 36), fill="white")
+        y += 70
+    f = font("black", 38); t = "TOP 10 COMPLETO · LINK EN BIO"
+    w = d.textlength(t, font=f)
+    d.rounded_rectangle((TK_L, TK_B - 40, TK_L + w + 60, TK_B + 40), radius=999, fill="white")
+    d.text((TK_L + 30, TK_B - 23), t, font=f, fill=BG)
+    return img
+
+def tiktok_carousel(news, fecha, out):
+    for f in os.listdir(out):
+        if f.startswith("tiktok-") and f.endswith(".jpg"): os.remove(os.path.join(out, f))
+    total = 5
+    slides = [tk_cover(news, fecha)] + [tk_news(news, i, total) for i in range(min(5, len(news)))] + [tk_outro(news, total)]
+    for i, im in enumerate(slides, start=1):
+        im.convert("RGB").save(os.path.join(out, f"tiktok-{i}.jpg"), quality=90)
+    # copias JPG de las stories (TikTok no acepta PNG)
+    for nme in ("story-top5", "story-ultima-1"):
+        Image.open(os.path.join(out, nme + ".png")).convert("RGB").save(os.path.join(out, nme + ".jpg"), quality=92)
+
 # ---------- REEL ----------
 def slide_intro(fecha):
     img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
@@ -419,6 +539,7 @@ def main():
     story_top5(news, fecha).save(os.path.join(out, "story-top5.png"))
     story_card(news, 0, fecha).save(os.path.join(out, "story-ultima-1.png"))
     story_card(news, 1, fecha).save(os.path.join(out, "story-ultima-2.png"))
+    tiktok_carousel(news, fecha, out)
     if reel:
         slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
         make_reel(slides, os.path.join(out, "reel.mp4"))
