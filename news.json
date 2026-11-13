@@ -1,12 +1,84 @@
 [
- {"cat":"musica","destacada":true,"kw":"Latin Grammy","title":"Esta noche, Latin Grammy: Rosalía va a por 7","text":"La gala de Las Vegas se celebra hoy jueves; en España se verá de madrugada en Movistar Plus+ (desde las 02:00). Rosalía, con siete nominaciones, actúa junto a Karol G, Bad Gyal, Bizarrap y Nathy Peluso.","source":"Qué!","url":"https://www.que.es/2026/11/11/latin-grammy-2026-las-vegas-rosalia/"},
- {"cat":"gaming","kw":"GTA 6","title":"GTA 6 ya se puede precargar: sale el 19","text":"Rockstar ha abierto la precarga para quienes reservaron la versión digital; con la edición en caja se puede precargar al activar el código. Llega a PS5 y Xbox Series en una semana.","source":"Rockstar Games","url":"https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"},
- {"cat":"deportes","kw":"Chequia–ESP","title":"Chequia–España, hoy a las 20:45 en La 1","text":"La Roja, líder con cuatro victorias, 12 puntos y 12 goles a favor, visita Praga en la Nations League. El partido se emite en La 1 y RTVE Play.","source":"Fútbol Total","url":"https://futboltotal.futbol/noticias/que-ver-paron-selecciones-noviembre-2026"},
- {"cat":"musica","kw":"Coachella","title":"Bad Gyal y Las Petunias, al Coachella 2027","text":"El cartel del festival, con Dua Lipa, Madonna y Daddy Yankee, incluye a la catalana y al grupo madrileño. Será en abril de 2027 y las entradas salen este viernes 13.","source":"Infobae","url":"https://infobae.com/america/agencias/2026/11/11/bad-gyal-y-las-petunias-representacion-espanola-en-el-festival-coachella-2027"},
- {"cat":"tele","kw":"La Séptima","title":"La Séptima cierra su 1ª semana con un 3,5%","text":"El nuevo canal de la TDT suma 5,2 millones de espectadores diarios en sus siete primeros días. Sus franjas más fuertes son la noche (4,3%) y la sobremesa (3,8%).","source":"Infobae","url":"https://www.infobae.com/espana/agencias/2026/11/12/la-septima-en-su-primera-semana-35-de-cuota-y-52-millones-de-espectadores-diarios/"},
- {"cat":"musica","kw":"Stray Kids","title":"Stray Kids llenarán el Olímpic en 2027","text":"El grupo de K-pop actuará el 24 de julio de 2027 en el Estadi Olímpic de Barcelona con su gira «Run It». Entradas a la venta el 19 de noviembre a las 15:00.","source":"La Ganzúa","url":"https://www.laganzua.net/noticias/32884-stray-kids-anuncian-un-concierto-en-barcelona-en-2027-con-sus-hits-de-kpop"},
- {"cat":"gaming","kw":"PS Plus","title":"Adiós a la app de PS Plus para PC","text":"Sony cerrará el 10 de diciembre la app que permitía jugar en streaming en PC con PS Plus Premium. El Remote Play con tu propia consola seguirá funcionando.","source":"Kotaku en Español","url":"https://es.kotaku.com/playstation-confirma-una-mala-noticia-para-los-jugadores-de-pc-eliminara-una-funcion-de-ps-plus-en-diciembre-2000056915"},
- {"cat":"gossip","kw":"Lambda García","title":"Lambda García anuncia su compromiso","text":"El actor mexicano se casará con el productor teatral Daniel Delgado, que le pidió matrimonio con una canción en un mirador de Ensenada. Aún no hay fecha de boda.","source":"El Vigía","url":"https://elvigia.com.mx/2026/11/11/lambda-garcia-anuncia-su-compromiso-matrimonial/"},
- {"cat":"musica","kw":"Los Enemigos","title":"Los Enemigos tocan hoy en Valencia","text":"La banda de Josele Santiago presenta «Canciones chulas», su primer disco en seis años, esta noche en la Sala Moon. La gira sigue en Santiago y llega a Madrid en enero.","source":"La Ganzúa","url":"https://www.laganzua.net/noticias/32894-los-enemigos-actuan-en-valencia-el-12-de-noviembre-y-luego-en-santiago-barcelona-y-mas-ciudades"},
- {"cat":"deportes","kw":"Italia–Francia","title":"Italia–Francia, el otro duelazo de hoy","text":"A la misma hora que España, a las 20:45, italianos y franceses se miden en la Nations League en uno de los platos fuertes del parón de selecciones.","source":"Fútbol Total","url":"https://futboltotal.futbol/noticias/que-ver-paron-selecciones-noviembre-2026"}
+ {
+  "cat": "musica",
+  "destacada": true,
+  "gancho": "Rosalía arrasa en los Latin Grammy",
+  "kw": "Latin Grammy",
+  "title": "Rosalía arrasa: Álbum y Canción del Año",
+  "text": "La catalana gana Álbum del Año con «LUX» y Canción del Año con «La Perla», entre otros premios. Milo J se lleva Grabación del Año con «Niño» y Aria Vega, Mejor Nuevo Artista.",
+  "source": "Infobae",
+  "url": "https://www.infobae.com/entretenimiento/2026/11/13/lista-de-ganadores-de-los-latin-grammy-2026-rosalia-karol-g-y-milo-j-entre-los-triunfadores/"
+ },
+ {
+  "cat": "gaming",
+  "kw": "Microsoft",
+  "title": "Caída mundial de Microsoft: Outlook y Teams, KO",
+  "text": "Outlook, Teams, Office, OneDrive y Copilot llevan horas fallando en decenas de países desde la tarde del jueves. Microsoft descarta un ciberataque y admite que la recuperación va más lenta de lo previsto.",
+  "source": "El Español",
+  "url": "https://www.elespanol.com/omicrono/software/20261113/outlook-teams-no-funcionan-microsoft-experimenta-caida-mundial-servicios-consigue-solucionar/1003744456695_0.html"
+ },
+ {
+  "cat": "deportes",
+  "kw": "Chequia–ESP",
+  "title": "España gana 0-2 en Praga y sigue con pleno",
+  "text": "La Roja suma su quinta victoria en cinco partidos de la Nations League tras imponerse a Chequia a domicilio.",
+  "source": "ESPN",
+  "url": "https://www.espn.com/soccer/report/_/gameId/401861148"
+ },
+ {
+  "cat": "musica",
+  "kw": "Alejandro Sanz",
+  "title": "Alejandro Sanz y Yerai Cortés, también premiados",
+  "text": "Sanz gana Mejor Álbum Pop Contemporáneo con «¿Y Ahora Qué +?» y Yerai Cortés, Mejor Álbum Flamenco con «Popular». Karol G se lleva Álbum Urbano con «Tropicoqueta».",
+  "source": "KCH FM",
+  "url": "https://kchcomunicacion.com/2026/11/13/latin-grammy-2026-rosalia-karol-g-y-milo-j-se-llevan-los-maximos-honores/"
+ },
+ {
+  "cat": "musica",
+  "kw": "Coachella",
+  "title": "Coachella 2027, a la venta hoy con Bad Gyal",
+  "text": "El cartel del festival, con Dua Lipa, Madonna y Daddy Yankee, incluye a la catalana y al grupo madrileño. Será en abril de 2027 y las entradas salen este viernes 13.",
+  "source": "Infobae",
+  "url": "https://infobae.com/america/agencias/2026/11/11/bad-gyal-y-las-petunias-representacion-espanola-en-el-festival-coachella-2027"
+ },
+ {
+  "cat": "gaming",
+  "kw": "GTA 6",
+  "title": "GTA 6 ya se puede precargar: sale el 19",
+  "text": "Rockstar ha abierto la precarga para quienes reservaron la versión digital; con la edición en caja se puede precargar al activar el código. Llega a PS5 y Xbox Series en una semana.",
+  "source": "Rockstar Games",
+  "url": "https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"
+ },
+ {
+  "cat": "tele",
+  "kw": "La Séptima",
+  "title": "La Séptima cierra su 1ª semana con un 3,5%",
+  "text": "El nuevo canal de la TDT suma 5,2 millones de espectadores diarios en sus siete primeros días. Sus franjas más fuertes son la noche (4,3%) y la sobremesa (3,8%).",
+  "source": "Infobae",
+  "url": "https://www.infobae.com/espana/agencias/2026/11/12/la-septima-en-su-primera-semana-35-de-cuota-y-52-millones-de-espectadores-diarios/"
+ },
+ {
+  "cat": "musica",
+  "kw": "Stray Kids",
+  "title": "Stray Kids llenarán el Olímpic en 2027",
+  "text": "El grupo de K-pop actuará el 24 de julio de 2027 en el Estadi Olímpic de Barcelona con su gira «Run It». Entradas a la venta el 19 de noviembre a las 15:00.",
+  "source": "La Ganzúa",
+  "url": "https://www.laganzua.net/noticias/32884-stray-kids-anuncian-un-concierto-en-barcelona-en-2027-con-sus-hits-de-kpop"
+ },
+ {
+  "cat": "gaming",
+  "kw": "PS Plus",
+  "title": "Adiós a la app de PS Plus para PC",
+  "text": "Sony cerrará el 10 de diciembre la app que permitía jugar en streaming en PC con PS Plus Premium. El Remote Play con tu propia consola seguirá funcionando.",
+  "source": "Kotaku en Español",
+  "url": "https://es.kotaku.com/playstation-confirma-una-mala-noticia-para-los-jugadores-de-pc-eliminara-una-funcion-de-ps-plus-en-diciembre-2000056915"
+ },
+ {
+  "cat": "gossip",
+  "kw": "Lambda García",
+  "title": "Lambda García anuncia su compromiso",
+  "text": "El actor mexicano se casará con el productor teatral Daniel Delgado, que le pidió matrimonio con una canción en un mirador de Ensenada. Aún no hay fecha de boda.",
+  "source": "El Vigía",
+  "url": "https://elvigia.com.mx/2026/11/11/lambda-garcia-anuncia-su-compromiso-matrimonial/"
+ }
 ]
