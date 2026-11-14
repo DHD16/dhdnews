@@ -1,12 +1,84 @@
 [
- {"cat":"musica","destacada":true,"gancho":"Rosalía hace historia en los Latin Grammy","kw":"Rosalía","title":"Rosalía hace historia: 6 Latin Grammy en una noche","text":"Con «LUX» se lleva su tercer Álbum del Año y suma seis premios en una sola gala, récord para una mujer que supera a Shakira y Natalia Lafourcade. Ya acumula 17 gramófonos.","source":"La Tribuna","url":"https://www.latribuna.com.py/lifestyle/arte-y-cultura/2026/11/13/rosalia-hace-historia-en-los-latin-grammy-al-lograr-un-record/"},
- {"cat":"deportes","kw":"ESP–ING","title":"España–Inglaterra: el domingo, a por el liderato","text":"La Roja recibe a Inglaterra el domingo a las 20:45 en el Metropolitano (La 1). Tras ganar 0-2 en Praga, a España le vale el empate para acabar primera de grupo.","source":"Sports Illustrated","url":"https://www.si.com/es-us/espana-vs-inglaterra-previa-predicciones-y-alineaciones-15-11-2026"},
- {"cat":"gaming","kw":"GTA 6","title":"GTA 6 ya se precarga: sale el jueves 19","text":"Rockstar ha abierto la precarga de Grand Theft Auto VI para que esté listo el día del lanzamiento, este jueves 19 de noviembre.","source":"Rockstar Games","url":"https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"},
- {"cat":"gaming","kw":"Microsoft","title":"Microsoft vuelve tras más de 20 horas caído","text":"Outlook, Teams y Copilot se recuperan poco a poco tras una caída mundial de más de 20 horas. Microsoft descarta un ciberataque y apunta a un fallo en una actualización.","source":"El Diario","url":"https://www.eldiario.ec/mundo/microsoft-restablece-gradualmente-outlook-teams-y-copilot-tras-una-caida-mundial-de-mas-de-20-horas-13112026/"},
- {"cat":"musica","kw":"SFDK","title":"Viernes de discos: SFDK, Los Punsetes y U2","text":"SFDK estrena «Salto de fé», Los Punsetes publican «Un río de angustia desbocada» y U2 lanza «Carnaval de luz». Coque Malla y Los Secretos también traen single nuevo.","source":"Música Nueva","url":"https://musicanueva.es/novedades-musicales-semana-13-noviembre-2026/"},
- {"cat":"youtube","kw":"IShowSpeed","title":"Streamer Awards: triplete de IShowSpeed","text":"IShowSpeed es el primero en ganar tres veces Streamer del Año. El mexicano Quackity recibió el Premio al Legado y Jynxzi fue Gamer del Año.","source":"Cultura Geek","url":"https://culturageek.com.ar/streamer-awards-2026-ganadores/"},
- {"cat":"tele","kw":"La 1","title":"«La hora de La 1» arrasa con un 20,9%","text":"El magacín matinal de La 1 firmó un 20,9% de cuota el viernes, aunque el día lo ganó Antena 3 con un 13,7%. La 1 cerró la jornada con un 10,1%.","source":"FormulaTV","url":"https://www.formulatv.com/noticias/audiencias-viernes-13-noviembre-de-viernes-belen-138760/"},
- {"cat":"gossip","kw":"Ana de Armas","title":"Ana de Armas y Beto Montenegro, ya oficiales","text":"La actriz y el cantante de Rawayana posaron juntos por primera vez como pareja en la alfombra roja de la gala Persona del Año de los Latin Grammy.","source":"¡HOLA!","url":"https://www.hola.com/us-es/celebrities/20261112934653/ana-de-armas-beto-montenegro-rawayana-alfombra-roja-gala-persona-anio-latin-grammy-2026-fotos/"},
- {"cat":"musica","kw":"Natos y Waor","title":"Natos y Waor, Recycled J y Morad: «MI VIDA»","text":"El dúo madrileño se une a Recycled J y Morad en «MI VIDA», uno de los singles urbanos más fuertes del viernes.","source":"Música Nueva","url":"https://musicanueva.es/novedades-musicales-semana-13-noviembre-2026/"},
- {"cat":"gaming","kw":"Commandos","title":"Commandos: Origins llega a Switch 2","text":"La saga de estrategia nacida en España aterriza en Nintendo Switch 2 en formato digital el 15 de diciembre, de la mano de Kalypso Media.","source":"Infobae","url":"https://www.infobae.com/malditos-nerds/2026/11/13/commandos-origins-confirma-edicion-digital-para-nintendo-switch-2-en-2026/"}
+ {
+  "cat": "youtube",
+  "destacada": true,
+  "gancho": "Jordi Wild sienta a 3 candidatos al 29-N",
+  "kw": "Jordi Wild",
+  "title": "Jordi Wild entrevista a Sánchez, Feijóo y Colau",
+  "text": "Las tres entrevistas de The Wild Project suman 7,7 millones de visualizaciones en su primer día. Sin preguntas pactadas, con verificadores y sin Abascal, que se cayó de la lista.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=jordi-wild-candidatos"
+ },
+ {
+  "cat": "gaming",
+  "kw": "Vuelos EEUU",
+  "title": "EEUU para todos sus vuelos: +8.800 cancelados",
+  "text": "Un fallo de comunicaciones en el control aéreo obligó a la FAA a frenar todos los despegues del país durante más de 4 horas el viernes. Hoy sábado siguen los retrasos y ya hay unas 2.650 cancelaciones más.",
+  "source": "Euronews",
+  "url": "https://es.euronews.com/2026/11/14/se-levanta-el-bloqueo-de-vuelos-en-eeuu-pero-continuan-los-retrasos-y-cancelaciones"
+ },
+ {
+  "cat": "musica",
+  "kw": "Rosalía",
+  "title": "Rosalía hace historia: 6 Latin Grammy en una noche",
+  "text": "Con «LUX» se lleva su tercer Álbum del Año y suma seis premios en una sola gala, récord para una mujer que supera a Shakira y Natalia Lafourcade. Ya acumula 17 gramófonos.",
+  "source": "La Tribuna",
+  "url": "https://www.latribuna.com.py/lifestyle/arte-y-cultura/2026/11/13/rosalia-hace-historia-en-los-latin-grammy-al-lograr-un-record/"
+ },
+ {
+  "cat": "deportes",
+  "kw": "ESP–ING",
+  "title": "España–Inglaterra: el domingo, a por el liderato",
+  "text": "La Roja recibe a Inglaterra el domingo a las 20:45 en el Metropolitano (La 1). Tras ganar 0-2 en Praga, a España le vale el empate para acabar primera de grupo.",
+  "source": "Sports Illustrated",
+  "url": "https://www.si.com/es-us/espana-vs-inglaterra-previa-predicciones-y-alineaciones-15-11-2026"
+ },
+ {
+  "cat": "gaming",
+  "kw": "GTA 6",
+  "title": "GTA 6 ya se precarga: sale el jueves 19",
+  "text": "Rockstar ha abierto la precarga de Grand Theft Auto VI para que esté listo el día del lanzamiento, este jueves 19 de noviembre.",
+  "source": "Rockstar Games",
+  "url": "https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"
+ },
+ {
+  "cat": "gaming",
+  "kw": "Microsoft",
+  "title": "Microsoft vuelve tras más de 20 horas caído",
+  "text": "Outlook, Teams y Copilot se recuperan poco a poco tras una caída mundial de más de 20 horas. Microsoft descarta un ciberataque y apunta a un fallo en una actualización.",
+  "source": "El Diario",
+  "url": "https://www.eldiario.ec/mundo/microsoft-restablece-gradualmente-outlook-teams-y-copilot-tras-una-caida-mundial-de-mas-de-20-horas-13112026/"
+ },
+ {
+  "cat": "musica",
+  "kw": "SFDK",
+  "title": "Viernes de discos: SFDK, Los Punsetes y U2",
+  "text": "SFDK estrena «Salto de fé», Los Punsetes publican «Un río de angustia desbocada» y U2 lanza «Carnaval de luz». Coque Malla y Los Secretos también traen single nuevo.",
+  "source": "Música Nueva",
+  "url": "https://musicanueva.es/novedades-musicales-semana-13-noviembre-2026/"
+ },
+ {
+  "cat": "youtube",
+  "kw": "IShowSpeed",
+  "title": "Streamer Awards: triplete de IShowSpeed",
+  "text": "IShowSpeed es el primero en ganar tres veces Streamer del Año. El mexicano Quackity recibió el Premio al Legado y Jynxzi fue Gamer del Año.",
+  "source": "Cultura Geek",
+  "url": "https://culturageek.com.ar/streamer-awards-2026-ganadores/"
+ },
+ {
+  "cat": "tele",
+  "kw": "La 1",
+  "title": "«La hora de La 1» arrasa con un 20,9%",
+  "text": "El magacín matinal de La 1 firmó un 20,9% de cuota el viernes, aunque el día lo ganó Antena 3 con un 13,7%. La 1 cerró la jornada con un 10,1%.",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/noticias/audiencias-viernes-13-noviembre-de-viernes-belen-138760/"
+ },
+ {
+  "cat": "gossip",
+  "kw": "Ana de Armas",
+  "title": "Ana de Armas y Beto Montenegro, ya oficiales",
+  "text": "La actriz y el cantante de Rawayana posaron juntos por primera vez como pareja en la alfombra roja de la gala Persona del Año de los Latin Grammy.",
+  "source": "¡HOLA!",
+  "url": "https://www.hola.com/us-es/celebrities/20261112934653/ana-de-armas-beto-montenegro-rawayana-alfombra-roja-gala-persona-anio-latin-grammy-2026-fotos/"
+ }
 ]
