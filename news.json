@@ -1,84 +1,12 @@
 [
- {
-  "cat": "musica",
-  "destacada": true,
-  "gancho": "Rosalía arrasa en los Latin Grammy",
-  "kw": "Latin Grammy",
-  "title": "Rosalía arrasa: Álbum y Canción del Año",
-  "text": "La catalana se lleva 5 premios, entre ellos Álbum del Año con «LUX» y Canción del Año con «La Perla». Milo J gana Grabación del Año con «Niño» y Aria Vega, Mejor Nuevo Artista.",
-  "source": "Infobae",
-  "url": "https://www.infobae.com/entretenimiento/2026/11/13/lista-de-ganadores-de-los-latin-grammy-2026-rosalia-karol-g-y-milo-j-entre-los-triunfadores/"
- },
- {
-  "cat": "gaming",
-  "kw": "Microsoft",
-  "title": "Caída mundial de Microsoft: Outlook y Teams, KO",
-  "text": "Outlook, Teams, Office y Copilot llevan desde el jueves fallando en 74 países. Microsoft descarta un ciberataque y habla de una recuperación gradual, pero aún no la da por resuelta.",
-  "source": "Infobae",
-  "url": "https://www.infobae.com/tecno/2026/11/13/microsoft-reconocio-que-aun-no-logra-resolver-los-problemas-que-provocaron-la-caida-global-de-outlook-teams-y-copilot/"
- },
- {
-  "cat": "deportes",
-  "kw": "Chequia–ESP",
-  "title": "España gana 0-2 en Praga y sigue con pleno",
-  "text": "La Roja suma su quinta victoria en cinco partidos de la Nations League tras imponerse a Chequia a domicilio.",
-  "source": "ESPN",
-  "url": "https://www.espn.com/soccer/report/_/gameId/401861148"
- },
- {
-  "cat": "musica",
-  "kw": "Alejandro Sanz",
-  "title": "Alejandro Sanz y Yerai Cortés, también premiados",
-  "text": "Sanz gana Mejor Álbum Pop Contemporáneo con «¿Y Ahora Qué +?» y Yerai Cortés, Mejor Álbum Flamenco con «Popular». Karol G se lleva Álbum Urbano con «Tropicoqueta».",
-  "source": "KCH FM",
-  "url": "https://kchcomunicacion.com/2026/11/13/latin-grammy-2026-rosalia-karol-g-y-milo-j-se-llevan-los-maximos-honores/"
- },
- {
-  "cat": "musica",
-  "kw": "Coachella",
-  "title": "Coachella 2027, a la venta hoy con Bad Gyal",
-  "text": "El cartel del festival, con Dua Lipa, Madonna y Daddy Yankee, incluye a la catalana y al grupo madrileño. Será en abril de 2027 y las entradas salen este viernes 13.",
-  "source": "Infobae",
-  "url": "https://infobae.com/america/agencias/2026/11/11/bad-gyal-y-las-petunias-representacion-espanola-en-el-festival-coachella-2027"
- },
- {
-  "cat": "gaming",
-  "kw": "GTA 6",
-  "title": "GTA 6 ya se puede precargar: sale el 19",
-  "text": "Rockstar ha abierto la precarga para quienes reservaron la versión digital; con la edición en caja se puede precargar al activar el código. Llega a PS5 y Xbox Series en una semana.",
-  "source": "Rockstar Games",
-  "url": "https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"
- },
- {
-  "cat": "tele",
-  "kw": "La Séptima",
-  "title": "La Séptima cierra su 1ª semana con un 3,5%",
-  "text": "El nuevo canal de la TDT suma 5,2 millones de espectadores diarios en sus siete primeros días. Sus franjas más fuertes son la noche (4,3%) y la sobremesa (3,8%).",
-  "source": "Infobae",
-  "url": "https://www.infobae.com/espana/agencias/2026/11/12/la-septima-en-su-primera-semana-35-de-cuota-y-52-millones-de-espectadores-diarios/"
- },
- {
-  "cat": "musica",
-  "kw": "Stray Kids",
-  "title": "Stray Kids llenarán el Olímpic en 2027",
-  "text": "El grupo de K-pop actuará el 24 de julio de 2027 en el Estadi Olímpic de Barcelona con su gira «Run It». Entradas a la venta el 19 de noviembre a las 15:00.",
-  "source": "La Ganzúa",
-  "url": "https://www.laganzua.net/noticias/32884-stray-kids-anuncian-un-concierto-en-barcelona-en-2027-con-sus-hits-de-kpop"
- },
- {
-  "cat": "gaming",
-  "kw": "PS Plus",
-  "title": "Adiós a la app de PS Plus para PC",
-  "text": "Sony cerrará el 10 de diciembre la app que permitía jugar en streaming en PC con PS Plus Premium. El Remote Play con tu propia consola seguirá funcionando.",
-  "source": "Kotaku en Español",
-  "url": "https://es.kotaku.com/playstation-confirma-una-mala-noticia-para-los-jugadores-de-pc-eliminara-una-funcion-de-ps-plus-en-diciembre-2000056915"
- },
- {
-  "cat": "gossip",
-  "kw": "Lambda García",
-  "title": "Lambda García anuncia su compromiso",
-  "text": "El actor mexicano se casará con el productor teatral Daniel Delgado, que le pidió matrimonio con una canción en un mirador de Ensenada. Aún no hay fecha de boda.",
-  "source": "El Vigía",
-  "url": "https://elvigia.com.mx/2026/11/11/lambda-garcia-anuncia-su-compromiso-matrimonial/"
- }
+ {"cat":"musica","destacada":true,"gancho":"Rosalía hace historia en los Latin Grammy","kw":"Rosalía","title":"Rosalía hace historia: 6 Latin Grammy en una noche","text":"Con «LUX» se lleva su tercer Álbum del Año y suma seis premios en una sola gala, récord para una mujer que supera a Shakira y Natalia Lafourcade. Ya acumula 17 gramófonos.","source":"La Tribuna","url":"https://www.latribuna.com.py/lifestyle/arte-y-cultura/2026/11/13/rosalia-hace-historia-en-los-latin-grammy-al-lograr-un-record/"},
+ {"cat":"deportes","kw":"ESP–ING","title":"España–Inglaterra: el domingo, a por el liderato","text":"La Roja recibe a Inglaterra el domingo a las 20:45 en el Metropolitano (La 1). Tras ganar 0-2 en Praga, a España le vale el empate para acabar primera de grupo.","source":"Sports Illustrated","url":"https://www.si.com/es-us/espana-vs-inglaterra-previa-predicciones-y-alineaciones-15-11-2026"},
+ {"cat":"gaming","kw":"GTA 6","title":"GTA 6 ya se precarga: sale el jueves 19","text":"Rockstar ha abierto la precarga de Grand Theft Auto VI para que esté listo el día del lanzamiento, este jueves 19 de noviembre.","source":"Rockstar Games","url":"https://www.rockstargames.com/es/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"},
+ {"cat":"gaming","kw":"Microsoft","title":"Microsoft vuelve tras más de 20 horas caído","text":"Outlook, Teams y Copilot se recuperan poco a poco tras una caída mundial de más de 20 horas. Microsoft descarta un ciberataque y apunta a un fallo en una actualización.","source":"El Diario","url":"https://www.eldiario.ec/mundo/microsoft-restablece-gradualmente-outlook-teams-y-copilot-tras-una-caida-mundial-de-mas-de-20-horas-13112026/"},
+ {"cat":"musica","kw":"SFDK","title":"Viernes de discos: SFDK, Los Punsetes y U2","text":"SFDK estrena «Salto de fé», Los Punsetes publican «Un río de angustia desbocada» y U2 lanza «Carnaval de luz». Coque Malla y Los Secretos también traen single nuevo.","source":"Música Nueva","url":"https://musicanueva.es/novedades-musicales-semana-13-noviembre-2026/"},
+ {"cat":"youtube","kw":"IShowSpeed","title":"Streamer Awards: triplete de IShowSpeed","text":"IShowSpeed es el primero en ganar tres veces Streamer del Año. El mexicano Quackity recibió el Premio al Legado y Jynxzi fue Gamer del Año.","source":"Cultura Geek","url":"https://culturageek.com.ar/streamer-awards-2026-ganadores/"},
+ {"cat":"tele","kw":"La 1","title":"«La hora de La 1» arrasa con un 20,9%","text":"El magacín matinal de La 1 firmó un 20,9% de cuota el viernes, aunque el día lo ganó Antena 3 con un 13,7%. La 1 cerró la jornada con un 10,1%.","source":"FormulaTV","url":"https://www.formulatv.com/noticias/audiencias-viernes-13-noviembre-de-viernes-belen-138760/"},
+ {"cat":"gossip","kw":"Ana de Armas","title":"Ana de Armas y Beto Montenegro, ya oficiales","text":"La actriz y el cantante de Rawayana posaron juntos por primera vez como pareja en la alfombra roja de la gala Persona del Año de los Latin Grammy.","source":"¡HOLA!","url":"https://www.hola.com/us-es/celebrities/20261112934653/ana-de-armas-beto-montenegro-rawayana-alfombra-roja-gala-persona-anio-latin-grammy-2026-fotos/"},
+ {"cat":"musica","kw":"Natos y Waor","title":"Natos y Waor, Recycled J y Morad: «MI VIDA»","text":"El dúo madrileño se une a Recycled J y Morad en «MI VIDA», uno de los singles urbanos más fuertes del viernes.","source":"Música Nueva","url":"https://musicanueva.es/novedades-musicales-semana-13-noviembre-2026/"},
+ {"cat":"gaming","kw":"Commandos","title":"Commandos: Origins llega a Switch 2","text":"La saga de estrategia nacida en España aterriza en Nintendo Switch 2 en formato digital el 15 de diciembre, de la mano de Kalypso Media.","source":"Infobae","url":"https://www.infobae.com/malditos-nerds/2026/11/13/commandos-origins-confirma-edicion-digital-para-nintendo-switch-2-en-2026/"}
 ]
