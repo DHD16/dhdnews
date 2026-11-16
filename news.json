@@ -1,84 +1,12 @@
 [
- {
-  "cat": "youtube",
-  "destacada": true,
-  "gancho": "Jordi Wild sienta a 3 candidatos al 29-N",
-  "kw": "Jordi Wild",
-  "title": "Jordi Wild y los candidatos: +15 millones",
-  "text": "Las entrevistas de The Wild Project a Sánchez, Feijóo y Colau ya superan los 15 millones de visualizaciones. Sin preguntas pactadas y con verificadores en directo.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=jordi-wild-candidatos"
- },
- {
-  "cat": "musica",
-  "kw": "Claudia Arenas",
-  "title": "Claudia Arenas: primera gira y 3 sold out",
-  "text": "La alicantina de OT 2025 estrena hoy su primera gira en la Sala Marearock de Alicante. Alicante, Madrid (18/11) y Barcelona (26/11): las tres fechas, sin entradas.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=claudia-arenas-gira-alicante"
- },
- {
-  "cat": "deportes",
-  "kw": "ESP–ING",
-  "title": "España–Inglaterra: el liderato, esta noche",
-  "text": "La Selección cierra la fase de grupos de la Nations League a las 20:45 en el Metropolitano (La 1 y RTVE Play). A España le vale el empate; Lamine Yamal y Oyarzabal vuelven.",
-  "source": "SportAragón",
-  "url": "https://www.sportaragon.com/futbol-aragon/espana-inglaterra-horario-television-que-necesita-cada-seleccion-ser-primera-grupo/20261114172603163094.html"
- },
- {
-  "cat": "gaming",
-  "kw": "GTA 6",
-  "title": "GTA 6, a 4 días: todo listo para Vice City",
-  "text": "Rockstar lanza GTA VI el jueves 19 en PS5 y Xbox Series, con la precarga ya abierta (hasta 212 GB). Los análisis de la prensa llegarían el día 18.",
-  "source": "El Diario Alerta",
-  "url": "https://www.eldiarioalerta.com/articulo/video-juegos/gta-vi-desata-cuenta-atras-fecha-precio-todo-que-debes-saber-antes-entrar-vice-city/20261114094645586390.html"
- },
- {
-  "cat": "musica",
-  "kw": "Rosalía",
-  "title": "Rosalía arrasa con 6 Latin Grammy",
-  "text": "«LUX» le da su tercer Álbum del Año y «La Perla» gana Canción del Año. Es la primera mujer con tres Álbum del Año como artista principal.",
-  "source": "Crazyminds",
-  "url": "https://crazyminds.es/noticias/rosalia-grammy-latino-2026/"
- },
- {
-  "cat": "deportes",
-  "kw": "ATP Finals",
-  "title": "Jódar debuta hoy en Turín ante Zverev",
-  "text": "Arrancan las Nitto ATP Finals con Alcaraz y Rafa Jódar. El debut del joven madrileño contra Zverev es a las 14:00 en Movistar Plus+.",
-  "source": "El Debate",
-  "url": "https://www.eldebate.com/deportes/tenis/20261114/alexander-zverev-rafa-jodar-horario-donde-ver-primera-jornada-nitto-atp-finals_480844.html"
- },
- {
-  "cat": "musica",
-  "kw": "LOS40 MA",
-  "title": "LOS40 Music Awards: cuenta atrás",
-  "text": "La gala será el 20 de noviembre en el Palau Sant Jordi de Barcelona. Rosalía, Quevedo, Lola Índigo y Ana Mena, entre los nominados a mejor artista español.",
-  "source": "El Generacional",
-  "url": "https://elgeneracionalpost.com/cultura/2026/1113/291232/llego-la-cuenta-atras-para-los40-music-awards-santander-2026.html"
- },
- {
-  "cat": "tele",
-  "kw": "De Viernes",
-  "title": "'De Viernes' lidera y 'La Voz' remonta",
-  "text": "Telecinco ganó el viernes con un 15,5% de '¡De Viernes!', mientras 'La Voz' se recuperó hasta el 12,5% en Antena 3. En La 1, 'Cuánta guerra' marcó un 5,6%.",
-  "source": "eldiario.es (Vertele)",
-  "url": "https://www.eldiario.es/vertele/audiencias-tv/viernes-13-noviembre-2026-deviernes-belen-esteban-lider-la-voz-debate-sexta_1_13663614.html"
- },
- {
-  "cat": "tele",
-  "kw": "La Promesa",
-  "title": "La 1: 'La Promesa' y 'Valle Salvaje' suben",
-  "text": "Las dos series diarias de La 1 crecieron el viernes: 'La Promesa' marcó un 11,4% (917.000) y 'Valle Salvaje' un 10,5%, su segundo mejor dato del mes.",
-  "source": "Cultura en Serie",
-  "url": "https://www.culturaenserie.com/audiencias-series-viernes-13-noviembre-2026.html"
- },
- {
-  "cat": "gossip",
-  "kw": "Mariló",
-  "title": "Mariló Montero será abuela otra vez",
-  "text": "La presentadora confirmó que su hijo Alberto Herrera y Blanca Llandres esperan su segundo hijo, ocho meses después de nacer Marcos. Pidió prudencia: «está en fase muy inicial».",
-  "source": "El Confidencial Digital",
-  "url": "https://www.elconfidencialdigital.com/articulo/famosos/marilo-montero-confirma-dos-embarazos-familia-herrera-peticion-prudencia/202611141724141502409.html"
- }
+ {"cat":"deportes","destacada":true,"gancho":"Inglaterra tumba a la Roja: 2-3","kw":"ESP–ING","title":"Inglaterra rompe el invicto de España","text":"La Selección perdió 2-3 ante Inglaterra en el Metropolitano (Kane, Konsa y White; Oyarzabal y Nico Williams) y se acaba su racha de 44 partidos oficiales sin perder. Baja a segunda de grupo en la Nations League.","source":"Infobae / EFE","url":"https://www.infobae.com/america/agencias/2026/11/15/cronica-del-espana-inglaterra-2-3/"},
+ {"cat":"gaming","kw":"GTA 6","title":"Semana GTA 6: sale este jueves","text":"Grand Theft Auto VI llega el jueves 19 de noviembre a PS5 y Xbox Series. De PC, por ahora, Rockstar no ha dicho nada.","source":"Libertad Digital","url":"https://www.libertaddigital.com/ciencia-tecnologia/videojuegos/2026-11-16/estrenos-de-videojuegos-16-20-nov-gta-6-llega-a-las-tiendas-tras-una-eternidad-esperando-7491918/"},
+ {"cat":"musica","kw":"Bizarrap","title":"Bizarrap pone fin a sus Music Sessions","text":"El productor lo anunció al recoger su Latin Grammy a Mejor Canción Urbana con Daddy Yankee: la Session nº 66 será la última.","source":"Enfoque Monterrey","url":"https://enfoquemonterrey.com.mx/2026/11/14/anuncia-bizarrap-el-fin-de-sus-music-sessions-la-numero-66-sera-la-ultima/"},
+ {"cat":"musica","kw":"Pablo Alborán","title":"Alborán se pone sinfónico: disco y gira","text":"'SINFÓNICO' sale el 18 de diciembre y viene con gira en 2027: Madrid, Valencia, Barcelona, Lisboa y Sevilla. Preventa de entradas, este miércoles 18 a las 10:00.","source":"Info7","url":"https://www.info7.mx/espectaculos/pablo-alboran-anuncia-disco-sinfonico-y-gira-para-2027/8730786377"},
+ {"cat":"youtube","kw":"Xokas","title":"Xokas: \"Fui top 1 del mundo\"","text":"En The Wild Project se comparó con el Rubius, Auron e Ibai en su mejor momento y dijo que tuvo que trabajar más que ellos. Los fandoms ya están en guerra.","source":"Qué!","url":"https://www.que.es/2026/11/16/xokas-rubius-auronplay-polemica"},
+ {"cat":"tele","kw":"La 1","title":"La 1 arrasa: 6,5 millones con la Selección","text":"El España-Inglaterra fue lo más visto de la temporada (44,1% y minuto de oro de 7,4 millones). 'La película de la semana' firmó después su mejor dato del año (15,7%).","source":"Vertele (elDiario.es)","url":"https://www.eldiario.es/vertele/audiencias-tv/domingo-15-noviembre-2026-espana-inglaterra-arrasa-6-millones-rtve-facilita-maximo-anual-la-pelicula-de-la-semana_1_13666484.html"},
+ {"cat":"deportes","kw":"Alcaraz","title":"Alcaraz debuta hoy en las ATP Finals","text":"Se mide a Tiafoe en Turín no antes de las 14:00 (Movistar+). Jódar cayó en su estreno ante Zverev por 6-4 y 6-4.","source":"El Debate","url":"https://www.eldebate.com/deportes/tenis/20261115/horario-donde-ver-tv-debut-carlos-alcaraz-atp-finals-contra-frances-tiafoe_481078.html"},
+ {"cat":"musica","kw":"Vega","title":"Vega vuelve con 'L'appel du vide'","text":"Primer adelanto de su nuevo disco, producido por Ricky Falkner. Celebra 25 años de carrera con una gira en 2027 por trece ciudades.","source":"ESCplus","url":"https://www.escplus.es/musica/2026/vega-lappel-du-vide-nuevo-album-gira-2027/"},
+ {"cat":"musica","kw":"Kany García","title":"Kany García y Rauw Alejandro: 'Suave'","text":"La puertorriqueña une fuerzas con Rauw en su nuevo single, uno de los estrenos de la semana junto a Mónica Naranjo, Los Secretos y MARLENA.","source":"La Parabólica TV","url":"https://laparabolica.tv/novedades-musicales-13-noviembre-2026/"},
+ {"cat":"gossip","kw":"GH VIP 9","title":"Belén Esteban, a GH VIP 9","text":"Telecinco estrena 'Gran Hermano VIP 9' el miércoles 18. Ya hay diez concursantes oficiales, con Belén Esteban, Pipi Estrada y Raquel Mosquera.","source":"Vertele (elDiario.es)","url":"https://www.eldiario.es/vertele/noticias/carlos-corbacho-concursante-oficial-gran-hermano-vip-telecinco-isabel-pantoja_1_13665317.html"}
 ]
