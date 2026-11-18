@@ -1,12 +1,84 @@
 [
- {"cat":"musica","destacada":true,"gancho":"Rosalía, 9 veces nominada a los Grammy","kw":"Rosalía","title":"Rosalía arrasa: 9 nominaciones a los Grammy","text":"'Lux' entra en Álbum del Año y 'Berghain' en Grabación y Canción del Año: sus primeras nominaciones en las categorías grandes. Solo Raye (11) tiene más. La gala, el 7 de febrero en Los Ángeles.","source":"RPP / El Financiero","url":"https://rpp.pe/musica/internacional/grammy-2027-lista-completa-de-nominados-a-los-premios-noticia-1718026"},
- {"cat":"gaming","kw":"GTA 6","title":"GTA 6: quedan dos días","text":"Grand Theft Auto VI sale este jueves 19 de noviembre en PS5 y Xbox Series. Es el gran estreno de una semana que llevamos años esperando.","source":"Libertad Digital","url":"https://www.libertaddigital.com/ciencia-tecnologia/videojuegos/2026-11-16/estrenos-de-videojuegos-16-20-nov-gta-6-llega-a-las-tiendas-tras-una-eternidad-esperando-7491918/"},
- {"cat":"deportes","kw":"Alcaraz","title":"Alcaraz debuta a lo grande en Turín","text":"Arrasó a Tiafoe 6-2, 6-2 en poco más de una hora en su estreno en las ATP Finals. El miércoles se mide a Medvedev.","source":"Cadena 3","url":"https://www.cadena3.com/noticia/tenis/alcaraz-debuto-con-un-solido-triunfo-contra-tiafoe-en-las-atp-finals_613622"},
- {"cat":"musica","kw":"LOS40 Awards","title":"LOS40 Music Awards: cartel de lujo el viernes","text":"Quevedo, Lola Índigo, Ana Mena, Emilia, Camilo o Carlos Vives actúan el viernes 20 (20:30, en directo en Divinity). Rosalía llega como favorita con 7 nominaciones.","source":"Divinity","url":"https://divinity.es/television/20261116/divinity-emite-los40-music-awards-santander-2026-directo-como-ver_18_020719253.html"},
- {"cat":"gaming","kw":"Game Awards","title":"The Game Awards revela hoy sus nominados","text":"La lista de candidatos al GOTY 2026 se anuncia esta tarde (18:00, hora española). La gala será el 10 de diciembre.","source":"Gamecored","url":"https://gamecored.com/the-game-awards-anunciara-a-sus-nominados-de-2026-el-17-de-noviembre/"},
- {"cat":"musica","kw":"Karol G","title":"Karol G y los latinos también van a los Grammy","text":"Karol G opta a Mejor Canción Latina con 'Ahí' (junto a Drake) y a Mejor Álbum Latin Pop. También están nominados Jorge Drexler, Ca7riel & Paco Amoroso y Milo J.","source":"RPP","url":"https://rpp.pe/musica/internacional/grammy-2027-lista-completa-de-nominados-a-los-premios-noticia-1718026"},
- {"cat":"deportes","kw":"Gales–Portugal","title":"Portugal cierra el grupo en Cardiff","text":"La Portugal de Cristiano, líder con 12 puntos, juega hoy en Gales (20:45, DAZN) la última jornada de la Nations League.","source":"Fútbol Total","url":"https://futboltotal.futbol/partido/wales-vs-portugal-uefa-nations-league-2026-11-17"},
- {"cat":"tele","kw":"La 1","title":"La 1, segunda cadena del lunes","text":"La 1 firmó un 13,1% de media, solo por detrás de Antena 3. El Telediario 1 fue su espacio más fuerte: 1,6 millones y 16,9%.","source":"FormulaTV","url":"https://www.formulatv.com/noticias/audiencias-lunes-16-noviembre-isla-tentaciones-138778/"},
- {"cat":"deportes","kw":"Madrid–Celta","title":"Vuelve LaLiga: Madrid–Celta el sábado","text":"Tras el parón, el Real Madrid recibe al Celta el sábado 21 a las 21:00 (Movistar Plus+ / M+ LALIGA) en la jornada 13.","source":"Fútbol Total","url":"https://futboltotal.futbol/partido/real-madrid-vs-celta-vigo-la-liga-2026-11-22"},
- {"cat":"tele","kw":"La Séptima","title":"La Séptima marca un 2,9% el lunes","text":"El nuevo canal de la TDT cerró el lunes con un 2,9% de cuota; su programa más visto fue 'En línea' en sobremesa (327.000 y 3,6%).","source":"FormulaTV","url":"https://www.formulatv.com/noticias/audiencias-lunes-16-noviembre-isla-tentaciones-138778/"}
+ {
+  "cat": "gaming",
+  "destacada": true,
+  "gancho": "GTA 6 llega el jueves y ya opta al GOTY",
+  "kw": "GTA 6",
+  "title": "GTA 6 llega mañana… y ya opta al GOTY",
+  "text": "Sale este jueves 19 en PS5 y Xbox Series y ya es uno de los 6 candidatos a Juego del Año de The Game Awards.",
+  "source": "Variety",
+  "url": "https://variety.com/2026/awards/news/game-awards-nominations-2026-list-1236949480/"
+ },
+ {
+  "cat": "musica",
+  "kw": "Estopa",
+  "title": "Estopa agota su gira en horas",
+  "text": "La 'Gira de la MKT' voló en horas y suman tres fechas: Valencia (11 junio), Barcelona (20 junio) y Madrid (8 julio). Sevilla, el 26 de junio. Todo en verano de 2027.",
+  "source": "Libertad Digital",
+  "url": "https://www.libertaddigital.com/cultura/musica/2026-11-18/estopa-anuncia-nuevos-conciertos-tras-agotar-las-entradas-en-horas-7493741/"
+ },
+ {
+  "cat": "deportes",
+  "kw": "Alcaraz",
+  "title": "Alcaraz–Medvedev: duelo por el liderato",
+  "text": "Hoy a las 14:00 (Movistar Plus+) en las ATP Finals de Turín. Los dos ganaron su estreno y el que gane se pone primero de grupo.",
+  "source": "El Debate",
+  "url": "https://www.eldebate.com/deportes/tenis/20261117/carlos-alcaraz-daniil-medvedev-horario-donde-ver-tv-fase-grupos-atp-finals_481870.html"
+ },
+ {
+  "cat": "youtube",
+  "kw": "Rubius",
+  "title": "Rubius, en Nueva Zelanda por GTA 6",
+  "text": "El youtuber viajó al país donde GTA 6 se desbloquea antes que en ningún sitio para jugarlo en directo en Twitch y YouTube, y promete regalar códigos durante el stream.",
+  "source": "Generación Xbox",
+  "url": "https://generacionxbox.com/rubius-anuncia-tres-bombazos-sobre-gta-6-jugara-el-dia-18-y-regalara-codigos-para-xbox-y-ps5-cada-10-minutos/"
+ },
+ {
+  "cat": "musica",
+  "kw": "C. Arenas",
+  "title": "Claudia Arenas llena hoy Clamores",
+  "text": "La alicantina de OT 2025 sigue su primera gira esta noche en la Sala Clamores de Madrid, con todo vendido. El 26/11 cierra en Jamboree (Barcelona), también sold out.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=claudia-arenas-gira-alicante"
+ },
+ {
+  "cat": "gaming",
+  "kw": "Game Awards",
+  "title": "Los 6 candidatos al GOTY 2026",
+  "text": "GTA VI, Resident Evil Requiem, Zelda: Ocarina of Time Remake, 007 First Light, Control Resonant y Phantom Blade Zero. La gala, el 10 de diciembre.",
+  "source": "3DJuegos",
+  "url": "https://www.3djuegos.com/pc/noticias/the-game-awards-2026-lista-completa-nominados-todos-juegos-candidatos-al-goty"
+ },
+ {
+  "cat": "musica",
+  "kw": "LOS40 Awards",
+  "title": "LOS40 Music Awards, este viernes",
+  "text": "Quevedo, Lola Índigo, Ana Mena, Emilia, Camilo y Carlos Vives actúan el viernes 20 (20:30, Divinity). Rosalía, favorita con 7 nominaciones.",
+  "source": "Divinity",
+  "url": "https://divinity.es/television/20261116/divinity-emite-los40-music-awards-santander-2026-directo-como-ver_18_020719253.html"
+ },
+ {
+  "cat": "deportes",
+  "kw": "Portugal",
+  "title": "Portugal remonta y es primera",
+  "text": "Ganó 3-2 en Gales, con diez jugadores, y acaba líder de su grupo de la Nations League. El sorteo de cuartos es el viernes 20.",
+  "source": "Publimetro",
+  "url": "https://www.publimetro.com.mx/deportes/2026/11/17/portugal-sufre-ante-gales-pero-una-remontada-le-asegura-el-liderato-en-la-nations-league/"
+ },
+ {
+  "cat": "tele",
+  "kw": "La revuelta",
+  "title": "'La revuelta' con Emilia, 1,5 millones",
+  "text": "La visita de Emilia Mernes llevó a 'La revuelta' a 1.513.000 espectadores (12,6%) el martes. La 1 cerró el día con un 12,7%.",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/noticias/audiencias-martes-17-noviembre-cena-idiotas-138787/"
+ },
+ {
+  "cat": "tele",
+  "kw": "La Séptima",
+  "title": "La Séptima sube al 3,1%",
+  "text": "El nuevo canal de la TDT mejora y firma un 3,1% de cuota el martes, por encima del 2,9% del lunes.",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/noticias/audiencias-martes-17-noviembre-cena-idiotas-138787/"
+ }
 ]
