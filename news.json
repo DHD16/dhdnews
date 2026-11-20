@@ -1,8 +1,16 @@
 [
  {
-  "cat": "musica",
+  "cat": "gaming",
   "destacada": true,
-  "gancho": "The Jacksons, gratis en Gran Canaria",
+  "gancho": "GTA 6 vende 24 millones en un día",
+  "kw": "GTA 6",
+  "title": "GTA 6: 24 millones de copias en un día",
+  "text": "Sensor Tower calcula 24,6 millones de copias y 2.360 millones de dólares en su estreno, casi el triple que GTA V. Es una estimación, no cifra oficial.",
+  "source": "Make Tech Easier",
+  "url": "https://maketecheasier.com/gta-6-first-day-sales-estimate/"
+ },
+ {
+  "cat": "musica",
   "kw": "The Jacksons",
   "title": "The Jacksons, gratis en Gran Canaria",
   "text": "La legendaria banda da la bienvenida a la Navidad el 6 de diciembre en Maspalomas: encendido a las 19:00 y concierto a las 21:00, con entrada libre hasta completar aforo.",
@@ -10,75 +18,67 @@
   "url": "articulo.html?id=the-jacksons-maspalomas"
  },
  {
-  "cat": "gaming",
-  "kw": "GTA 6",
-  "title": "GTA 6 ya se puede jugar",
-  "text": "Llegó a medianoche a PS5 y Xbox Series X|S, 13 años después de GTA V. Jason y Lucía ya recorren Vice City; de PC, nada oficial todavía.",
+  "cat": "youtube",
+  "kw": "Rubius",
+  "title": "Rubius reúne a 311.000 en su GTA 6",
+  "text": "Su primer directo de GTA 6 rozó los 311.000 espectadores a la vez, el tercer pico más alto de su carrera en Twitch.",
   "source": "Vandal",
-  "url": "https://vandal.elespanol.com/noticia/2026323012/gta-6-en-directo-todas-las-noticias-curiosidades-y-descubrimientos-del-dia-de-lanzamiento/"
+  "url": "https://vandal.elespanol.com/noticia-amp/2026323031/twitch-pone-cifras-al-exito-de-gta-6-la-audiencia-en-la-plataforma-se-duplico-gracias-al-juego-de-rockstar/"
  },
  {
   "cat": "musica",
-  "kw": "Bad Bunny",
-  "title": "Bad Bunny y Rosalía, en la radio de GTA 6",
-  "text": "La emisora latina Cocoteo FM del juego incluye 'EoO' de Bad Bunny, 'Candy' de Rosalía y 'El Makinón' de Karol G.",
-  "source": "LOS40",
-  "url": "https://los40.cl/2026/11/18/bad-bunny-rosalia-y-karol-g-en-gta-vi-estas-son-las-canciones-que-podras-escuchar-en-cocoteo-fm"
- },
- {
-  "cat": "youtube",
-  "kw": "IlloJuan",
-  "title": "IlloJuan rompe su récord con GTA 6",
-  "text": "Su primer directo de GTA 6 llegó a un pico de 403.666 espectadores, con una media de más de 250.000 durante más de 9 horas.",
-  "source": "Movistar eSports",
-  "url": "https://movistaresports.com/illojuan-bate-records-en-su-canal-con-gta-6/"
+  "kw": "Los Planetas",
+  "title": "Los Planetas estrenan 'Dile a tus padres'",
+  "text": "Segundo adelanto de su próximo disco, también en single de 7 pulgadas con 'Dos cruces'. La gira arranca el 6 de febrero de 2027 en Ciudad de México.",
+  "source": "Todoindie",
+  "url": "https://es.todoindie.com/los-planetas-publican-single-dile-a-tus-padres"
  },
  {
   "cat": "deportes",
-  "kw": "Alcaraz",
-  "title": "Alcaraz, a semis de las ATP Finals",
-  "text": "Tras ganar 6-2, 6-4 a Medvedev, el murciano se metió en las semifinales de Turín por tercera vez en cuatro participaciones.",
-  "source": "ATP Tour",
-  "url": "https://www.atptour.com/es/news/nitto-atp-finals-2026-miercoles-alcaraz-clasificado-sf"
+  "kw": "LaLiga J13",
+  "title": "Vuelve LaLiga: Espanyol–Athletic, hoy 21:00",
+  "text": "Arranca la jornada 13. Madrid–Celta el sábado; Barça–Villarreal (14:00) y Getafe–Atlético (21:00), el domingo.",
+  "source": "El Desmarque",
+  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261021/fechas-horarios-partidos-jornada-13-laliga_18_020499599.html"
  },
  {
   "cat": "musica",
-  "kw": "P. Alborán",
-  "title": "Alborán se pasa a lo sinfónico",
-  "text": "Pablo Alborán publica 'SINFØNICO' el 18 de diciembre y lo llevará de gira en 2027: Teatro Real de Madrid, Roig Arena de Valencia y Palau de la Música de Barcelona.",
-  "source": "RD Música",
-  "url": "https://www.rdmusica.com/pablo-alboran-anuncia-nuevo-disco-y-una-gira-con-sus-canciones-en-formato-sinfonico/"
- },
- {
-  "cat": "musica",
-  "kw": "Rosalía",
-  "title": "Rosalía cierra su año con 6 Latin Grammy",
-  "text": "Con 'Lux' como Álbum del Año y 'La Perla' como Canción del Año, la catalana hace balance: \"Tengo todo lo que hace falta para ser la mejor\".",
-  "source": "Qué!",
-  "url": "https://www.que.es/2026/11/18/rosalia-2026-latin-grammy-frase/"
- },
- {
-  "cat": "gaming",
-  "kw": "Streaming",
-  "title": "GTA 6 pulveriza el récord de espectadores",
-  "text": "Superó los 6,38 millones de espectadores entre Twitch, YouTube y Kick, más del triple del anterior récord de Valorant.",
-  "source": "Vandal",
-  "url": "https://vandal.elespanol.com/noticia-amp/2026322047/gta-6-tambien-hace-historia-en-las-plataformas-de-streaming-y-triplica-el-anterior-record-de-espectadores/"
+  "kw": "Vega",
+  "title": "Vega anuncia 'SIE7E' y gira de 25 años",
+  "text": "El nuevo álbum sale el 7 de febrero de 2027 y la gira suma 13 fechas, de Bilbao (19/2) a Santiago (8/5). El primer adelanto es 'L'appel du vide'.",
+  "source": "Popelera",
+  "url": "https://www.popelera.net/vega-album-sie7e-gira-2027/"
  },
  {
   "cat": "tele",
-  "kw": "La 1",
-  "title": "La 1 lidera noviembre con un 13%",
-  "text": "El miércoles fue segunda (12,5%) y 'La revuelta' reunió 1,38 millones (11,6%). En lo que va de mes, La 1 manda en el ranking mensual.",
-  "source": "Barlovento Comunicación",
-  "url": "https://barloventocomunicacion.es/audiencias-diarias/audiencias-18-de-noviembre-2026/"
+  "kw": "La revuelta",
+  "title": "La revuelta, 11,6% y 1,38 millones",
+  "text": "El programa de Broncano aguantó el miércoles en La 1, que cerró el día con un 12,5%. 'El perro andaluz' firmó un 15,4% en la noche.",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/audiencias/2026-11-18/"
  },
  {
   "cat": "tele",
   "kw": "La Séptima",
-  "title": "La Séptima sigue al alza: 3,5%",
-  "text": "El nuevo canal de la TDT fue el miércoles el temático más visto, con un 3,5% de cuota.",
-  "source": "Barlovento Comunicación",
-  "url": "https://barloventocomunicacion.es/audiencias-diarias/audiencias-18-de-noviembre-2026/"
+  "title": "La Séptima repite 3,5% de media",
+  "text": "El nuevo canal de la TDT mantiene el 3,5% y su sobremesa sube al 4,4%, a solo 1,2 puntos de laSexta en esa franja.",
+  "source": "FormulaTV",
+  "url": "https://www.formulatv.com/audiencias/2026-11-18/"
+ },
+ {
+  "cat": "gaming",
+  "kw": "Twitch",
+  "title": "GTA 6 lleva el streaming a otro nivel",
+  "text": "Más de 6,3 millones de personas a la vez viendo GTA 6 sumando Twitch, YouTube y Kick. Ibai y AuronPlay, los canales más grandes en la categoría.",
+  "source": "ActualTV",
+  "url": "https://actualtv.es/gta-6-streamers-twitch-youtube/"
+ },
+ {
+  "cat": "gossip",
+  "kw": "Brittany Snow",
+  "title": "Brittany Snow confirma su compromiso",
+  "text": "La actriz de 'Dando la nota' confirmó en The Drew Barrymore Show que está comprometida con el director creativo Hunter Moreno.",
+  "source": "Cotilleo",
+  "url": "https://www.cotilleo.es/2026/11/20/brittany-snow-compromiso-hunter-moreno-536713/"
  }
 ]
