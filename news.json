@@ -1,8 +1,16 @@
 [
  {
-  "cat": "gaming",
+  "cat": "musica",
   "destacada": true,
-  "gancho": "GTA 6 ya se puede jugar en PS5 y Xbox",
+  "gancho": "The Jacksons, gratis en Gran Canaria",
+  "kw": "The Jacksons",
+  "title": "The Jacksons, gratis en Gran Canaria",
+  "text": "La legendaria banda da la bienvenida a la Navidad el 6 de diciembre en Maspalomas: encendido a las 19:00 y concierto a las 21:00, con entrada libre hasta completar aforo.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=the-jacksons-maspalomas"
+ },
+ {
+  "cat": "gaming",
   "kw": "GTA 6",
   "title": "GTA 6 ya se puede jugar",
   "text": "Llegó a medianoche a PS5 y Xbox Series X|S, 13 años después de GTA V. Jason y Lucía ya recorren Vice City; de PC, nada oficial todavía.",
@@ -72,13 +80,5 @@
   "text": "El nuevo canal de la TDT fue el miércoles el temático más visto, con un 3,5% de cuota.",
   "source": "Barlovento Comunicación",
   "url": "https://barloventocomunicacion.es/audiencias-diarias/audiencias-18-de-noviembre-2026/"
- },
- {
-  "cat": "gossip",
-  "kw": "Kalinskaya",
-  "title": "Anna Kalinskaya anuncia su compromiso",
-  "text": "La tenista compartió en Instagram una foto con anillo junto al empresario Tomás Ferrari: \"No puedo esperar a nuestro próximo capítulo\".",
-  "source": "Panorama",
-  "url": "https://www.panoramaweb.com.mx/tendencias/2026/11/18/anna-kalinskaya-anuncia-su-compromiso-con-tomas-ferrari-tras-ruptura-con-jannik-sinner-54581.html"
  }
 ]
