@@ -1,8 +1,16 @@
 [
  {
-  "cat": "gaming",
+  "cat": "musica",
   "destacada": true,
-  "gancho": "GTA 6 vende 24 millones en un día",
+  "gancho": "LOS40 Music Awards: hoy, Ana Mena",
+  "kw": "LOS40 Awards",
+  "title": "LOS40 Awards: todos miran a Ana Mena",
+  "text": "Esta noche (20:30, Divinity) el Palau Sant Jordi vive la gala del 60 aniversario. Rosalía, favorita; el show más esperado, el de Ana Mena.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=los40-music-awards-2026-ana-mena"
+ },
+ {
+  "cat": "gaming",
   "kw": "GTA 6",
   "title": "GTA 6: 24 millones de copias en un día",
   "text": "Sensor Tower calcula 24,6 millones de copias y 2.360 millones de dólares en su estreno, casi el triple que GTA V. Es una estimación, no cifra oficial.",
@@ -72,13 +80,5 @@
   "text": "Más de 6,3 millones de personas a la vez viendo GTA 6 sumando Twitch, YouTube y Kick. Ibai y AuronPlay, los canales más grandes en la categoría.",
   "source": "ActualTV",
   "url": "https://actualtv.es/gta-6-streamers-twitch-youtube/"
- },
- {
-  "cat": "gossip",
-  "kw": "Brittany Snow",
-  "title": "Brittany Snow confirma su compromiso",
-  "text": "La actriz de 'Dando la nota' confirmó en The Drew Barrymore Show que está comprometida con el director creativo Hunter Moreno.",
-  "source": "Cotilleo",
-  "url": "https://www.cotilleo.es/2026/11/20/brittany-snow-compromiso-hunter-moreno-536713/"
  }
 ]
