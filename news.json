@@ -1,84 +1,12 @@
 [
- {
-  "cat": "musica",
-  "destacada": true,
-  "gancho": "LOS40 Music Awards: hoy, Ana Mena",
-  "kw": "LOS40 Awards",
-  "title": "LOS40 Awards: todos miran a Ana Mena",
-  "text": "Esta noche (20:30, Divinity) el Palau Sant Jordi vive la gala del 60 aniversario. Rosalía, favorita; el show más esperado, el de Ana Mena.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=los40-music-awards-2026-ana-mena"
- },
- {
-  "cat": "gaming",
-  "kw": "GTA 6",
-  "title": "GTA 6: 24 millones de copias en un día",
-  "text": "Sensor Tower calcula 24,6 millones de copias y 2.360 millones de dólares en su estreno, casi el triple que GTA V. Es una estimación, no cifra oficial.",
-  "source": "Make Tech Easier",
-  "url": "https://maketecheasier.com/gta-6-first-day-sales-estimate/"
- },
- {
-  "cat": "musica",
-  "kw": "The Jacksons",
-  "title": "The Jacksons, gratis en Gran Canaria",
-  "text": "La legendaria banda da la bienvenida a la Navidad el 6 de diciembre en Maspalomas: encendido a las 19:00 y concierto a las 21:00, con entrada libre hasta completar aforo.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=the-jacksons-maspalomas"
- },
- {
-  "cat": "youtube",
-  "kw": "Rubius",
-  "title": "Rubius reúne a 311.000 en su GTA 6",
-  "text": "Su primer directo de GTA 6 rozó los 311.000 espectadores a la vez, el tercer pico más alto de su carrera en Twitch.",
-  "source": "Vandal",
-  "url": "https://vandal.elespanol.com/noticia-amp/2026323031/twitch-pone-cifras-al-exito-de-gta-6-la-audiencia-en-la-plataforma-se-duplico-gracias-al-juego-de-rockstar/"
- },
- {
-  "cat": "musica",
-  "kw": "Los Planetas",
-  "title": "Los Planetas estrenan 'Dile a tus padres'",
-  "text": "Segundo adelanto de su próximo disco, también en single de 7 pulgadas con 'Dos cruces'. La gira arranca el 6 de febrero de 2027 en Ciudad de México.",
-  "source": "Todoindie",
-  "url": "https://es.todoindie.com/los-planetas-publican-single-dile-a-tus-padres"
- },
- {
-  "cat": "deportes",
-  "kw": "LaLiga J13",
-  "title": "Vuelve LaLiga: Espanyol–Athletic, hoy 21:00",
-  "text": "Arranca la jornada 13. Madrid–Celta el sábado; Barça–Villarreal (14:00) y Getafe–Atlético (21:00), el domingo.",
-  "source": "El Desmarque",
-  "url": "https://www.eldesmarque.com/futbol/liga-1a-division/20261021/fechas-horarios-partidos-jornada-13-laliga_18_020499599.html"
- },
- {
-  "cat": "musica",
-  "kw": "Vega",
-  "title": "Vega anuncia 'SIE7E' y gira de 25 años",
-  "text": "El nuevo álbum sale el 7 de febrero de 2027 y la gira suma 13 fechas, de Bilbao (19/2) a Santiago (8/5). El primer adelanto es 'L'appel du vide'.",
-  "source": "Popelera",
-  "url": "https://www.popelera.net/vega-album-sie7e-gira-2027/"
- },
- {
-  "cat": "tele",
-  "kw": "La revuelta",
-  "title": "La revuelta, 11,6% y 1,38 millones",
-  "text": "El programa de Broncano aguantó el miércoles en La 1, que cerró el día con un 12,5%. 'El perro andaluz' firmó un 15,4% en la noche.",
-  "source": "FormulaTV",
-  "url": "https://www.formulatv.com/audiencias/2026-11-18/"
- },
- {
-  "cat": "tele",
-  "kw": "La Séptima",
-  "title": "La Séptima repite 3,5% de media",
-  "text": "El nuevo canal de la TDT mantiene el 3,5% y su sobremesa sube al 4,4%, a solo 1,2 puntos de laSexta en esa franja.",
-  "source": "FormulaTV",
-  "url": "https://www.formulatv.com/audiencias/2026-11-18/"
- },
- {
-  "cat": "gaming",
-  "kw": "Twitch",
-  "title": "GTA 6 lleva el streaming a otro nivel",
-  "text": "Más de 6,3 millones de personas a la vez viendo GTA 6 sumando Twitch, YouTube y Kick. Ibai y AuronPlay, los canales más grandes en la categoría.",
-  "source": "ActualTV",
-  "url": "https://actualtv.es/gta-6-streamers-twitch-youtube/"
- }
+ {"cat":"musica","destacada":true,"gancho":"Rosalía arrasa en LOS40 con 4 premios","kw":"Rosalía","title":"Rosalía, reina de LOS40 con 4 premios","text":"Anoche, en el Palau Sant Jordi, se llevó 4 de sus 7 nominaciones, entre ellas mejor álbum por 'Lux' y el Golden Award a artista global del año.","source":"Ara","url":"https://es.ara.cat/cultura/musica/rosalia-triunfa-gran-festival-los40-music-awards_1_5918160.html"},
+ {"cat":"musica","kw":"Aitana","title":"Aitana gana canción y gira del año","text":"'Superestrella' fue elegida mejor canción y su tour, mejor gira en LOS40 Music Awards. Dio su discurso entero en catalán.","source":"Ara","url":"https://es.ara.cat/cultura/musica/rosalia-triunfa-gran-festival-los40-music-awards_1_5918160.html"},
+ {"cat":"musica","kw":"A. Sanz","title":"Alejandro Sanz: 12 conciertos en 2027","text":"La gira '¿Y ahora qué+?' recorrerá España en junio y julio, de Tenerife a Chiclana. Entradas a la venta el 24 de noviembre a las 10:00.","source":"Telecinco","url":"https://www.telecinco.es/noticias/cultura/20261120/alejandro-sanz-gira-2027-espana-ciudades-entradas_18_020765563.html"},
+ {"cat":"youtube","kw":"IlloJuan","title":"IlloJuan borra GTA 6 en pleno directo","text":"Eliminó el juego por error ante medio millón de espectadores y tardó más de una hora en reinstalarlo. Aun así batió su récord: pico de 403.666 viewers.","source":"Movistar eSports","url":"https://movistaresports.com/illojuan-bate-records-en-su-canal-con-gta-6"},
+ {"cat":"deportes","kw":"Madrid–Celta","title":"Madrid–Celta, hoy a las 21:00","text":"El Bernabéu cierra el sábado de la jornada 13 de LaLiga. El domingo, Barça–Villarreal (14:00) y Getafe–Atlético (21:00).","source":"Real Madrid","url":"https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/actualidad/el-real-madrid-celta-se-jugara-el-sabado-21-de-noviembre-a-las-21-00-horas-21-10-2026"},
+ {"cat":"gossip","kw":"Guitarrica","title":"Rosalía entrega su premio a Guitarricadelafuente","text":"Subió sola al escenario de LOS40 para darle el premio a fenómeno cultural del año y lo ligó a la película 'La bola negra'.","source":"Ara","url":"https://es.ara.cat/cultura/musica/rosalia-triunfa-gran-festival-los40-music-awards_1_5918160.html"},
+ {"cat":"deportes","kw":"Espanyol","title":"El Espanyol asalta San Mamés (0-1)","text":"Un gol de Roberto Fernández en la segunda parte tumbó al Athletic en el arranque de la jornada 13. Fortuño, clave bajo palos.","source":"Fuentes Informadas","url":"https://fuentesinformadas.com/el-espanyol-asalta-san-mames-con-un-gol-de-roberto-fernandez-y-se-lleva-los-tres-puntos-ante-el-athletic-0-1"},
+ {"cat":"tele","kw":"La Voz","title":"'La Voz' gana el duelo del viernes","text":"Antena 3 marcó un 12,1% frente al 11,8% de 'De Viernes' en el cara a cara. En La 1, 'La hora de La 1' brilló por la mañana con un 22,3%.","source":"Vertele (elDiario.es)","url":"https://www.eldiario.es/vertele/audiencias-tv/viernes-20-noviembre-2026-deviernes-telecinco-olvido-belen-la-voz-lider-jason-statham_1_13682308.html"},
+ {"cat":"musica","kw":"Estopa","title":"Estopa: Golden Award y estadios en 2027","text":"Los hermanos recogieron un Golden Award en LOS40 y cantaron a capela con el público. En 2027 llevan 'La Maketa' a 4 estadios.","source":"Qué!","url":"https://www.que.es/2026/11/16/estopa-gira-2027-entradas/"},
+ {"cat":"gaming","kw":"Game Pass","title":"Game Pass suma 10 juegos en noviembre","text":"Xbox confirma las novedades de la segunda quincena del mes, con terror, humor y puzles y dos estrenos desde el primer día.","source":"Vandal","url":"https://vandal.elespanol.com/noticia/2026321039/xbox-anuncia-las-novedades-de-game-pass-de-la-segunda-mitad-de-noviembre-con-dos-estrenos-dia-1/"}
 ]
