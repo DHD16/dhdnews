@@ -543,6 +543,12 @@ def main():
     if reel:
         slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
         make_reel(slides, os.path.join(out, "reel.mp4"))
+    try:
+        import sitemap
+        sm_path, sm_n = sitemap.build()
+        print("OK sitemap", sm_path, f"({sm_n} urls)")
+    except Exception as e:
+        print("WARN sitemap no generado:", e)
     print("OK", out)
 
 if __name__ == "__main__":

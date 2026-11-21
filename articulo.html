@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DHDNEWS · Dailynews</title>
 <meta name="description" content="Artículo de DHDNEWS · Dailynews">
+<link rel="canonical" href="https://dhd16.github.io/dhdnews/articulo.html">
+<meta property="og:site_name" content="DHDNEWS · Dailynews">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DHDNEWS · Dailynews">
+<meta property="og:description" content="Artículo de DHDNEWS · Dailynews">
+<meta property="og:url" content="https://dhd16.github.io/dhdnews/articulo.html">
+<meta property="og:image" content="https://dhd16.github.io/dhdnews/fotos/musica/0.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DHDNEWS · Dailynews">
+<meta name="twitter:description" content="Artículo de DHDNEWS · Dailynews">
+<meta name="twitter:image" content="https://dhd16.github.io/dhdnews/fotos/musica/0.jpg">
+<script type="application/ld+json" id="ldjson">{}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Crect width=%2248%22 height=%2248%22 rx=%2210%22 fill=%22%23ff2e63%22/%3E%3Crect y=%2230%22 width=%2248%22 height=%2218%22 fill=%22%2308d9d6%22/%3E%3Ctext x=%2224%22 y=%2226%22 text-anchor=%22middle%22 font-family=%22Arial Black,Impact%22 font-size=%2219%22 fill=%22white%22%3EDHD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -100,8 +113,31 @@ if (!/^[a-z0-9-]+$/.test(id)) {
 } else {
   fetch(`articulos/${id}.json?t=${Date.now()}`, {cache:"no-store"}).then(r => { if(!r.ok) throw 0; return r.json(); }).then(a => {
     const c = CATS[a.cat] || CATS.musica;
+    const pageUrl = location.origin + location.pathname + "?id=" + id;
+    const imgUrl = location.origin + location.pathname.replace(/articulo\.html$/, "") + (a.img || `fotos/${a.cat}/0.jpg`);
+    const desc = a.subtitle || a.title;
     document.title = `${a.title} · DHDNEWS`;
-    document.querySelector('meta[name=description]').content = a.subtitle || a.title;
+    document.querySelector('meta[name=description]').content = desc;
+    document.querySelector('link[rel=canonical]').href = pageUrl;
+    document.querySelector('meta[property="og:title"]').content = a.title;
+    document.querySelector('meta[property="og:description"]').content = desc;
+    document.querySelector('meta[property="og:url"]').content = pageUrl;
+    document.querySelector('meta[property="og:image"]').content = imgUrl;
+    document.querySelector('meta[name="twitter:title"]').content = a.title;
+    document.querySelector('meta[name="twitter:description"]').content = desc;
+    document.querySelector('meta[name="twitter:image"]').content = imgUrl;
+    document.getElementById("ldjson").textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": a.title,
+      "description": desc,
+      "image": [imgUrl],
+      "datePublished": (a.date || "") + "T08:00:00+01:00",
+      "dateModified": (a.date || "") + "T08:00:00+01:00",
+      "author": {"@type": "Person", "name": a.author || "Diego D. Hidalgo"},
+      "publisher": {"@type": "Organization", "name": "DHDNEWS · Dailynews", "logo": {"@type": "ImageObject", "url": location.origin + location.pathname.replace(/articulo\.html$/, "") + "fotos/musica/0.jpg"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": pageUrl}
+    });
     document.getElementById("app").innerHTML = `
       <section class="hero" style="--c:${c.color}">
         <img src="${a.img ? esc(a.img) : `fotos/${a.cat}/0.jpg`}" alt="${esc(a.imgAlt||"")}" style="object-position:${esc(a.imgPos || "center 30%")}" onerror="this.remove()">${a.imgCredit ? `<span class="credit">Foto: ${a.imgCreditUrl ? `<a href="${esc(a.imgCreditUrl)}" target="_blank" rel="noopener">${esc(a.imgCredit)}</a>` : esc(a.imgCredit)}</span>` : ""}
