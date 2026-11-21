@@ -22,7 +22,7 @@ def build():
                 continue
             aid = a.get("id") or fn[:-5]
             lastmod = a.get("date") or datetime.date.fromtimestamp(os.path.getmtime(path)).isoformat()
-            urls.append((f"articulo.html?id={aid}", lastmod, "monthly", "0.7"))
+            urls.append((f"noticia/{aid}.html", lastmod, "monthly", "0.7"))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

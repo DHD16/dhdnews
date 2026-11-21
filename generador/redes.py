@@ -544,6 +544,14 @@ def main():
         slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
         make_reel(slides, os.path.join(out, "reel.mp4"))
     try:
+        import prerender
+        p_done, p_failed = prerender.run()
+        print(f"OK prerender {len(p_done)} páginas estáticas en noticia/")
+        if p_failed:
+            print("WARN prerender fallos:", p_failed)
+    except Exception as e:
+        print("WARN prerender no generado:", e)
+    try:
         import sitemap
         sm_path, sm_n = sitemap.build()
         print("OK sitemap", sm_path, f"({sm_n} urls)")

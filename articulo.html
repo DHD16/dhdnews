@@ -113,8 +113,9 @@ if (!/^[a-z0-9-]+$/.test(id)) {
 } else {
   fetch(`articulos/${id}.json?t=${Date.now()}`, {cache:"no-store"}).then(r => { if(!r.ok) throw 0; return r.json(); }).then(a => {
     const c = CATS[a.cat] || CATS.musica;
-    const pageUrl = location.origin + location.pathname + "?id=" + id;
-    const imgUrl = location.origin + location.pathname.replace(/articulo\.html$/, "") + (a.img || `fotos/${a.cat}/0.jpg`);
+    const base = location.origin + location.pathname.replace(/articulo\.html$/, "");
+    const pageUrl = base + "noticia/" + id + ".html";
+    const imgUrl = base + (a.img || `fotos/${a.cat}/0.jpg`);
     const desc = a.subtitle || a.title;
     document.title = `${a.title} · DHDNEWS`;
     document.querySelector('meta[name=description]').content = desc;
@@ -155,13 +156,13 @@ if (!/^[a-z0-9-]+$/.test(id)) {
         ${a.tags ? `<div class="tags">${a.tags.map(t => `<span>#${esc(t)}</span>`).join("")}</div>` : ""}
         <div class="share">
           <button type="button" id="copy">🔗 Copiar enlace</button>
-          <a href="https://wa.me/?text=${encodeURIComponent(a.title + " " + location.href)}" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(a.title)}&url=${encodeURIComponent(location.href)}" target="_blank" rel="noopener">X</a>
+          <a href="https://wa.me/?text=${encodeURIComponent(a.title + " " + pageUrl)}" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(a.title)}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener">X</a>
         </div>
       </article>
       <div class="more"><a href="./">TODO EL TOP 10 DE HOY →<small>Música, gaming, streamers, deportes, tele y gossip en DHDNEWS</small></a></div>`;
     document.getElementById("copy").onclick = e => {
-      navigator.clipboard.writeText(location.href).then(() => e.target.textContent = "✓ Enlace copiado").catch(() => {});
+      navigator.clipboard.writeText(pageUrl).then(() => e.target.textContent = "✓ Enlace copiado").catch(() => {});
     };
   }).catch(() => {
     document.getElementById("app").innerHTML = '<p class="err">No hemos encontrado este artículo. <a href="./" style="color:var(--accent2)">Volver a la portada</a></p>';
