@@ -1,84 +1,12 @@
 [
- {
-  "cat": "musica",
-  "destacada": true,
-  "gancho": "Rosalía arrasa en LOS40 con 4 premios",
-  "kw": "LOS40 Awards",
-  "title": "LOS40: la crónica y todos los ganadores",
-  "text": "Rosalía arrasa con 4 premios y Ana Mena y Lola Índigo cantan juntas 'Pa ti toa' y ganan Mejor Colaboración. La gala y el palmarés completo.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=los40-music-awards-2026-cronica"
- },
- {
-  "cat": "musica",
-  "kw": "Aitana",
-  "title": "Aitana gana canción y gira del año",
-  "text": "'Superestrella' fue elegida mejor canción y su tour, mejor gira en LOS40 Music Awards. Dio su discurso entero en catalán.",
-  "source": "Ara",
-  "url": "https://es.ara.cat/cultura/musica/rosalia-triunfa-gran-festival-los40-music-awards_1_5918160.html"
- },
- {
-  "cat": "musica",
-  "kw": "A. Sanz",
-  "title": "Alejandro Sanz: 12 conciertos en 2027",
-  "text": "La gira '¿Y ahora qué+?' recorrerá España en junio y julio, de Tenerife a Chiclana. Entradas a la venta el 24 de noviembre a las 10:00.",
-  "source": "Telecinco",
-  "url": "https://www.telecinco.es/noticias/cultura/20261120/alejandro-sanz-gira-2027-espana-ciudades-entradas_18_020765563.html"
- },
- {
-  "cat": "youtube",
-  "kw": "IlloJuan",
-  "title": "IlloJuan borra GTA 6 en pleno directo",
-  "text": "Eliminó el juego por error ante medio millón de espectadores y tardó más de una hora en reinstalarlo. Aun así batió su récord: pico de 403.666 viewers.",
-  "source": "Movistar eSports",
-  "url": "https://movistaresports.com/illojuan-bate-records-en-su-canal-con-gta-6"
- },
- {
-  "cat": "deportes",
-  "kw": "Madrid–Celta",
-  "title": "Madrid–Celta, hoy a las 21:00",
-  "text": "El Bernabéu cierra el sábado de la jornada 13 de LaLiga. El domingo, Barça–Villarreal (14:00) y Getafe–Atlético (21:00).",
-  "source": "Real Madrid",
-  "url": "https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/actualidad/el-real-madrid-celta-se-jugara-el-sabado-21-de-noviembre-a-las-21-00-horas-21-10-2026"
- },
- {
-  "cat": "gossip",
-  "kw": "Guitarrica",
-  "title": "Rosalía entrega su premio a Guitarricadelafuente",
-  "text": "Subió sola al escenario de LOS40 para darle el premio a fenómeno cultural del año y lo ligó a la película 'La bola negra'.",
-  "source": "Ara",
-  "url": "https://es.ara.cat/cultura/musica/rosalia-triunfa-gran-festival-los40-music-awards_1_5918160.html"
- },
- {
-  "cat": "deportes",
-  "kw": "Espanyol",
-  "title": "El Espanyol asalta San Mamés (0-1)",
-  "text": "Un gol de Roberto Fernández en la segunda parte tumbó al Athletic en el arranque de la jornada 13. Fortuño, clave bajo palos.",
-  "source": "Fuentes Informadas",
-  "url": "https://fuentesinformadas.com/el-espanyol-asalta-san-mames-con-un-gol-de-roberto-fernandez-y-se-lleva-los-tres-puntos-ante-el-athletic-0-1"
- },
- {
-  "cat": "tele",
-  "kw": "La Voz",
-  "title": "'La Voz' gana el duelo del viernes",
-  "text": "Antena 3 marcó un 12,1% frente al 11,8% de 'De Viernes' en el cara a cara. En La 1, 'La hora de La 1' brilló por la mañana con un 22,3%.",
-  "source": "Vertele (elDiario.es)",
-  "url": "https://www.eldiario.es/vertele/audiencias-tv/viernes-20-noviembre-2026-deviernes-telecinco-olvido-belen-la-voz-lider-jason-statham_1_13682308.html"
- },
- {
-  "cat": "musica",
-  "kw": "Estopa",
-  "title": "Estopa: Golden Award y estadios en 2027",
-  "text": "Los hermanos recogieron un Golden Award en LOS40 y cantaron a capela con el público. En 2027 llevan 'La Maketa' a 4 estadios.",
-  "source": "Qué!",
-  "url": "https://www.que.es/2026/11/16/estopa-gira-2027-entradas/"
- },
- {
-  "cat": "gaming",
-  "kw": "Game Pass",
-  "title": "Game Pass suma 10 juegos en noviembre",
-  "text": "Xbox confirma las novedades de la segunda quincena del mes, con terror, humor y puzles y dos estrenos desde el primer día.",
-  "source": "Vandal",
-  "url": "https://vandal.elespanol.com/noticia/2026321039/xbox-anuncia-las-novedades-de-game-pass-de-la-segunda-mitad-de-noviembre-con-dos-estrenos-dia-1/"
- }
+ {"cat":"gaming","destacada":true,"gancho":"GTA 6 vende 32,5 millones en 24 horas","kw":"GTA 6","title":"GTA 6 bate el récord del entretenimiento","text":"Take-Two confirma 32,5 millones de copias y 3.790 millones de dólares en su primer día a la venta. Nunca un estreno había facturado tanto en 24 horas.","source":"Qué!","url":"https://www.que.es/2026/11/21/gta-6-record-ventas-entretenimiento/"},
+ {"cat":"musica","kw":"BTS","title":"BTS arrasa en los MAMA 2026 de Osaka","text":"Se llevan dos daesang: Artista del Año y Álbum del Año por 'ARIRANG'. CORTIS gana Canción del Año con 'REDRED' y ENHYPEN repite Fans' Choice.","source":"TopStarNews","url":"https://global.topstarnews.net/es/articleView.html?idxno=16282434"},
+ {"cat":"deportes","kw":"FCB–Villarreal","title":"Barça–Villarreal, hoy a las 14:00","text":"Duelo de la zona alta en LaLiga, por DAZN. La jornada se cierra con Getafe–Atlético a las 21:00 en M+ LaLiga TV.","source":"Sport Flash","url":"https://www.sport-flash.com/sports/football/es/calendar/2026-11-22/laliga-2026-2027"},
+ {"cat":"youtube","kw":"Rubius","title":"Rubius: 311.000 viewers jugando GTA 6","text":"Su primera hora con el juego de Rockstar reunió unos 311.000 espectadores a la vez. En todo Twitch, GTA VI superó los 3,3 millones simultáneos.","source":"Vandal","url":"https://vandal.elespanol.com/noticia/2026323031/twitch-pone-cifras-al-exito-de-gta-6-la-audiencia-en-la-plataforma-se-duplico-gracias-al-juego-de-rockstar"},
+ {"cat":"deportes","kw":"Premier","title":"Arsenal empata y el Chelsea cae 1-4","text":"El líder Arsenal no pasó del 2-2 en Newcastle, el City empató 1-1 con el Fulham y el Leeds goleó 1-4 en Stamford Bridge.","source":"Semana","url":"https://www.semana.com/deportes/articulo/tabla-de-posiciones-en-premier-league-manchester-city-y-arsenal-tropiezan-chelsea-sufre-goleada/202627/"},
+ {"cat":"musica","kw":"Los Planetas","title":"Los Planetas estrenan 'Dile a tus padres'","text":"Es el segundo adelanto de su undécimo disco. Lo presentarán el 6 de febrero en el Teatro Metropolitan de Ciudad de México.","source":"Rockdelux","url":"https://www.rockdelux.com/es/actualidad/la-semana-vista-por---miguel-pardo---viernes--20-de-noviembre-de-2026"},
+ {"cat":"tele","kw":"La Voz","title":"'La Voz: batallas' lidera el viernes","text":"Antena 3 marcó un 11,7% con 986.000 espectadores en prime time y superó a '¡De viernes!'.","source":"FormulaTV","url":"https://www.formulatv.com/noticias/audiencias-viernes-20-noviembre-de-viernes-la-voz-138810/"},
+ {"cat":"musica","kw":"C. Durante","title":"Carolina Durante: tres adelantos de golpe","text":"Publican 'Al cielo. Devil May Cry', 'Mi manera de vivir' y 'Cuesta arriba sin frenos' antes de tocar en Valencia (26/11) y Barcelona (28/11).","source":"Rockdelux","url":"https://www.rockdelux.com/es/actualidad/la-semana-vista-por---miguel-pardo---viernes--20-de-noviembre-de-2026"},
+ {"cat":"tele","kw":"La Séptima","title":"La Séptima marca un 3,9% el viernes","text":"El nuevo canal de la TDT se quedó a 1,5 puntos de laSexta (5,4%) y por delante de La 2 (2,9%) en la cuota del día.","source":"Demócrata","url":"https://www.democrata.es/actualidad/audiencias-septima-competidores-lasexta/"},
+ {"cat":"gossip","kw":"LOS40","title":"La alfombra de LOS40: quién desfiló","text":"Alice Campello, Laura Escanes, Dulceida, Rossy de Palma y Pablo Alborán posaron en el Palau Sant Jordi. Rosalía, de blanco y con tocado de pájaro.","source":"El Español","url":"https://www.elespanol.com/corazon/famosos/20261121/rosalia-guitarricadelafuente-alice-campello-famosos-desfilaron-alfombra-los40-music-awards-barcelona/1003744467318_3.html"}
 ]
