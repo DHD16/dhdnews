@@ -155,7 +155,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="hero">
     <a class="lead" id="lead"></a>
     <aside class="daily">
-      <h2>TOP 10 DE HOY <span id="fecha"></span></h2>
+      <h2>TOP <span id="topn">10</span> DE HOY <span id="fecha"></span></h2>
       <ol id="top5"></ol>
     </aside>
   </section>
@@ -352,6 +352,7 @@ function init(){
   $("#lead").href = lead.url||"#";
   $("#lead").innerHTML = `<span class="wm">${kwOf(lead)}</span><span class="tag" style="--c:${lc.color}">${lc.icon} ${lc.label} · Destacada</span><h1>${lead.title}</h1><p>${lead.text}</p>`;
 
+  $("#topn").textContent = Math.min(NEWS.length,10);
   $("#top5").innerHTML = NEWS.slice(0,10).map(n=>`<li><a ${linkAttrs(n)}>${CATS[n.cat].icon} ${n.title}</a></li>`).join("");
   $("#ticker").textContent = "⚡ " + NEWS.map(n=>n.title).join("   ·   ") + " ⚡";
   $("#fecha").textContent = new Date().toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"});

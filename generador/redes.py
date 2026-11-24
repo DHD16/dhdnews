@@ -216,7 +216,7 @@ def story_top5(news, fecha):
         sub = wrap(d, n["title"], font("semi", 27), W-70-tx-30)
         if sub: d.text((tx, y+128), sub[0] + ("…" if len(sub) > 1 else ""), font=font("semi", 27), fill=(200, 200, 215))
         y += 194
-    cta_sticker(img, 1735, "TOP 10 COMPLETO", "link en bio · dhd16.github.io/dhdnews")
+    cta_sticker(img, 1735, "TOP 10 COMPLETO" if len(news) > 5 else "LÉELAS COMPLETAS", "link en bio · dhd16.github.io/dhdnews")
     return img
 
 def story_ultima(n, fecha):
@@ -443,14 +443,18 @@ def tk_outro(news, total):
     d.rounded_rectangle((TK_L, y + 20, TK_L + d.textlength(t, font=f) + 60, y + 100), radius=999, fill=CYAN)
     d.text((TK_L + 30, y + 37), t, font=f, fill=BG)
     y += 170
-    d.text((TK_L, y), "Y ADEMÁS EN EL TOP 10:", font=font("black", 36), fill=(200, 200, 215)); y += 64
+    if len(news) > 5:
+        d.text((TK_L, y), "Y ADEMÁS EN EL TOP 10:", font=font("black", 36), fill=(200, 200, 215)); y += 64
+    else:
+        d.text((TK_L, y), "LOS 5 ARTÍCULOS COMPLETOS,", font=font("black", 36), fill=(200, 200, 215)); y += 54
+        d.text((TK_L, y), "CON TODOS LOS DETALLES, EN LA WEB", font=font("black", 36), fill=(200, 200, 215)); y += 64
     for i, n in enumerate(news[5:10], start=6):
         lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
         kw = (n.get("kw") or n["title"].split(":")[0]).upper()
         d.text((TK_L, y), f"{i}", font=font("anton", 58), fill=col)
         d.text((TK_L + 80, y), kw, font=fit(d, kw, "anton", TK_R - TK_L - 80, 58, 36), fill="white")
         y += 70
-    f = font("black", 38); t = "TOP 10 COMPLETO · LINK EN BIO"
+    f = font("black", 38); t = "TOP 10 COMPLETO · LINK EN BIO" if len(news) > 5 else "ARTÍCULOS COMPLETOS · LINK EN BIO"
     w = d.textlength(t, font=f)
     d.rounded_rectangle((TK_L, TK_B - 40, TK_L + w + 60, TK_B + 40), radius=999, fill="white")
     d.text((TK_L + 30, TK_B - 23), t, font=f, fill=BG)
