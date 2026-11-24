@@ -1,0 +1,25 @@
+{
+  "id": "/dhdnews/",
+  "name": "DHDNEWS · Dailynews",
+  "short_name": "DHDNEWS",
+  "description": "Las noticias del día en 60 segundos: música, gaming, streamers, deportes, televisión y gossip.",
+  "lang": "es-ES",
+  "dir": "ltr",
+  "start_url": "/dhdnews/?source=pwa",
+  "scope": "/dhdnews/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b10",
+  "theme_color": "#0b0b10",
+  "categories": ["news", "entertainment", "music", "sports"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "screenshots": [
+    {"src": "android/play-store/captura-1-portada.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Top 10 del día"},
+    {"src": "android/play-store/captura-2-articulo.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Artículo"}
+  ]
+}
