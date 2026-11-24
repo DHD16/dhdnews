@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dhdrecords.dhdnews",
+      "sha256_cert_fingerprints": [
+        "PEGA_AQUI_LA_SHA256_QUE_TE_DA_PWABUILDER",
+        "PEGA_AQUI_LA_SHA256_DE_PLAY_CONSOLE_INTEGRIDAD_DE_LA_APP"
+      ]
+    }
+  }
+]
