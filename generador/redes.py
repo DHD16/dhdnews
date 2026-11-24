@@ -471,6 +471,117 @@ def tiktok_carousel(news, fecha, out):
     for nme in ("story-top5", "story-ultima-1"):
         Image.open(os.path.join(out, nme + ".png")).convert("RGB").save(os.path.join(out, nme + ".jpg"), quality=92)
 
+# ---------- TIKTOK · JUEGO "¿REAL O FAKE?" ----------
+# 5 noticias reales + 1 inventada (inofensiva) en una posición; la solución va
+# SIEMPRE en la última foto del mismo carrusel. La fake nunca va a la web ni a Instagram.
+def tk_stamp(d, x, y, text, fill, fg=BG, size=40, angle_box=True):
+    f = font("black", size); w = d.textlength(text, font=f)
+    d.rounded_rectangle((x, y, x + w + 50, y + size + 34), radius=16, fill=fill)
+    d.text((x + 25, y + 15), text, font=f, fill=fg)
+    return w + 50
+
+def tk_game_cover(game, fecha, n_total):
+    n = game[0]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = tk_photo_bg(game, 0, PINK, 0.62); d = ImageDraw.Draw(img, "RGBA")
+    bug(img, TK_L, TK_T + 10, 0.62, center=False)
+    y = 440
+    fd = font("black", 34); ftxt = "JUEGO DEL DÍA · " + fecha_txt(fecha).upper()
+    d.rounded_rectangle((TK_L, y, TK_L + d.textlength(ftxt, font=fd) + 44, y + 64), radius=14, fill=PINK)
+    d.text((TK_L + 22, y + 12), ftxt, font=fd, fill="white")
+    y += 110
+    for t, c in ((f"{n_total} NOTICIAS.", "white"), ("UNA ES", "white"), ("FAKE.", PINK)):
+        d.text((TK_L, y), t, font=font("anton", 190), fill=c); y += 200
+    y += 90
+    for l in wrap(d, "¿Eres capaz de pillar la falsa? Lee las 6 y comenta el número.", font("black", 46), TK_R - TK_L)[:3]:
+        d.text((TK_L, y), l, font=font("black", 46), fill=(235, 235, 245)); y += 60
+    tk_swipe(d, max(y + 40, 1400), "DESLIZA Y JUEGA")
+    return img
+
+def tk_game_news(game, idx, total):
+    n = game[idx]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = tk_photo_bg(game, idx, col, 0.45); d = ImageDraw.Draw(img, "RGBA")
+    tk_counter(d, idx + 1, total, col)
+    mini_bug(img, TK_R, TK_T + 4, 36); d = ImageDraw.Draw(img, "RGBA")
+    d.text((TK_L - 10, 250), f"#{idx+1}", font=font("anton", 420), fill=col + (255,))
+    # sello ¿REAL O FAKE?
+    f = font("anton", 64); t = "¿REAL O FAKE?"
+    w = d.textlength(t, font=f)
+    d.rounded_rectangle((TK_R - w - 50, 560, TK_R, 650), radius=18, fill=(255, 255, 255, 235))
+    d.text((TK_R - w - 25, 566), t, font=f, fill=BG)
+    y = 780
+    chip(d, TK_L, y, lab, col, 32); y += 100
+    kw = (n.get("kw") or n["title"].split(":")[0]).upper()
+    fk = fit(d, kw, "anton", TK_R - TK_L, 170, 80)
+    for l in wrap(d, kw, fk, TK_R - TK_L)[:2]:
+        d.text((TK_L, y), l, font=fk, fill="white"); y += int(fk.size * 1.0)
+    y += 60
+    for l in wrap(d, n["title"], font("black", 50), TK_R - TK_L)[:3]:
+        d.text((TK_L, y), l, font=font("black", 50), fill="white"); y += 64
+    y += 16
+    fx = font("semi", 36); tl = wrap(d, n.get("text", ""), fx, TK_R - TK_L)
+    maxl = max(0, (TK_B - 10 - y) // 48)
+    if len(tl) > maxl:
+        tl = tl[:maxl]
+        if tl: tl[-1] = tl[-1].rstrip(",.;") + "…"
+    for l in tl:
+        d.text((TK_L, y), l, font=fx, fill=(215, 215, 228)); y += 48
+    return img
+
+def tk_game_vote(total):
+    img = background(VIOLET); d = ImageDraw.Draw(img, "RGBA")
+    mini_bug(img, TK_R, TK_T + 4, 36); d = ImageDraw.Draw(img, "RGBA")
+    y = 330
+    for t, c in (("¿CUÁL ES", "white"), ("LA FAKE?", PINK)):
+        d.text((TK_L, y), t, font=font("anton", 190), fill=c); y += 190
+    y += 50
+    f = font("black", 42); t = f"COMENTA EL NÚMERO (1-{total})  ↓"
+    d.rounded_rectangle((TK_L, y, TK_L + d.textlength(t, font=f) + 60, y + 84), radius=999, fill=CYAN)
+    d.text((TK_L + 30, y + 18), t, font=f, fill=BG)
+    y += 150
+    for l in ("Comenta ANTES de deslizar:", "en la siguiente foto", "está la solución."):
+        d.text((TK_L, y), l, font=font("black", 50), fill="white"); y += 66
+    tk_swipe(d, max(y + 60, 1450), "VER SOLUCIÓN")
+    return img
+
+def tk_game_reveal(game, pos, por_que):
+    n = game[pos]; lab, col = CATS.get(n["cat"], ("NOTICIA", PINK))
+    img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
+    mini_bug(img, TK_R, TK_T + 4, 36); d = ImageDraw.Draw(img, "RGBA")
+    y = 280
+    d.text((TK_L, y), "LA FAKE ERA", font=font("anton", 150), fill="white"); y += 160
+    d.text((TK_L, y), f"LA #{pos+1}", font=font("anton", 230), fill=BG); y += 300
+    kw = (n.get("kw") or n["title"]).upper()
+    d.text((TK_L, y), kw, font=fit(d, kw, "anton", TK_R - TK_L - 260, 90, 50), fill="white")
+    tk_stamp(d, TK_R - 230, y + 10, "FAKE", BG, "white", 52)
+    y += 120
+    for l in wrap(d, por_que, font("semi", 38), TK_R - TK_L)[:4]:
+        d.text((TK_L, y), l, font=font("semi", 38), fill="white"); y += 50
+    y += 40
+    for l in ("Las otras 5 son 100% REALES.", "¿Acertaste? Dilo en comentarios."):
+        d.text((TK_L, y), l, font=font("black", 44), fill="white"); y += 60
+    f = font("black", 36); t = "NOTICIAS REALES COMPLETAS · LINK EN BIO"
+    w = d.textlength(t, font=f)
+    d.rounded_rectangle((TK_L, TK_B - 130, TK_L + w + 60, TK_B - 54), radius=999, fill="white")
+    d.text((TK_L + 30, TK_B - 113), t, font=f, fill=BG)
+    d.text((TK_L, TK_B - 20), "Síguenos: mañana, nueva ronda.", font=font("black", 34), fill=(255, 235, 240))
+    return img
+
+def tiktok_game(news, juego, fecha, out):
+    fake = dict(juego["fake"]); fake.setdefault("source", "")
+    pos = int(juego.get("pos") or (fecha.toordinal() % 4) + 2) - 1   # 1-6 → índice; por defecto entre la 2 y la 5
+    pos = max(0, min(5, pos))
+    game = list(news[:5]); game.insert(pos, fake)
+    total = len(game)
+    for f in os.listdir(out):
+        if f.startswith("tiktok-") and f.endswith(".jpg"): os.remove(os.path.join(out, f))
+    slides = [tk_game_cover(game, fecha, total)] + [tk_game_news(game, i, total) for i in range(total)] \
+             + [tk_game_vote(total), tk_game_reveal(game, pos, juego.get("por_que", "Esta noticia nos la hemos inventado para el juego."))]
+    for i, im in enumerate(slides, start=1):
+        im.convert("RGB").save(os.path.join(out, f"tiktok-{i}.jpg"), quality=90)
+    for nme in ("story-top5", "story-ultima-1"):
+        Image.open(os.path.join(out, nme + ".png")).convert("RGB").save(os.path.join(out, nme + ".jpg"), quality=92)
+    return len(slides), pos + 1
+
 # ---------- REEL ----------
 def slide_intro(fecha):
     img = background(PINK); d = ImageDraw.Draw(img, "RGBA")
@@ -543,7 +654,12 @@ def main():
     story_top5(news, fecha).save(os.path.join(out, "story-top5.png"))
     story_card(news, 0, fecha).save(os.path.join(out, "story-ultima-1.png"))
     story_card(news, 1, fecha).save(os.path.join(out, "story-ultima-2.png"))
-    tiktok_carousel(news, fecha, out)
+    if "--juego" in sys.argv:
+        juego = json.load(open(sys.argv[sys.argv.index("--juego") + 1]))
+        n_sl, fpos = tiktok_game(news, juego, fecha, out)
+        print(f"OK TikTok juego: {n_sl} fotos (tiktok-1..{n_sl}.jpg), la fake es la #{fpos}")
+    else:
+        tiktok_carousel(news, fecha, out)
     if reel:
         slides = [(slide_intro(fecha), 2.5)] + [(slide_news(n, i+1), 4.0) for i, n in enumerate(news[:5])] + [(slide_outro(), 3.0)]
         make_reel(slides, os.path.join(out, "reel.mp4"))
