@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dhd16.github.io/dhdnews/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/arkheron-estrenos-videojuegos-semana-gta-6.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/claudia-arenas-gira-alicante.html</loc>
@@ -15,6 +21,18 @@
   <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/conchita-el-llavero.html</loc>
     <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/dangelo-kamikazi-gta-6-cancion.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/en-tierra-lejana-audiencias-cena-de-los-idiotas.html</loc>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -37,8 +55,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/lucho-rk-retrica-numero-1-singles-espana.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/playacoco-migajero.html</loc>
     <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/real-madrid-psv-5-1-champions.html</loc>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
