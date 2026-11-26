@@ -2,13 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dhd16.github.io/dhdnews/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/alejandro-sanz-gira-2027-entradas.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/arkheron-estrenos-videojuegos-semana-gta-6.html</loc>
     <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/audiencias-gh-vip-9-segunda-gala-revuelta-hormiguero.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/barcelona-sabah-1-4-champions-atletico-villarreal.html</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -37,8 +55,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/gta-6-ideas-descartadas-rockstar.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/jordi-wild-candidatos.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/lasso-gira-2027-una-mas-y-nos-vamos.html</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
