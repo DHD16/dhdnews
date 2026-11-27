@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dhd16.github.io/dhdnews/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -27,6 +27,24 @@
   <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/barcelona-sabah-1-4-champions-atletico-villarreal.html</loc>
     <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/belako-gira-2027-fechas-nuevo-disco.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/benjamin-clementine-gira-espana-2027-entradas.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/campanadas-2026-la-1-jesus-vazquez-silvia-abril-manuel-carrasco.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -61,8 +79,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/gta-6-ventas-record-millones-copias.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/jordi-wild-candidatos.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/laliga-jornada-14-horarios-television.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

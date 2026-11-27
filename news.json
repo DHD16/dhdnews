@@ -1,7 +1,44 @@
 [
- {"cat":"musica","destacada":true,"gancho":"12 conciertos en España en verano de 2027","kw":"Alejandro Sanz","title":"Alejandro Sanz anuncia su gira 2027","text":"«¿Y Ahora Qué+?» recorrerá 12 ciudades españolas del 12 de junio al 31 de julio. Las entradas ya están a la venta.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=alejandro-sanz-gira-2027-entradas"},
- {"cat":"deportes","kw":"Champions","title":"Pleno español: Barça, Atleti y Villarreal","text":"El Barça goleó 1-4 al Sabah con doblete de Gordon, el Atlético ganó 2-0 al Viking y el Villarreal, 0-1 en Praga.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=barcelona-sabah-1-4-champions-atletico-villarreal"},
- {"cat":"gaming","kw":"GTA 6","title":"Lo que Rockstar quitó de GTA 6","text":"Cines, tenis, gatear y decorar las guaridas: Rockstar confirma las ideas que se quedaron fuera del juego.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=gta-6-ideas-descartadas-rockstar"},
- {"cat":"tele","kw":"Audiencias","title":"'GH VIP 9' cae en su segunda gala","text":"El reality lidera con un 14,2% pero baja. 'El hormiguero' (12,9%) gana a 'La revuelta' (12,2%) y Antena 3 gana el día.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=audiencias-gh-vip-9-segunda-gala-revuelta-hormiguero"},
- {"cat":"musica","kw":"Lasso","title":"Lasso arranca su gira 2027 en Barcelona","text":"«Una más y nos vamos» empieza el 2 de marzo en Barcelona y pasará por Madrid y Valencia antes de recorrer el mundo.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=lasso-gira-2027-una-mas-y-nos-vamos"}
+ {
+  "cat": "tele",
+  "destacada": true,
+  "gancho": "Carrasco y Abril debutan en las uvas",
+  "kw": "Campanadas",
+  "title": "Las Campanadas de La 1 ya tienen trío",
+  "text": "Jesús Vázquez, Silvia Abril y Manuel Carrasco darán las uvas desde la Puerta del Sol.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=campanadas-2026-la-1-jesus-vazquez-silvia-abril-manuel-carrasco"
+ },
+ {
+  "cat": "gaming",
+  "kw": "GTA 6",
+  "title": "GTA 6 pulveriza todos los récords",
+  "text": "32,5 millones de copias el primer día y casi 45 millones en su primer fin de semana.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=gta-6-ventas-record-millones-copias"
+ },
+ {
+  "cat": "deportes",
+  "kw": "LaLiga",
+  "title": "Jornada 14: horarios y dónde verla",
+  "text": "Real Madrid-Alavés, Elche-Atlético y Dépor-Barça, del viernes 27 al lunes 30.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=laliga-jornada-14-horarios-television"
+ },
+ {
+  "cat": "musica",
+  "kw": "Clementine",
+  "title": "Benjamin Clementine: 11 fechas en España",
+  "text": "Gira íntima a piano en mayo de 2027. Entradas hoy a las 12:00.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=benjamin-clementine-gira-espana-2027-entradas"
+ },
+ {
+  "cat": "musica",
+  "kw": "Belako",
+  "title": "Belako anuncia su gira de 2027",
+  "text": "19 conciertos por España y nuevo disco en marzo con el sello Montgrí.",
+  "source": "DHDNEWS · Artículo propio",
+  "url": "articulo.html?id=belako-gira-2027-fechas-nuevo-disco"
+ }
 ]
