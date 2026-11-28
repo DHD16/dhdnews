@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dhd16.github.io/dhdnews/</loc>
-    <lastmod>2026-11-27</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/aitana-martin-garrix-not-giving-up-on-us.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/alejandro-sanz-gira-2027-entradas.html</loc>
@@ -63,6 +69,12 @@
   <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/dangelo-kamikazi-gta-6-cancion.html</loc>
     <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/el-escondite-la-1-grison-famosos-estreno.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -127,8 +139,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/real-madrid-alaves-hora-tv-alineaciones.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dhd16.github.io/dhdnews/noticia/real-madrid-psv-5-1-champions.html</loc>
     <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/roger-waters-legacy-pink-floyd-espana-2027-entradas.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhd16.github.io/dhdnews/noticia/silksong-sea-of-sorrow-dlc-gratis-fecha.html</loc>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

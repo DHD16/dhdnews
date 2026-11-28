@@ -1,44 +1,7 @@
 [
- {
-  "cat": "tele",
-  "destacada": true,
-  "gancho": "Carrasco y Abril debutan en las uvas",
-  "kw": "Campanadas",
-  "title": "Las Campanadas de La 1 ya tienen trío",
-  "text": "Jesús Vázquez, Silvia Abril y Manuel Carrasco darán las uvas desde la Puerta del Sol.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=campanadas-2026-la-1-jesus-vazquez-silvia-abril-manuel-carrasco"
- },
- {
-  "cat": "gaming",
-  "kw": "GTA 6",
-  "title": "GTA 6 pulveriza todos los récords",
-  "text": "32,5 millones de copias el primer día y casi 45 millones en su primer fin de semana.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=gta-6-ventas-record-millones-copias"
- },
- {
-  "cat": "deportes",
-  "kw": "LaLiga",
-  "title": "Jornada 14: horarios y dónde verla",
-  "text": "Real Madrid-Alavés, Elche-Atlético y Dépor-Barça, del viernes 27 al lunes 30.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=laliga-jornada-14-horarios-television"
- },
- {
-  "cat": "musica",
-  "kw": "Clementine",
-  "title": "Benjamin Clementine: 11 fechas en España",
-  "text": "Gira íntima a piano en mayo de 2027. Entradas hoy a las 12:00.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=benjamin-clementine-gira-espana-2027-entradas"
- },
- {
-  "cat": "musica",
-  "kw": "Belako",
-  "title": "Belako anuncia su gira de 2027",
-  "text": "19 conciertos por España y nuevo disco en marzo con el sello Montgrí.",
-  "source": "DHDNEWS · Artículo propio",
-  "url": "articulo.html?id=belako-gira-2027-fechas-nuevo-disco"
- }
+ {"cat":"musica","destacada":true,"gancho":"Ya suena su primera canción juntos","kw":"Aitana","title":"Aitana y Martin Garrix, juntos al fin","text":"Presentan 'Not Giving Up On Us', con versos en español, que irá en el disco de Garrix.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=aitana-martin-garrix-not-giving-up-on-us"},
+ {"cat":"tele","kw":"El escondite","title":"Grison estrena 'El escondite' en La 1","text":"18 famosos juegan al escondite en una casa con 120 escondites. El lunes 30, tras 'La Revuelta'.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=el-escondite-la-1-grison-famosos-estreno"},
+ {"cat":"deportes","kw":"Real Madrid","title":"El Madrid puede igualar hoy al Barça","text":"Real Madrid-Alavés a las 21:00 en el Bernabéu, en Movistar Plus+. Mourinho suma 10 victorias seguidas.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=real-madrid-alaves-hora-tv-alineaciones"},
+ {"cat":"gaming","kw":"Silksong","title":"Silksong tendrá DLC gratis el 11 de diciembre","text":"Sea of Sorrow lleva a Hornet a una región acuática con nuevas zonas, jefes y hasta pesca.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=silksong-sea-of-sorrow-dlc-gratis-fecha"},
+ {"cat":"musica","kw":"Pink Floyd","title":"El show de Roger Waters, en 6 ciudades","text":"'Legacy', el homenaje a Pink Floyd que lidera Harry Waters, llega a España en 2027. Entradas ya a la venta.","source":"DHDNEWS · Artículo propio","url":"articulo.html?id=roger-waters-legacy-pink-floyd-espana-2027-entradas"}
 ]
